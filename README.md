@@ -1,4 +1,4 @@
 # ShootBall	
 Game for Rubika
 
-Powered by CocosCreator
+Powered by CocosCreator.
