@@ -1,0 +1,2 @@
+# ShootBall	
+Game for Rubika
