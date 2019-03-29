@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "0a59b5fb-0a4e-46cd-9692-ab924a2748b8",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_peykan_magno": {
+      "ver": "1.0.3",
+      "uuid": "56ba580e-11f9-4735-ab68-164851082633",
+      "rawTextureUuid": "0a59b5fb-0a4e-46cd-9692-ab924a2748b8",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -21,
+      "trimX": 17,
+      "trimY": 48,
+      "width": 293,
+      "height": 277,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

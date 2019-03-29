@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "9d3061dd-99bf-49be-9caa-7e2962aad804",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_padide_nasehi": {
+      "ver": "1.0.3",
+      "uuid": "39d742ba-72da-47c2-a4f7-6ffaa9b12c5d",
+      "rawTextureUuid": "9d3061dd-99bf-49be-9caa-7e2962aad804",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -17.5,
+      "trimX": 17,
+      "trimY": 41,
+      "width": 293,
+      "height": 284,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

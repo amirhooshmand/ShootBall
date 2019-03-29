@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "2325de7b-f97f-4a61-ae29-36d426b8393c",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_masjed_mousa": {
+      "ver": "1.0.3",
+      "uuid": "3168d091-3e2f-487a-853f-da39e2a58d11",
+      "rawTextureUuid": "2325de7b-f97f-4a61-ae29-36d426b8393c",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -35.5,
+      "trimX": 17,
+      "trimY": 77,
+      "width": 293,
+      "height": 248,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

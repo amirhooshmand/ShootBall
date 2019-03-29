@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "e566d1c4-3e2b-432d-89f6-40865176919a",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_pers_GK": {
+      "ver": "1.0.3",
+      "uuid": "a231be5a-299a-4517-b81f-7a8249cacaa7",
+      "rawTextureUuid": "e566d1c4-3e2b-432d-89f6-40865176919a",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": -15.5,
+      "trimX": 17,
+      "trimY": 37,
+      "width": 292,
+      "height": 288,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

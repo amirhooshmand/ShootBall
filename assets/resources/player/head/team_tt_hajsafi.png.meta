@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "9ec6143e-ba54-431a-856e-7b8338e07ed4",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_tt_hajsafi": {
+      "ver": "1.0.3",
+      "uuid": "d402f882-e98d-42f4-b250-be39a861dfcf",
+      "rawTextureUuid": "9ec6143e-ba54-431a-856e-7b8338e07ed4",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -25,
+      "trimX": 17,
+      "trimY": 56,
+      "width": 293,
+      "height": 269,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

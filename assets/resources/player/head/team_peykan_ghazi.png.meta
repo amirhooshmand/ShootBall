@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "201df35f-5e4f-47a5-8703-a7480e38299a",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_peykan_ghazi": {
+      "ver": "1.0.3",
+      "uuid": "eea6a79b-0803-469f-ac3f-21461240c172",
+      "rawTextureUuid": "201df35f-5e4f-47a5-8703-a7480e38299a",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -27.5,
+      "trimX": 17,
+      "trimY": 61,
+      "width": 293,
+      "height": 264,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

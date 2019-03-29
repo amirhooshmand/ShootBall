@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "5f7f46e2-b014-4412-a71d-9e8e3e1e90e9",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_saipa_soleimani": {
+      "ver": "1.0.3",
+      "uuid": "f65391f4-d9d9-4905-acd7-71487381b84d",
+      "rawTextureUuid": "5f7f46e2-b014-4412-a71d-9e8e3e1e90e9",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -35.5,
+      "trimX": 17,
+      "trimY": 77,
+      "width": 293,
+      "height": 248,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

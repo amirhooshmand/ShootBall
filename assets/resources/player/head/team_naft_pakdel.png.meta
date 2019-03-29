@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "0151bd1a-988d-46b1-9b4d-e43486547847",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_naft_pakdel": {
+      "ver": "1.0.3",
+      "uuid": "82c1a76e-bd3e-4b7a-8fd7-a9ab67908dc4",
+      "rawTextureUuid": "0151bd1a-988d-46b1-9b4d-e43486547847",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": -25,
+      "trimX": 17,
+      "trimY": 56,
+      "width": 292,
+      "height": 269,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

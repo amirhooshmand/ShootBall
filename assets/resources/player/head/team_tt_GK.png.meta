@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "f59a7728-797b-47dc-8fad-34f85fbce31a",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_tt_GK": {
+      "ver": "1.0.3",
+      "uuid": "590aa782-42b7-44b9-b036-82351972445b",
+      "rawTextureUuid": "f59a7728-797b-47dc-8fad-34f85fbce31a",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": -20.5,
+      "trimX": 17,
+      "trimY": 47,
+      "width": 292,
+      "height": 278,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

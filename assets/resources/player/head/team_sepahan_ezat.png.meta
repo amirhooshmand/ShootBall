@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "e61fff02-d404-451c-9508-502e974fbe00",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_sepahan_ezat": {
+      "ver": "1.0.3",
+      "uuid": "91db25b8-5e8a-4106-8a87-7b37ddf5bfb3",
+      "rawTextureUuid": "e61fff02-d404-451c-9508-502e974fbe00",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -35.5,
+      "trimX": 17,
+      "trimY": 77,
+      "width": 293,
+      "height": 248,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

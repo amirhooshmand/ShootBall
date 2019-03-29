@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "92b079c9-8b2b-4f02-8060-16f93ce5d70c",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_pers_alipur": {
+      "ver": "1.0.3",
+      "uuid": "c644d3ce-10e3-4c7d-a87b-0a6881c9ebc6",
+      "rawTextureUuid": "92b079c9-8b2b-4f02-8060-16f93ce5d70c",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -35.5,
+      "trimX": 17,
+      "trimY": 77,
+      "width": 293,
+      "height": 248,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

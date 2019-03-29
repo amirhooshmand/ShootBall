@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "92ffd495-ff72-4a8e-90cd-c32b32a09a97",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_tt_stokes": {
+      "ver": "1.0.3",
+      "uuid": "b6759d56-4a78-4f96-a4ef-630573daf9fc",
+      "rawTextureUuid": "92ffd495-ff72-4a8e-90cd-c32b32a09a97",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -23,
+      "trimX": 17,
+      "trimY": 52,
+      "width": 293,
+      "height": 273,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

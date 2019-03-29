@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "acb62f8d-961e-4093-8761-9d98d7343e46",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_naft_jahani": {
+      "ver": "1.0.3",
+      "uuid": "7411908e-3225-4720-839e-25628fa8da88",
+      "rawTextureUuid": "acb62f8d-961e-4093-8761-9d98d7343e46",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -25,
+      "trimX": 17,
+      "trimY": 56,
+      "width": 293,
+      "height": 269,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

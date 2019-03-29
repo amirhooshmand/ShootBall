@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "87b53f47-0573-4a19-a4c6-3e204ac843e2",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_saipa_GK": {
+      "ver": "1.0.3",
+      "uuid": "151685f6-3649-4ba2-8d85-41714690c5ad",
+      "rawTextureUuid": "87b53f47-0573-4a19-a4c6-3e204ac843e2",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": -25,
+      "trimX": 17,
+      "trimY": 56,
+      "width": 292,
+      "height": 269,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

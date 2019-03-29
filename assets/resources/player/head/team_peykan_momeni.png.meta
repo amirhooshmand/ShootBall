@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "838ebb81-243a-41d7-889b-c7816316c814",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_peykan_momeni": {
+      "ver": "1.0.3",
+      "uuid": "7d133b8a-d97e-4137-b2cd-184b6f8070d7",
+      "rawTextureUuid": "838ebb81-243a-41d7-889b-c7816316c814",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -17.5,
+      "trimX": 17,
+      "trimY": 41,
+      "width": 293,
+      "height": 284,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

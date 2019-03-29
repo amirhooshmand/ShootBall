@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "46c712c2-24db-42fc-8f5d-bfb76fa3fd38",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_ss_voria": {
+      "ver": "1.0.3",
+      "uuid": "e5a5f1c5-ab1f-4101-bc68-7b1491b03054",
+      "rawTextureUuid": "46c712c2-24db-42fc-8f5d-bfb76fa3fd38",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -21.5,
+      "trimX": 17,
+      "trimY": 49,
+      "width": 293,
+      "height": 276,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

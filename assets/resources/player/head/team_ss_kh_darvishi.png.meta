@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "3c8fde6e-b061-4560-b047-80b78f4939c0",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_ss_kh_darvishi": {
+      "ver": "1.0.3",
+      "uuid": "1cd9ab8e-6655-47ed-b314-5704a6c48ebc",
+      "rawTextureUuid": "3c8fde6e-b061-4560-b047-80b78f4939c0",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 6,
+      "width": 326,
+      "height": 319,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

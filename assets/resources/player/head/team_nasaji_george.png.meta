@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "3371037c-ba89-49bc-9102-751757500392",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_nasaji_george": {
+      "ver": "1.0.3",
+      "uuid": "ce0da19c-81d1-44d4-a672-f95a55981040",
+      "rawTextureUuid": "3371037c-ba89-49bc-9102-751757500392",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -17.5,
+      "trimX": 17,
+      "trimY": 41,
+      "width": 293,
+      "height": 284,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

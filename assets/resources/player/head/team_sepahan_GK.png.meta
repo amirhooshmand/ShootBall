@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "cef593e3-0c95-43ed-a938-2ff3291d01d8",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_sepahan_GK": {
+      "ver": "1.0.3",
+      "uuid": "0626923e-38e7-4bf3-a47c-0e21f869ae2e",
+      "rawTextureUuid": "cef593e3-0c95-43ed-a938-2ff3291d01d8",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": -21,
+      "trimX": 17,
+      "trimY": 48,
+      "width": 292,
+      "height": 277,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

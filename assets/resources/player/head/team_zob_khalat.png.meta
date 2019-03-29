@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "ae17cefe-7183-4f91-9556-ca8dd746ca71",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_zob_khalat": {
+      "ver": "1.0.3",
+      "uuid": "347b862a-51af-4a51-a155-8dadfde6c628",
+      "rawTextureUuid": "ae17cefe-7183-4f91-9556-ca8dd746ca71",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -20.5,
+      "trimX": 17,
+      "trimY": 47,
+      "width": 293,
+      "height": 278,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

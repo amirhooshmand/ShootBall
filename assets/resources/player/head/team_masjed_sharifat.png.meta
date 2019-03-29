@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "b32780bb-0af0-4713-a830-c039badfe402",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_masjed_sharifat": {
+      "ver": "1.0.3",
+      "uuid": "f0947997-7184-4c0b-8d07-11943f98ac49",
+      "rawTextureUuid": "b32780bb-0af0-4713-a830-c039badfe402",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -15.5,
+      "trimX": 17,
+      "trimY": 37,
+      "width": 293,
+      "height": 288,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

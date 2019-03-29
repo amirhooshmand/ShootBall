@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "9d1d69ec-b45c-4da1-8897-1d0fdb33c3db",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_sepahan_navidkia": {
+      "ver": "1.0.3",
+      "uuid": "6a3e7a62-3530-48c1-b37e-f077e5df4916",
+      "rawTextureUuid": "9d1d69ec-b45c-4da1-8897-1d0fdb33c3db",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -35.5,
+      "trimX": 17,
+      "trimY": 77,
+      "width": 293,
+      "height": 248,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

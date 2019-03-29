@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "bdeb145d-ccdf-4409-aedd-436222b262df",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_sepahan_keyrosh": {
+      "ver": "1.0.3",
+      "uuid": "5e135b71-8a0b-4c23-b785-487349af59b1",
+      "rawTextureUuid": "bdeb145d-ccdf-4409-aedd-436222b262df",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -21.5,
+      "trimX": 17,
+      "trimY": 49,
+      "width": 293,
+      "height": 276,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

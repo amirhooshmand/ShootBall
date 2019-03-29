@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "89dce775-9a1c-4232-8a1b-4bed2ac3cc75",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_mashin_yousefi": {
+      "ver": "1.0.3",
+      "uuid": "d0070e81-b1b0-40fe-9984-31f9b5f0a495",
+      "rawTextureUuid": "89dce775-9a1c-4232-8a1b-4bed2ac3cc75",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -20.5,
+      "trimX": 17,
+      "trimY": 47,
+      "width": 293,
+      "height": 278,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

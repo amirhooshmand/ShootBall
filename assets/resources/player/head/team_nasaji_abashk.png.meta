@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "dbb84330-6cbb-4d28-92e8-3915eb6c97f4",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_nasaji_abashk": {
+      "ver": "1.0.3",
+      "uuid": "7b00d8a0-2a6f-4c8d-af91-0f7c98274909",
+      "rawTextureUuid": "dbb84330-6cbb-4d28-92e8-3915eb6c97f4",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -20.5,
+      "trimX": 17,
+      "trimY": 47,
+      "width": 293,
+      "height": 278,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

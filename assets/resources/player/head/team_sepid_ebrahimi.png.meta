@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "f336bb73-e7c3-4756-bbb6-a8d698f54dfc",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_sepid_ebrahimi": {
+      "ver": "1.0.3",
+      "uuid": "fdc06d51-30bb-4d8e-a3fe-acb1fc7d857e",
+      "rawTextureUuid": "f336bb73-e7c3-4756-bbb6-a8d698f54dfc",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -17.5,
+      "trimX": 17,
+      "trimY": 41,
+      "width": 293,
+      "height": 284,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

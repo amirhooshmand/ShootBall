@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "72fb61d0-be4b-4add-8351-dc0e2a879806",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_pers_siamak": {
+      "ver": "1.0.3",
+      "uuid": "c6654e8b-323a-41a9-943a-ce3ed96203c2",
+      "rawTextureUuid": "72fb61d0-be4b-4add-8351-dc0e2a879806",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -15.5,
+      "trimX": 17,
+      "trimY": 37,
+      "width": 293,
+      "height": 288,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

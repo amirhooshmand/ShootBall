@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "40b43449-2888-4a75-9232-53add71a145c",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_mashin_GK": {
+      "ver": "1.0.3",
+      "uuid": "c239fec9-df6c-43f8-8483-51472bc965aa",
+      "rawTextureUuid": "40b43449-2888-4a75-9232-53add71a145c",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -35.5,
+      "trimX": 17,
+      "trimY": 77,
+      "width": 293,
+      "height": 248,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

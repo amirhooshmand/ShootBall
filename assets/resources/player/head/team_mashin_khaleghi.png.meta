@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "913c5dd3-6472-4986-acaf-a5933a34a5b9",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_mashin_khaleghi": {
+      "ver": "1.0.3",
+      "uuid": "d7d748e9-e302-46eb-a81c-9909d5507515",
+      "rawTextureUuid": "913c5dd3-6472-4986-acaf-a5933a34a5b9",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -23.5,
+      "trimX": 17,
+      "trimY": 53,
+      "width": 293,
+      "height": 272,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

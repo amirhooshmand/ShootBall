@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "fd78624e-5225-4d6f-845d-44bd8bffdcb0",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_sepid_GK": {
+      "ver": "1.0.3",
+      "uuid": "722c9404-6a21-497a-8bb0-000824ebde0a",
+      "rawTextureUuid": "fd78624e-5225-4d6f-845d-44bd8bffdcb0",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": -17.5,
+      "trimX": 17,
+      "trimY": 41,
+      "width": 292,
+      "height": 284,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

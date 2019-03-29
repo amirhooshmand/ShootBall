@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "e5abd980-310c-4cb7-a067-22bb65603b6e",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_zob_hadadi": {
+      "ver": "1.0.3",
+      "uuid": "505dc779-59af-49bc-80bb-81b077a3207f",
+      "rawTextureUuid": "e5abd980-310c-4cb7-a067-22bb65603b6e",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -18,
+      "trimX": 17,
+      "trimY": 42,
+      "width": 293,
+      "height": 283,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

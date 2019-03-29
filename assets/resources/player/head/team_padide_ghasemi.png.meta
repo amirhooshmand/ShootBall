@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "9935f188-ede7-416e-8951-5f9456367c36",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_padide_ghasemi": {
+      "ver": "1.0.3",
+      "uuid": "ede36aa4-1939-4edd-b3ad-9f4cc32e6565",
+      "rawTextureUuid": "9935f188-ede7-416e-8951-5f9456367c36",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -17.5,
+      "trimX": 17,
+      "trimY": 41,
+      "width": 293,
+      "height": 284,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

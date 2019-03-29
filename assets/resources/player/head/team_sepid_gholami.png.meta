@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "4083877f-5432-4612-a95d-100f84d87130",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_sepid_gholami": {
+      "ver": "1.0.3",
+      "uuid": "f55c023a-cb41-489c-a93e-c7a0afcb01df",
+      "rawTextureUuid": "4083877f-5432-4612-a95d-100f84d87130",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -17.5,
+      "trimX": 17,
+      "trimY": 41,
+      "width": 293,
+      "height": 284,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

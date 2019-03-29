@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "df0c40ea-d7b3-4260-98e4-9c0583fd0639",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_peykan_GK": {
+      "ver": "1.0.3",
+      "uuid": "4d239102-9768-4a52-bd0b-1f92b6d99305",
+      "rawTextureUuid": "df0c40ea-d7b3-4260-98e4-9c0583fd0639",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": -17.5,
+      "trimX": 17,
+      "trimY": 41,
+      "width": 292,
+      "height": 284,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

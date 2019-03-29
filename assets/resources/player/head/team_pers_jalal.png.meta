@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "525941e6-66a9-466d-b6a6-1f8a45f5031c",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "team_pers_jalal": {
+      "ver": "1.0.3",
+      "uuid": "001e6e1f-aecf-4554-930b-97cd99d54b09",
+      "rawTextureUuid": "525941e6-66a9-466d-b6a6-1f8a45f5031c",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": -35.5,
+      "trimX": 17,
+      "trimY": 77,
+      "width": 293,
+      "height": 248,
+      "rawWidth": 326,
+      "rawHeight": 331,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
