@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "4ec84bc3-9d50-46c3-b0ee-61cc78b63fd2",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "flag_abadan": {
+      "ver": "1.0.3",
+      "uuid": "21eb5d75-d583-4282-9d65-6a8eb107b1ee",
+      "rawTextureUuid": "4ec84bc3-9d50-46c3-b0ee-61cc78b63fd2",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": 0,
+      "trimX": 9,
+      "trimY": 3,
+      "width": 1283,
+      "height": 354,
+      "rawWidth": 1300,
+      "rawHeight": 360,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

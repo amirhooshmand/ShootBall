@@ -37,14 +37,14 @@
         "__id__": 7
       },
       {
-        "__id__": 25
+        "__id__": 26
       },
       {
-        "__id__": 26
+        "__id__": 27
       }
     ],
     "_prefab": {
-      "__id__": 27
+      "__id__": 28
     },
     "_opacity": 255,
     "_color": {
@@ -346,8 +346,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 548,
-      "height": 77
+      "width": 642,
+      "height": 70
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -414,7 +414,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 552,
+      "width": 642,
       "height": 612
     },
     "_anchorPoint": {
@@ -424,7 +424,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 0,
+      "x": 1,
       "y": -109,
       "z": 0
     },
@@ -488,8 +488,8 @@
     "_enabled": true,
     "_layoutSize": {
       "__type__": "cc.Size",
-      "width": 548,
-      "height": 77
+      "width": 642,
+      "height": 70
     },
     "_resize": 1,
     "_N$layoutType": 2,
@@ -705,10 +705,13 @@
       },
       {
         "__id__": 22
+      },
+      {
+        "__id__": 24
       }
     ],
     "_prefab": {
-      "__id__": 24
+      "__id__": 25
     },
     "_opacity": 255,
     "_color": {
@@ -731,7 +734,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": -237,
-      "y": 419,
+      "y": 417,
       "z": 0
     },
     "_scale": {
@@ -879,6 +882,33 @@
     "customEventData": ""
   },
   {
+    "__type__": "cc.Widget",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 20
+    },
+    "_enabled": true,
+    "alignMode": 1,
+    "_target": null,
+    "_alignFlags": 9,
+    "_left": 48,
+    "_right": 0,
+    "_top": 48,
+    "_bottom": 0,
+    "_verticalCenter": 0,
+    "_horizontalCenter": 0,
+    "_isAbsLeft": true,
+    "_isAbsRight": true,
+    "_isAbsTop": true,
+    "_isAbsBottom": true,
+    "_isAbsHorizontalCenter": true,
+    "_isAbsVerticalCenter": true,
+    "_originalWidth": 0,
+    "_originalHeight": 0,
+    "_id": ""
+  },
+  {
     "__type__": "cc.PrefabInfo",
     "root": {
       "__id__": 1
@@ -899,6 +929,9 @@
     "_enabled": true,
     "matchPrefab": {
       "__uuid__": "f8167403-38bb-4af2-8d34-54625fcf0c8d"
+    },
+    "playMatchPrefab": {
+      "__uuid__": "402f8b06-50d4-45e2-a289-f5ea10c00506"
     },
     "cupSprites": [
       {

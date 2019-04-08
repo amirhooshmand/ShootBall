@@ -28,7 +28,6 @@ cc.Class({
         starter: false,
     },
     start() {
-
         this.node.angle = (this.startRotation + this.endRotation) / 2;
 
         this.flag = false;

@@ -54,9 +54,6 @@ cc.Class({
         xhr.send(arg);                 
         xhr.onreadystatechange = this.xhrCallback;*/
 
-        
-
-
         var url = "http://rubika1.rakhtkan.net/userApi.php";
         var xhr = this.createCORSRequest("POST", url);
         if (!xhr) {

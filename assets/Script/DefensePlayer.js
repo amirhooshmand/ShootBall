@@ -9,7 +9,7 @@ cc.Class({
     start() {
         var self = this;
 
-        cc.loader.loadRes("defence/" + cc.sys.localStorage.getItem("team") + "_0", cc.SpriteFrame, function (err, spriteFrame) {
+        cc.loader.loadRes("defence/" + cc.find("DBStorage").getComponent("DBStorage").getData("team") + "_0", cc.SpriteFrame, function (err, spriteFrame) {
             self.node.getComponent(cc.Sprite).spriteFrame = spriteFrame;
         });
     },
@@ -19,7 +19,7 @@ cc.Class({
         if (other.name.startsWith('Ball')) {
 
             var self = this;
-            cc.loader.loadRes("defence/" + cc.sys.localStorage.getItem("team") + "_1", cc.SpriteFrame, function (err, spriteFrame) {
+            cc.loader.loadRes("defence/" + cc.find("DBStorage").getComponent("DBStorage").getData("team") + "_1", cc.SpriteFrame, function (err, spriteFrame) {
                 self.node.getComponent(cc.Sprite).spriteFrame = spriteFrame;
             });
 
@@ -43,7 +43,7 @@ cc.Class({
 
         if (other.name.startsWith('Ball')) {
             this.schedule(function () {
-                cc.loader.loadRes("defence/" + cc.sys.localStorage.getItem("team") + "_0", cc.SpriteFrame, function (err, spriteFrame) {
+                cc.loader.loadRes("defence/" + cc.find("DBStorage").getComponent("DBStorage").getData("team") + "_0", cc.SpriteFrame, function (err, spriteFrame) {
                     self.node.getComponent(cc.Sprite).spriteFrame = spriteFrame;
                 });
             }, .1, 0);

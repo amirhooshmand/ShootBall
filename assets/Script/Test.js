@@ -23,6 +23,7 @@ cc.Class({
     start () {
         this.videoplayer.play();
     },
+    
     callback: function (event) {
         //event is EventCustom, you can use event.detail to get VideoPlayer component
         var videoplayer = event.detail;

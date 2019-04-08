@@ -21,10 +21,15 @@ cc.Class({
     },
 
     start() {
+
+        //cc.find("DBStorage").getComponent("DBStorage").setData("coin", 5500);
+
+        //cc.log(cc.find("DBStorage").getComponent("DBStorage").getData("coin", 545555));
+
         var teamManagerNode = cc.find("Canvas/TeamManager");
         this.teamManager = teamManagerNode.getComponent("TeamManager");
 
-        for (var j = 0; j < this.teamManager.players.length; j++) {
+        /*for (var j = 0; j < this.teamManager.players.length; j++) {
                 
                 cc.loader.loadRes("player/body/" + this.teamManager.players[j].bodyColor, cc.SpriteFrame, function (err, spriteFrame) {
                 });
@@ -38,24 +43,24 @@ cc.Class({
                 cc.loader.loadRes("logo/" + this.teamManager.players[j].teamID, cc.SpriteFrame, function (err, spriteFrame) {
                 });
             
-        }
+        }*/
 
         this.canvas = cc.find("Canvas");
 
         var bartarCup = cc.find("Canvas/shelf_3/cup_bartar");
         var hazfiCup = cc.find("Canvas/shelf_3/cup_hazfi");
 
-        if(cc.sys.localStorage.getItem(1 + "_detail_" + "week_" + 15) == null)
+        if(cc.find("DBStorage").getComponent("DBStorage").getData(1 + "_detail_" + "week_" + 15) == null)
         {
             bartarCup.getComponent(cc.Sprite).spriteFrame = this.diactiveBartarCup;
             bartarCup.getComponent(cc.Button).interactable = false;
         }
-        if(cc.sys.localStorage.getItem(2 + "_detail_" + "week_" + 30) == null)
+        if(cc.find("DBStorage").getComponent("DBStorage").getData(2 + "_detail_" + "week_" + 30) == null)
         {
             hazfiCup.getComponent(cc.Sprite).spriteFrame = this.diactiveHazfiCup;
             hazfiCup.getComponent(cc.Button).interactable = false;
         }
-        this.setPlayer(cc.sys.localStorage.getItem("team"));
+        this.setPlayer(cc.find("DBStorage").getComponent("DBStorage").getData("team"));
     },
 
     setPlayer: function(selectedteamID)

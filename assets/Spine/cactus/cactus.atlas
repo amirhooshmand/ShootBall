@@ -1,0 +1,82 @@
+
+cactus.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+gol
+  rotate: true
+  xy: 2, 20
+  size: 100, 188
+  orig: 102, 190
+  offset: 1, 1
+  index: -1
+goldun
+  rotate: false
+  xy: 192, 13
+  size: 138, 107
+  orig: 140, 109
+  offset: 1, 1
+  index: -1
+k-1
+  rotate: false
+  xy: 332, 108
+  size: 19, 12
+  orig: 21, 14
+  offset: 1, 1
+  index: -1
+k-2
+  rotate: false
+  xy: 332, 108
+  size: 19, 12
+  orig: 21, 14
+  offset: 1, 1
+  index: -1
+k-8
+  rotate: false
+  xy: 332, 108
+  size: 19, 12
+  orig: 21, 14
+  offset: 1, 1
+  index: -1
+k-3
+  rotate: false
+  xy: 2, 2
+  size: 17, 16
+  orig: 19, 18
+  offset: 1, 1
+  index: -1
+k-4
+  rotate: false
+  xy: 332, 87
+  size: 11, 19
+  orig: 13, 21
+  offset: 1, 1
+  index: -1
+k-5
+  rotate: false
+  xy: 21, 3
+  size: 16, 15
+  orig: 18, 17
+  offset: 1, 1
+  index: -1
+k-6
+  rotate: false
+  xy: 353, 110
+  size: 16, 10
+  orig: 18, 12
+  offset: 1, 1
+  index: -1
+k-9
+  rotate: false
+  xy: 353, 110
+  size: 16, 10
+  orig: 18, 12
+  offset: 1, 1
+  index: -1
+k-7
+  rotate: false
+  xy: 353, 110
+  size: 16, 10
+  orig: 18, 12
+  offset: 1, 1
+  index: -1

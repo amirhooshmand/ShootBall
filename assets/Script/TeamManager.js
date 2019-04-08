@@ -23,7 +23,7 @@ cc.Class({
         });
 
         this.teams.push({
-            name: "پارس جنوبی جم",
+            name: "پارس جم",
             id: 2,
             price: 150
         });
