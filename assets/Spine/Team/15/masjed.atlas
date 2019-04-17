@@ -1,0 +1,71 @@
+
+masjed.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+L-hand
+  rotate: true
+  xy: 2, 42
+  size: 474, 514
+  orig: 479, 519
+  offset: 3, 2
+  index: -1
+R-hand
+  rotate: false
+  xy: 518, 2
+  size: 474, 514
+  orig: 479, 519
+  offset: 3, 2
+  index: -1
+body
+  rotate: false
+  xy: 2, 518
+  size: 559, 422
+  orig: 564, 427
+  offset: 3, 2
+  index: -1
+eye
+  rotate: false
+  xy: 2, 966
+  size: 230, 51
+  orig: 234, 54
+  offset: 2, 1
+  index: -1
+eyebrow
+  rotate: false
+  xy: 234, 942
+  size: 392, 75
+  orig: 396, 78
+  offset: 2, 1
+  index: -1
+mouth
+  rotate: false
+  xy: 628, 863
+  size: 343, 154
+  orig: 346, 158
+  offset: 2, 1
+  index: -1
+
+masjed2.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+head
+  rotate: false
+  xy: 2, 2
+  size: 709, 698
+  orig: 715, 706
+  offset: 4, 4
+  index: -1
+
+masjed3.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+stand
+  rotate: false
+  xy: 2, 2
+  size: 617, 592
+  orig: 622, 597
+  offset: 3, 2
+  index: -1

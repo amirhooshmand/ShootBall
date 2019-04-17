@@ -13,13 +13,13 @@ cc.Class({
         this.teams.push({
             name: "استقلال",
             id: 0,
-            price: 150
+            price: 500
         });
 
         this.teams.push({
-            name: "استقلال خوزستان",
+            name: "استقلال خ",
             id: 1,
-            price: 150
+            price: 0
         });
 
         this.teams.push({
@@ -29,7 +29,7 @@ cc.Class({
         });
 
         this.teams.push({
-            name: "پدیده",
+            name: "    پدیده",
             id: 3,
             price: 150
         });
@@ -55,7 +55,8 @@ cc.Class({
         this.teams.push({
             name: "ذوب آهن",
             id: 7,
-            price: 150
+            price: 150,
+            numberColor: "black"
         });
 
         this.teams.push({
@@ -67,7 +68,8 @@ cc.Class({
         this.teams.push({
             name: "سپاهان",
             id: 9,
-            price: 150
+            price: 150,
+            numberColor: "black"
         });
 
         this.teams.push({
@@ -85,7 +87,8 @@ cc.Class({
         this.teams.push({
             name: "فولاد",
             id: 12,
-            price: 150
+            price: 150,
+            numberColor: "black"
         });
 
         this.teams.push({

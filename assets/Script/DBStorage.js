@@ -9,21 +9,27 @@ cc.Class({
     onLoad() {
         this.data = cc.sys.localStorage.getItem("data");
         if(this.data == null) this.data = "{}";
-        cc.log(this.data);
+
+        this.resetAll();
+        //if(this.getItem("coin", -1) == -1)
+            //this.setItem("coin", 4987);
+
+        //cc.log(this.data);
+
     },
 
-    reset:function()
+    resetAll:function()
     {
         cc.sys.localStorage.setItem("data", "{}");
         this.data = "{}";
     },
 
-    getData: function (key) {
+    getItem: function (key) {
         var obj = JSON.parse(this.data);
         return obj[key];
     },
 
-    getData: function (key, defaultValue) {
+    getItem: function (key, defaultValue) {
         var obj = JSON.parse(this.data);
         var out = obj[key];
         if (out == null) out = defaultValue;

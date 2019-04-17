@@ -40,20 +40,23 @@
       },
       {
         "__id__": 136
+      },
+      {
+        "__id__": 142
       }
     ],
     "_active": true,
     "_level": 1,
     "_components": [
       {
-        "__id__": 142
+        "__id__": 152
       },
       {
-        "__id__": 143
+        "__id__": 153
       }
     ],
     "_prefab": {
-      "__id__": 144
+      "__id__": 154
     },
     "_opacity": 255,
     "_color": {
@@ -1426,7 +1429,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "ShopItem",
+    "_name": "ShopItem1",
     "_objFlags": 0,
     "_parent": {
       "__id__": 38
@@ -1990,7 +1993,7 @@
     "_useOriginalSize": false,
     "_string": "از بین بردن تمام رقبا در زمین",
     "_N$string": "از بین بردن تمام رقبا در زمین",
-    "_fontSize": 13,
+    "_fontSize": 14,
     "_lineHeight": 15,
     "_enableWrapText": true,
     "_N$file": {
@@ -2224,7 +2227,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "ShopItem",
+    "_name": "ShopItem2",
     "_objFlags": 0,
     "_parent": {
       "__id__": 38
@@ -2788,7 +2791,7 @@
     "_useOriginalSize": false,
     "_string": "تمام موانع را نابود کنید",
     "_N$string": "تمام موانع را نابود کنید",
-    "_fontSize": 13,
+    "_fontSize": 14,
     "_lineHeight": 15,
     "_enableWrapText": true,
     "_N$file": {
@@ -3022,7 +3025,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "ShopItem",
+    "_name": "ShopItem3",
     "_objFlags": 0,
     "_parent": {
       "__id__": 38
@@ -3586,7 +3589,7 @@
     "_useOriginalSize": false,
     "_string": "دریافت  توپ اضافه",
     "_N$string": "دریافت  توپ اضافه",
-    "_fontSize": 13,
+    "_fontSize": 14,
     "_lineHeight": 15,
     "_enableWrapText": true,
     "_N$file": {
@@ -3820,7 +3823,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "ShopItem",
+    "_name": "ShopItem4",
     "_objFlags": 0,
     "_parent": {
       "__id__": 38
@@ -4384,7 +4387,7 @@
     "_useOriginalSize": false,
     "_string": "یخ زدن دروازه بان در یه دور بازی",
     "_N$string": "یخ زدن دروازه بان در یه دور بازی",
-    "_fontSize": 13,
+    "_fontSize": 14,
     "_lineHeight": 15,
     "_enableWrapText": true,
     "_N$file": {
@@ -4717,7 +4720,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "New Button",
+    "_name": "Start Button",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -4949,8 +4952,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 70,
-      "height": 70
+      "width": 50,
+      "height": 50
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -4959,8 +4962,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -237,
-      "y": 417,
+      "x": -270,
+      "y": 450,
       "z": 0
     },
     "_scale": {
@@ -5102,9 +5105,9 @@
     "alignMode": 1,
     "_target": null,
     "_alignFlags": 9,
-    "_left": 48,
-    "_right": 0,
-    "_top": 48,
+    "_left": 25,
+    "_right": 565,
+    "_top": 25,
     "_bottom": 859,
     "_verticalCenter": 0,
     "_horizontalCenter": 0,
@@ -5114,7 +5117,7 @@
     "_isAbsBottom": true,
     "_isAbsHorizontalCenter": true,
     "_isAbsVerticalCenter": true,
-    "_originalWidth": 0,
+    "_originalWidth": 50,
     "_originalHeight": 70,
     "_id": ""
   },
@@ -5127,6 +5130,339 @@
       "__uuid__": "402f8b06-50d4-45e2-a289-f5ea10c00506"
     },
     "fileId": "858P53H5ROjIiBh9ZCqON3",
+    "sync": false
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "coin_box",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [
+      {
+        "__id__": 143
+      }
+    ],
+    "_active": true,
+    "_level": 2,
+    "_components": [
+      {
+        "__id__": 146
+      },
+      {
+        "__id__": 147
+      },
+      {
+        "__id__": 148
+      },
+      {
+        "__id__": 149
+      }
+    ],
+    "_prefab": {
+      "__id__": 151
+    },
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 213,
+      "height": 51
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": -1,
+      "y": 449.5,
+      "z": 0
+    },
+    "_scale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_quat": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_zIndex": 0,
+    "_is3DNode": false,
+    "groupIndex": 0,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "Coin Label",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 142
+    },
+    "_children": [],
+    "_active": true,
+    "_level": 3,
+    "_components": [
+      {
+        "__id__": 144
+      }
+    ],
+    "_prefab": {
+      "__id__": 145
+    },
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 130.4,
+      "height": 30
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": 6.2,
+      "y": -2.7,
+      "z": 0
+    },
+    "_scale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_quat": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_zIndex": 0,
+    "_is3DNode": false,
+    "groupIndex": 0,
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.Label",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 143
+    },
+    "_enabled": true,
+    "_srcBlendFactor": 1,
+    "_dstBlendFactor": 771,
+    "_useOriginalSize": false,
+    "_string": "0",
+    "_N$string": "0",
+    "_fontSize": 30,
+    "_lineHeight": 30,
+    "_enableWrapText": true,
+    "_N$file": {
+      "__uuid__": "2296813c-bf0a-4445-b1ab-e4a35c5e4f3c"
+    },
+    "_isSystemFontUsed": false,
+    "_spacingX": 0,
+    "_N$horizontalAlign": 1,
+    "_N$verticalAlign": 1,
+    "_N$fontFamily": "Arial",
+    "_N$overflow": 1,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 1
+    },
+    "asset": {
+      "__uuid__": "402f8b06-50d4-45e2-a289-f5ea10c00506"
+    },
+    "fileId": "15nHa2rZRGfKGDTboJAFeV",
+    "sync": false
+  },
+  {
+    "__type__": "cc.Sprite",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 142
+    },
+    "_enabled": true,
+    "_srcBlendFactor": 770,
+    "_dstBlendFactor": 771,
+    "_spriteFrame": {
+      "__uuid__": "d79a7e8e-5ebf-4678-b460-b685db69ad95"
+    },
+    "_type": 0,
+    "_sizeMode": 0,
+    "_fillType": 0,
+    "_fillCenter": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_fillStart": 0,
+    "_fillRange": 0,
+    "_isTrimmedMode": true,
+    "_state": 0,
+    "_atlas": null,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.Widget",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 142
+    },
+    "_enabled": true,
+    "alignMode": 1,
+    "_target": null,
+    "_alignFlags": 1,
+    "_left": 0,
+    "_right": 0,
+    "_top": 25,
+    "_bottom": 0,
+    "_verticalCenter": 0,
+    "_horizontalCenter": 0,
+    "_isAbsLeft": true,
+    "_isAbsRight": true,
+    "_isAbsTop": true,
+    "_isAbsBottom": true,
+    "_isAbsHorizontalCenter": true,
+    "_isAbsVerticalCenter": true,
+    "_originalWidth": 0,
+    "_originalHeight": 0,
+    "_id": ""
+  },
+  {
+    "__type__": "ca245GmtUlOvr/ZLONl2joU",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 142
+    },
+    "_enabled": true,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.Button",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 142
+    },
+    "_enabled": true,
+    "duration": 0.1,
+    "zoomScale": 1.1,
+    "clickEvents": [
+      {
+        "__id__": 150
+      }
+    ],
+    "_N$interactable": true,
+    "_N$enableAutoGrayEffect": false,
+    "_N$transition": 3,
+    "transition": 3,
+    "_N$normalColor": {
+      "__type__": "cc.Color",
+      "r": 214,
+      "g": 214,
+      "b": 214,
+      "a": 255
+    },
+    "_N$pressedColor": {
+      "__type__": "cc.Color",
+      "r": 211,
+      "g": 211,
+      "b": 211,
+      "a": 255
+    },
+    "pressedColor": {
+      "__type__": "cc.Color",
+      "r": 211,
+      "g": 211,
+      "b": 211,
+      "a": 255
+    },
+    "_N$hoverColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "hoverColor": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_N$disabledColor": {
+      "__type__": "cc.Color",
+      "r": 124,
+      "g": 124,
+      "b": 124,
+      "a": 255
+    },
+    "_N$normalSprite": null,
+    "_N$pressedSprite": null,
+    "pressedSprite": null,
+    "_N$hoverSprite": null,
+    "hoverSprite": null,
+    "_N$disabledSprite": null,
+    "_N$target": null,
+    "_id": ""
+  },
+  {
+    "__type__": "cc.ClickEvent",
+    "target": {
+      "__id__": 1
+    },
+    "component": "",
+    "_componentId": "2e198vTLgpNLoYKKn6r8p8m",
+    "handler": "goToShop",
+    "customEventData": ""
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 1
+    },
+    "asset": {
+      "__uuid__": "402f8b06-50d4-45e2-a289-f5ea10c00506"
+    },
+    "fileId": "42xChv5dFFFpNNUTteI6VT",
     "sync": false
   },
   {
@@ -5163,6 +5499,9 @@
       "__id__": 1
     },
     "_enabled": true,
+    "StorePrefab": {
+      "__uuid__": "1609dc0f-8e74-4d9a-8395-ded078e5097a"
+    },
     "homeTeam": 5,
     "awayTeam": 6,
     "leagueName": "",

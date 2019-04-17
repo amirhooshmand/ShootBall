@@ -1,0 +1,71 @@
+
+saipa.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+L-hand
+  rotate: true
+  xy: 2, 43
+  size: 475, 516
+  orig: 479, 519
+  offset: 3, 1
+  index: -1
+R-hand
+  rotate: false
+  xy: 520, 2
+  size: 475, 516
+  orig: 479, 519
+  offset: 3, 1
+  index: -1
+body
+  rotate: false
+  xy: 2, 520
+  size: 559, 422
+  orig: 564, 427
+  offset: 3, 2
+  index: -1
+eye
+  rotate: false
+  xy: 2, 968
+  size: 230, 51
+  orig: 234, 54
+  offset: 2, 1
+  index: -1
+eyebrow
+  rotate: false
+  xy: 234, 944
+  size: 392, 75
+  orig: 396, 78
+  offset: 2, 1
+  index: -1
+mouth
+  rotate: false
+  xy: 628, 896
+  size: 330, 123
+  orig: 346, 158
+  offset: 8, 1
+  index: -1
+
+saipa2.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+head
+  rotate: false
+  xy: 2, 2
+  size: 711, 700
+  orig: 715, 706
+  offset: 3, 4
+  index: -1
+
+saipa3.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+stand
+  rotate: false
+  xy: 2, 2
+  size: 617, 592
+  orig: 622, 597
+  offset: 3, 2
+  index: -1

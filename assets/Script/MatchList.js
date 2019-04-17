@@ -63,9 +63,10 @@ cc.Class({
 
         var currentLvl = 1;
         this.lastPlayer = null;
-       cc.find("DBStorage").getComponent("DBStorage").setItem(this.cup + "_" + "week_" + weekCount, 1);
+        cc.find("DBStorage").getComponent("DBStorage").setItem(this.cup + "_" + "week_" + weekCount, 1);
+        cc.find("DBStorage").getComponent("DBStorage").setItem(this.cup + "_" + "week_" + 1, 1);
         for (var i = 0; i < this.rubicup.length; i++) {
-            if (this.rubicup[i].awayID != cc.find("DBStorage").getComponent("DBStorage").getData("team")) {
+            if (this.rubicup[i].awayID != cc.find("DBStorage").getComponent("DBStorage").getItem("team")) {
 
                 weekCount++;
 
@@ -74,7 +75,7 @@ cc.Class({
                 this.matchItems.push(match);
 
                 match.getChildByName("WeekLbl").getComponent(cc.Label).string = " هفته " + weekCount;
-                cc.loader.loadRes("logo/" + cc.find("DBStorage").getComponent("DBStorage").getData("team"), cc.SpriteFrame, function (err, spriteFrame) {
+                cc.loader.loadRes("logo/" + cc.find("DBStorage").getComponent("DBStorage").getItem("team"), cc.SpriteFrame, function (err, spriteFrame) {
                     match.getChildByName("score_box").getChildByName("homeLogo").getComponent(cc.Sprite).spriteFrame = spriteFrame;
                 });
 
@@ -85,15 +86,15 @@ cc.Class({
                 var player = match.getChildByName("Player")
                 this.setPlayer(player);
 
-                if (cc.find("DBStorage").getComponent("DBStorage").getData(this.cup + "_" + "week_" + (weekCount - 1)) == 1) {
+                if (cc.find("DBStorage").getComponent("DBStorage").getItem(this.cup + "_" + "week_" + (weekCount - 1)) == 1) {
                     if (this.lastPlayer != null)
                         this.activePlayer(this.lastPlayer, false);
 
-                    if (cc.find("DBStorage").getComponent("DBStorage").getData(this.cup + "_detail_" + "week_" + weekCount) == null) {
+                    if (cc.find("DBStorage").getComponent("DBStorage").getItem(this.cup + "_detail_" + "week_" + weekCount) == null) {
                         match.getChildByName("score_box").getChildByName("ResultLbl").getComponent(cc.Label).string = "شروع";
                         match.getChildByName("score_box").color = cc.Color.YELLOW;
                     } else
-                        match.getChildByName("score_box").getChildByName("ResultLbl").getComponent(cc.Label).string = cc.find("DBStorage").getComponent("DBStorage").getData(this.cup + "_detail_" + "week_" + weekCount);
+                        match.getChildByName("score_box").getChildByName("ResultLbl").getComponent(cc.Label).string = cc.find("DBStorage").getComponent("DBStorage").getItem(this.cup + "_detail_" + "week_" + weekCount);
 
                     this.lastPlayer = player;
                     currentLvl = weekCount;
@@ -123,7 +124,7 @@ cc.Class({
 
         var res = customEventData.split("&");
 
-        if (cc.find("DBStorage").getComponent("DBStorage").getData(this.cup + "_" + "week_" + (parseInt(res[0]) - 1)) == 1) {
+        if (cc.find("DBStorage").getComponent("DBStorage").getItem(this.cup + "_" + "week_" + (parseInt(res[0]) - 1)) == 1) {
             this.activePlayer(this.lastPlayer, false);
 
             var player = this.matchItems[parseInt(res[0]) - 1].getChildByName("Player");
@@ -135,7 +136,7 @@ cc.Class({
             canvas.addChild(playMatch);
 
             var pm = playMatch.getComponent("PlayMatch");
-            pm.homeTeam = cc.find("DBStorage").getComponent("DBStorage").getData("team");
+            pm.homeTeam = cc.find("DBStorage").getComponent("DBStorage").getItem("team");
             pm.awayTeam = parseInt(res[1]);
             pm.leagueName = "روبیکاپ      ";
             pm.weekName = "هفته " + parseInt(res[0]);
@@ -145,7 +146,11 @@ cc.Class({
 
     setPlayer: function (player) {
         for (var j = 0; j < this.teamManager.players.length; j++) {
-            if (this.teamManager.players[j].teamID == cc.find("DBStorage").getComponent("DBStorage").getData("team")) {
+            if (this.teamManager.players[j].teamID == cc.find("DBStorage").getComponent("DBStorage").getItem("team")) {
+
+                if (this.teamManager.teams[cc.find("DBStorage").getComponent("DBStorage").getItem("team")].numberColor == "black")
+                    player.getChildByName("jersey").getChildByName("numberLbl").color = cc.Color.BLACK;
+
                 //var player = cc.find("Canvas/shelf_2/Player");
                 player.getChildByName("jersey").getChildByName("numberLbl").getComponent(cc.Label).string = this.teamManager.players[j].number;
 

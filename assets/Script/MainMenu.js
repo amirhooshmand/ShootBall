@@ -6,6 +6,10 @@ cc.Class({
             default: null,
             type: cc.Prefab,
         },
+        StorePrefab: {
+            default: null,
+            type: cc.Prefab,
+        },
         selectMatchPrefab: {
             default: null,
             type: cc.Prefab,
@@ -24,7 +28,7 @@ cc.Class({
 
         //cc.find("DBStorage").getComponent("DBStorage").setData("coin", 5500);
 
-        //cc.log(cc.find("DBStorage").getComponent("DBStorage").getData("coin", 545555));
+        //cc.log(cc.find("DBStorage").getComponent("DBStorage").getItem("coin", 545555));
 
         var teamManagerNode = cc.find("Canvas/TeamManager");
         this.teamManager = teamManagerNode.getComponent("TeamManager");
@@ -50,40 +54,23 @@ cc.Class({
         var bartarCup = cc.find("Canvas/shelf_3/cup_bartar");
         var hazfiCup = cc.find("Canvas/shelf_3/cup_hazfi");
 
-        if(cc.find("DBStorage").getComponent("DBStorage").getData(1 + "_detail_" + "week_" + 15) == null)
+        if(cc.find("DBStorage").getComponent("DBStorage").getItem(1 + "_detail_" + "week_" + 15) == null)
         {
             bartarCup.getComponent(cc.Sprite).spriteFrame = this.diactiveBartarCup;
             bartarCup.getComponent(cc.Button).interactable = false;
         }
-        if(cc.find("DBStorage").getComponent("DBStorage").getData(2 + "_detail_" + "week_" + 30) == null)
+        if(cc.find("DBStorage").getComponent("DBStorage").getItem(2 + "_detail_" + "week_" + 30) == null)
         {
             hazfiCup.getComponent(cc.Sprite).spriteFrame = this.diactiveHazfiCup;
             hazfiCup.getComponent(cc.Button).interactable = false;
         }
-        this.setPlayer(cc.find("DBStorage").getComponent("DBStorage").getData("team"));
+        this.setPlayer(cc.find("DBStorage").getComponent("DBStorage").getItem("team"));
     },
 
     setPlayer: function(selectedteamID)
     {
-        for (var j = 0; j < this.teamManager.players.length; j++) {
-            if (this.teamManager.players[j].teamID ==  selectedteamID) {
-                var player = cc.find("Canvas/shelf_2/Player");
-                player.getChildByName("jersey").getChildByName("numberLbl").getComponent(cc.Label).string = this.teamManager.players[j].number;
-                
-                cc.loader.loadRes("player/body/" + this.teamManager.players[j].bodyColor, cc.SpriteFrame, function (err, spriteFrame) {
-                    player.getChildByName("body").getComponent(cc.Sprite).spriteFrame = spriteFrame;
-                });
-
-                cc.loader.loadRes("player/head/" + this.teamManager.players[j].headName, cc.SpriteFrame, function (err, spriteFrame) {
-                    player.getChildByName("head").getComponent(cc.Sprite).spriteFrame = spriteFrame;
-                });
-
-                cc.loader.loadRes("jersey/" + this.teamManager.players[j].teamID, cc.SpriteFrame, function (err, spriteFrame) {
-                    player.getChildByName("jersey").getComponent(cc.Sprite).spriteFrame = spriteFrame;
-                });
-                return;
-            }
-        }
+        var playerSpine = cc.find("Canvas/shelf_2/Player/PlayerSpine").getComponent("PlayerOnMenu");
+        playerSpine.setPlayer(selectedteamID);
     },
 
 
@@ -91,7 +78,8 @@ cc.Class({
 
     },
     storeClick: function () {
-
+        const storeNode = cc.instantiate(this.StorePrefab);
+        this.canvas.addChild(storeNode);
     },
     teamSelectClick: function () {
 

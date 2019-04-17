@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "b4da3af4-5ade-4b49-ae02-b252a6dc7c17",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "estegh-kh3": {
+      "ver": "1.0.3",
+      "uuid": "a4c5af77-d991-4963-a58e-a91ee6bcb9ba",
+      "rawTextureUuid": "b4da3af4-5ade-4b49-ae02-b252a6dc7c17",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -201.5,
+      "offsetY": 214,
+      "trimX": 2,
+      "trimY": 2,
+      "width": 617,
+      "height": 592,
+      "rawWidth": 1024,
+      "rawHeight": 1024,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
