@@ -17,6 +17,12 @@ cc.Class({
     },
 
     start() {
+
+        //cc.log(cc.view.getFrameSize().height);
+        //cc.log(this.node.height);
+
+        //this.node.height = cc.find("Canvas").scaleY * cc.view.getFrameSize().height;
+
         var teamManagerNode = cc.find("Canvas/TeamManager");
         this.teamManager = teamManagerNode.getComponent("TeamManager");
 

@@ -11,17 +11,25 @@ cc.Class({
     
     start()
     {
-        this.max = 800;
+        this.max = 1000;
+        this.min = 400;
     },
 
     onCollisionEnter: function (other, self) {
         
-        if(other.name.startsWith('Ball'))
+        if(other.name.startsWith('Ball') && other.tag == 1)
         {
             var velocity = other.getComponent(cc.RigidBody).linearVelocity;
-            if(Math.abs(velocity.x) < this.max || Math.abs(velocity.y) < this.max)
+
+            var physicsCircleCollider = other.getComponent(cc.PhysicsPolygonCollider);
+            if(Math.abs(velocity.y) < this.min && this.power <=1)
             {
-                var physicsCircleCollider = other.getComponent(cc.PhysicsCircleCollider);
+                this.ballRestitution = physicsCircleCollider.restitution;
+                physicsCircleCollider.restitution = 2;
+                physicsCircleCollider.apply();
+            }
+            else if(Math.abs(velocity.x) < this.max || Math.abs(velocity.y) < this.max)
+            {
                 
                 this.ballRestitution = physicsCircleCollider.restitution;
                 physicsCircleCollider.restitution = this.power;
@@ -44,11 +52,11 @@ cc.Class({
     
     onCollisionExit: function (other, self) {
         
-        if(other.name.startsWith('Ball'))
+        if(other.name.startsWith('Ball') && other.tag == 1)
         {
-            var physicsCircleCollider = other.getComponent(cc.PhysicsCircleCollider);
+            var physicsCircleCollider = other.getComponent(cc.PhysicsPolygonCollider);
             
-            physicsCircleCollider.restitution = 1;
+            physicsCircleCollider.restitution = this.ballRestitution;
             physicsCircleCollider.apply();
             cc.log("DefensePlayer: " + other.name);
         } 

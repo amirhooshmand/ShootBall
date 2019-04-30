@@ -15,7 +15,7 @@ cc.Class({
 
     initBall: function()
     {
-        var parent = cc.find("Canvas/BallParent");
+        var parent = cc.find("Canvas/Environment/BallParent");
 
         this.newBall(parent, this.node.position);
     },

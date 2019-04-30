@@ -8,18 +8,17 @@ cc.Class({
 
     onLoad() {
         this.data = cc.sys.localStorage.getItem("data");
-        if(this.data == null) this.data = "{}";
+        if (this.data == null) this.data = "{}";
 
-        this.resetAll();
+        //this.resetAll();
         //if(this.getItem("coin", -1) == -1)
-            //this.setItem("coin", 4987);
+        //this.setItem("coin", 4987);
 
         //cc.log(this.data);
 
     },
 
-    resetAll:function()
-    {
+    resetAll: function () {
         cc.sys.localStorage.setItem("data", "{}");
         this.data = "{}";
     },
@@ -45,7 +44,10 @@ cc.Class({
         this.data = data;
 
         return data;
+    },
 
+    save: function () {
+        
     }
 
 });

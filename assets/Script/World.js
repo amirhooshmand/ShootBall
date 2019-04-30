@@ -54,7 +54,7 @@ cc.Class({
         xhr.send(arg);                 
         xhr.onreadystatechange = this.xhrCallback;*/
 
-        var url = "http://rubika1.rakhtkan.net/userApi.php";
+        /*var url = "http://rubika1.rakhtkan.net/userApi.php";
         var xhr = this.createCORSRequest("POST", url);
         if (!xhr) {
           cc.log('CORS not supported');
@@ -63,7 +63,7 @@ cc.Class({
         xhr.setRequestHeader( "Content-Type", "application/x-www-form-urlencoded" );
         var arg = "app_token=NGDLPYOULRCSIQJBFSGITSTGCLQQYQDBEPDAZYAYBQFWOIOYZGRLOIHUNXJDHXWU&user_token=";// + androidApp.getUserToken();//"2505wjffrqluhzhzitcbhwbpfqxogmqn";
         xhr.send(arg);                 
-        xhr.onreadystatechange = this.xhrCallback;
+        xhr.onreadystatechange = this.xhrCallback;*/  
      },
 
      xhrCallback: function (event) {

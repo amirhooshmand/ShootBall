@@ -1,0 +1,33 @@
+
+load.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ball
+  rotate: false
+  xy: 0, 0
+  size: 138, 138
+  orig: 140, 140
+  offset: 1, 1
+  index: -1
+body
+  rotate: true
+  xy: 447, 33
+  size: 209, 243
+  orig: 211, 245
+  offset: 1, 1
+  index: -1
+hands
+  rotate: false
+  xy: 0, 138
+  size: 447, 104
+  orig: 449, 106
+  offset: 1, 1
+  index: -1
+head
+  rotate: false
+  xy: 690, 32
+  size: 242, 210
+  orig: 244, 212
+  offset: 1, 1
+  index: -1

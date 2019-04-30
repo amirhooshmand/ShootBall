@@ -33,6 +33,10 @@ cc.Class({
         this.currentTime = 0;
     },   
 
+    stop: function(){
+
+    },
+
      update (dt) {
          this.elapsedTime += dt;
          if(this.elapsedTime > this.currentTime + this.duration)
@@ -44,11 +48,13 @@ cc.Class({
             if(this.right == true)
             {
                 var action = cc.moveTo(this.duration, this.endPos.x, this.endPos.y);
+                action.tag = 1;
                 this.right = false;
             }
             else
             {
                 var action = cc.moveTo(this.duration, this.startPos.x, this.startPos.y);
+                action.tag = 1;
                 this.right = true;
             }
 

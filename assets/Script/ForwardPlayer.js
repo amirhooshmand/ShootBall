@@ -28,21 +28,33 @@ cc.Class({
         starter: false,
     },
     start() {
+        this.gameManager = cc.find("Canvas/GameManager").getComponent("GameManager");
+
         this.node.angle = (this.startRotation + this.endRotation) / 2;
 
         this.flag = false;
         this.ball = false;
         this.lock = this.starter;
-        
+
         this.childNode = this.node.getChildByName("Arrow");
         this.aimNode = this.node.getChildByName("Aim");
         this.childNode.active = false;
         this.aimNode.active = false;
 
+        this.sprite = this.node.getChildByName("player").getComponent(cc.Sprite);
+        
         cc.Canvas.instance.node.on(cc.Node.EventType.TOUCH_START, function (event) {
-            if (this.ball && !this.lock)
+            if (this.ball && !this.lock) {
                 this.onShoot();
+                if (this.starter) {
+                    this.gameManager.shoot();
+                }
+            }
         }, this);
+
+        if (this.starter) this.gameManager = cc.find("Canvas/GameManager").getComponent("GameManager");
+        
+        
     },
 
     findPointOnCircle: function (originX, originY, radius, angleRadians) {
@@ -59,7 +71,7 @@ cc.Class({
             if (this.node.angle >= this.startRotation)
                 this.flag = false;
         }
-        else if(!this.lock){
+        else if (!this.lock) {
             this.node.angle -= dt * this.speed;
             if (this.node.angle <= this.endRotation)
                 this.flag = true;
@@ -69,7 +81,8 @@ cc.Class({
     },
 
     onCollisionEnter: function (other, self) {
-        if (other.name.startsWith("Ball") && !this.ball) {
+
+        if (other.name.startsWith("Ball") && other.tag == 0 && !this.ball) {
 
             this.ballNode = other.node;
             this.ballNode.stopActionByTag(1);
@@ -91,13 +104,12 @@ cc.Class({
                 var action = cc.moveTo(1, dest.x, dest.y);
                 this.node.runAction(action);
 
-                this.schedule(function() {
+                this.schedule(function () {
                     this.lock = false;
                     this.childNode.active = true;
-                }, 1,0);
+                }, 1, 0);
             }
-            else
-            {
+            else {
                 this.childNode.active = true;
             }
             this.aimNode.active = false;
@@ -115,24 +127,9 @@ cc.Class({
     },
 
     onShoot: function () {
-        //cc.log(this.node.position);
-        //cc.director.getCollisionManager().enabled = true;
-        //cc.director.getPhysicsManager().enabled = true;
-
-        //this.ballNode.parent = null;
-        //var n = cc.find("Canvas/BallPos");
-        //n.addChild(this.ballNode);
-
-        //this.ballNode.addComponent(cc.RigidBody);
-        //this.ballNode.addComponent(cc.PhysicsCircleCollider);
 
         var rigidbody = this.ballNode.getComponent(cc.RigidBody);
-        //var physicsCircleCollider = this.ballNode.getComponent(cc.PhysicsCircleCollider);
-        //rigidbody.gravityScale  = 8;
         rigidbody.type = cc.RigidBodyType.Dynamic;
-        //physicsCircleCollider.restitution = 1;
-        //physicsCircleCollider.radius = 25;
-        //physicsCircleCollider.apply();
 
         var temp = new cc.Vec2((this.node.position.x - this.ballNode.position.x) * -this.power,
             (this.node.position.y - this.ballNode.position.y) * -this.power);
@@ -142,23 +139,42 @@ cc.Class({
         this.childNode.active = false;
         this.lock = this.starter;
         this.ball = false;
-        
+
+        this.shoot();
+
         if (this.starter) {
-            
+
             this.node.removeComponent(cc.CircleCollider);
             //circleCollider.enable = false;
-            
+
             var dest = new cc.Vec2(0, 650);
             var action = cc.moveTo(1, dest.x, dest.y);
             this.node.runAction(action);
-            this.schedule(function() {
+            this.schedule(function () {
                 this.node.angle = 0;
                 this.node.addComponent(cc.CircleCollider);
                 var circleCollider = this.node.getComponent(cc.CircleCollider);
                 circleCollider.radius = 48;
                 //circleCollider.enabled  = true; 
-            }, 1,0);
+            }, 1, 0);
         }
+    },
+
+    normal: function () {
+        self = this;
+        cc.loader.loadRes("player/forward/normal/" + this.gameManager.gameDetail.homeID, cc.SpriteFrame, function (err, spriteFrame) {
+            self.sprite.spriteFrame = spriteFrame;
+        });
+    },
+
+    shoot: function () {
+        self = this;
+
+        cc.loader.loadRes("player/forward/shoot/" + this.gameManager.gameDetail.homeID, cc.SpriteFrame, function (err, spriteFrame) {
+            self.sprite.spriteFrame = spriteFrame;
+        });
+
+        this.schedule(function () { this.normal(); }, 0.1, 0);
     },
 
 });

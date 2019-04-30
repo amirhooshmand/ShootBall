@@ -12,24 +12,11 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        videoplayer: cc.VideoPlayer
+
     },
 
-    end: function()
-    {
-        cc.director.loadScene('Main');
-    },
 
-    start () {
-        this.videoplayer.play();
+    start() {
+        //cc.find("DBStorage").getComponent("DBStorage").setItem("topPostion", this.node.y);
     },
-    
-    callback: function (event) {
-        //event is EventCustom, you can use event.detail to get VideoPlayer component
-        var videoplayer = event.detail;
-        //do whatever you want with videoplayer
-        //you can't pass customEventData in this way
-        cc.log("SS");
-        videoplayer.resume();
-     }, 
 });

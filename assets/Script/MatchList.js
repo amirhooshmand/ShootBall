@@ -28,23 +28,22 @@ cc.Class({
     start() {
 
         this.rubicup = [];
-
-        this.rubicup.push({ id: 0, goal: 2, awayID: 2 });
-        this.rubicup.push({ id: 1, goal: 5, awayID: 3 });
-        this.rubicup.push({ id: 2, goal: 3, awayID: 6 });
-        this.rubicup.push({ id: 3, goal: 4, awayID: 8 });
-        this.rubicup.push({ id: 4, goal: 5, awayID: 7 });
-        this.rubicup.push({ id: 5, goal: 9, awayID: 9 });
-        this.rubicup.push({ id: 6, goal: 7, awayID: 0 });
-        this.rubicup.push({ id: 7, goal: 10, awayID: 10 });
-        this.rubicup.push({ id: 8, goal: 5, awayID: 11 });
-        this.rubicup.push({ id: 9, goal: 5, awayID: 12 });
-        this.rubicup.push({ id: 10, goal: 5, awayID: 4 });
-        this.rubicup.push({ id: 11, goal: 5, awayID: 13 });
-        this.rubicup.push({ id: 12, goal: 5, awayID: 1 });
-        this.rubicup.push({ id: 13, goal: 5, awayID: 5 });
-        this.rubicup.push({ id: 14, goal: 5, awayID: 15 });
-        this.rubicup.push({ id: 15, goal: 5, awayID: 14 });
+        this.rubicup.push({ id: 1, ballCount: 5, homeGoal: 2, awayGoal: 3, awayID: 2, time: false });
+        this.rubicup.push({ id: 1, ballCount: 5, homeGoal: 2, awayGoal: 2, awayID: 3, time: false });
+        this.rubicup.push({ id: 2, ballCount: 5, homeGoal: 2, awayGoal: 2, awayID: 6, time: false });
+        this.rubicup.push({ id: 3, ballCount: 5, homeGoal: 2, awayGoal: 2, awayID: 8, time: false });
+        this.rubicup.push({ id: 4, ballCount: 5, homeGoal: 2, awayGoal: 2, awayID: 7, time: false });
+        this.rubicup.push({ id: 5, ballCount: 5, homeGoal: 2, awayGoal: 2, awayID: 9, time: false });
+        this.rubicup.push({ id: 6, ballCount: 5, homeGoal: 2, awayGoal: 2, awayID: 0, time: false });
+        this.rubicup.push({ id: 7, ballCount: 5, homeGoal: 2, awayGoal: 2, awayID: 10, time: false });
+        this.rubicup.push({ id: 8, ballCount: 5, homeGoal: 2, awayGoal: 2, awayID: 11, time: false });
+        this.rubicup.push({ id: 9, ballCount: 5, homeGoal: 2, awayGoal: 2, awayID: 12, time: false });
+        this.rubicup.push({ id: 10, ballCount: 5, homeGoal: 2, awayGoal: 2, awayID: 4, time: false });
+        this.rubicup.push({ id: 11, ballCount: 5, homeGoal: 2, awayGoal: 2, awayID: 13, time: false });
+        this.rubicup.push({ id: 12, ballCount: 5, homeGoal: 2, awayGoal: 2, awayID: 1, time: false });
+        this.rubicup.push({ id: 13, ballCount: 5, homeGoal: 2, awayGoal: 2, awayID: 5, time: false });
+        this.rubicup.push({ id: 14, ballCount: 5, homeGoal: 2, awayGoal: 2, awayID: 15, time: false });
+        this.rubicup.push({ id: 15, ballCount: 5, homeGoal: 2, awayGoal: 2, awayID: 14, time: false });
 
 
         var teamManagerNode = cc.find("Canvas/TeamManager");
@@ -110,7 +109,7 @@ cc.Class({
                 clickEventHandler.target = this.node; //This node is the node to which your event handler code component belongs
                 clickEventHandler.component = "MatchList";//This is the code file name
                 clickEventHandler.handler = "matchClick";
-                clickEventHandler.customEventData = weekCount + "&" + this.rubicup[i].awayID + "&" + this.rubicup[i].goal;
+                clickEventHandler.customEventData = this.rubicup[i];//.id + "&" + this.rubicup[i].awayID + "&" + this.rubicup[i].awayGoal + "&" + this.rubicup[i].homeGoal;
 
                 button.clickEvents.push(clickEventHandler);
             }
@@ -121,13 +120,10 @@ cc.Class({
     },
 
     matchClick: function (event, customEventData) {
-
-        var res = customEventData.split("&");
-
-        if (cc.find("DBStorage").getComponent("DBStorage").getItem(this.cup + "_" + "week_" + (parseInt(res[0]) - 1)) == 1) {
+        if (cc.find("DBStorage").getComponent("DBStorage").getItem(this.cup + "_" + "week_" + (customEventData.id - 1)) == 1) {
             this.activePlayer(this.lastPlayer, false);
 
-            var player = this.matchItems[parseInt(res[0]) - 1].getChildByName("Player");
+            var player = this.matchItems[customEventData.id - 1].getChildByName("Player");
             this.lastPlayer = player;
             this.activePlayer(player, true);
 
@@ -136,11 +132,8 @@ cc.Class({
             canvas.addChild(playMatch);
 
             var pm = playMatch.getComponent("PlayMatch");
-            pm.homeTeam = cc.find("DBStorage").getComponent("DBStorage").getItem("team");
-            pm.awayTeam = parseInt(res[1]);
             pm.leagueName = "روبیکاپ      ";
-            pm.weekName = "هفته " + parseInt(res[0]);
-            pm.goal = parseInt(res[2]);
+            pm.gameDetail = customEventData;
         }
     },
 
@@ -172,6 +165,9 @@ cc.Class({
 
     activePlayer: function (player, flag) {
         player.active = flag;
+    },
+    replaceNum: function (input) {//۱۲۳۴۵۶۷۸۹۰
+        return input.replace(/1/g, "۱").replace(/2/g, "۲").replace(/3/g, "۳").replace(/4/g, "۴").replace(/5/g, "۵").replace(/6/g, "۶").replace(/7/g, "۷").replace(/8/g, "۸").replace(/9/g, "۹").replace(/0/g, "۰");
     },
 
     close: function () {

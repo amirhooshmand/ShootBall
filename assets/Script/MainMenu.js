@@ -10,17 +10,21 @@ cc.Class({
             default: null,
             type: cc.Prefab,
         },
+        leaderboardPrefab: {
+            default: null,
+            type: cc.Prefab
+        },
         selectMatchPrefab: {
             default: null,
             type: cc.Prefab,
         },
-        diactiveBartarCup:{
+        diactiveBartarCup: {
             default: null,
-            type:cc.SpriteFrame
+            type: cc.SpriteFrame
         },
-        diactiveHazfiCup:{
+        diactiveHazfiCup: {
             default: null,
-            type:cc.SpriteFrame
+            type: cc.SpriteFrame
         }
     },
 
@@ -48,31 +52,49 @@ cc.Class({
                 });
             
         }*/
+        
+
+        this.loadImage(0);
 
         this.canvas = cc.find("Canvas");
 
         var bartarCup = cc.find("Canvas/shelf_3/cup_bartar");
         var hazfiCup = cc.find("Canvas/shelf_3/cup_hazfi");
 
-        if(cc.find("DBStorage").getComponent("DBStorage").getItem(1 + "_detail_" + "week_" + 15) == null)
-        {
+        if (cc.find("DBStorage").getComponent("DBStorage").getItem(1 + "_detail_" + "week_" + 15) == null) {
             bartarCup.getComponent(cc.Sprite).spriteFrame = this.diactiveBartarCup;
             bartarCup.getComponent(cc.Button).interactable = false;
         }
-        if(cc.find("DBStorage").getComponent("DBStorage").getItem(2 + "_detail_" + "week_" + 30) == null)
-        {
+        if (cc.find("DBStorage").getComponent("DBStorage").getItem(2 + "_detail_" + "week_" + 30) == null) {
             hazfiCup.getComponent(cc.Sprite).spriteFrame = this.diactiveHazfiCup;
             hazfiCup.getComponent(cc.Button).interactable = false;
         }
         this.setPlayer(cc.find("DBStorage").getComponent("DBStorage").getItem("team"));
     },
 
-    setPlayer: function(selectedteamID)
-    {
+    setPlayer: function (selectedteamID) {
         var playerSpine = cc.find("Canvas/shelf_2/Player/PlayerSpine").getComponent("PlayerOnMenu");
         playerSpine.setPlayer(selectedteamID);
     },
 
+    loadImage: function (j) {
+        //for (var j = 0; j < this.teamManager.players.length; j++) {
+        if (j < this.teamManager.players.length) {
+            var self = this;
+            cc.loader.loadRes("player/body/" + this.teamManager.players[j].bodyColor, cc.SpriteFrame, function (err, spriteFrame) { });
+
+            cc.loader.loadRes("player/head/" + this.teamManager.players[j].headName, cc.SpriteFrame, function (err, spriteFrame) { });
+            cc.loader.loadRes("jersey/" + this.teamManager.players[j].teamID, cc.SpriteFrame, function (err, spriteFrame) {
+                self.loadImage(++j);
+            });
+
+            cc.loader.loadRes("logo/" + this.teamManager.players[j].teamID, cc.SpriteFrame, function (err, spriteFrame) {});
+        }
+        else {
+            var loading = cc.find("Canvas/Loading");
+            loading.destroy();
+        }
+    },
 
     aboutUsClick: function () {
 
@@ -101,9 +123,9 @@ cc.Class({
         this.canvas.addChild(selectMatchNode);
         selectMatchNode.getComponent("MatchList").cup = 3;
     },
-    premierLeague_2Click: function () {
-        const selectMatchNode = cc.instantiate(this.selectMatchPrefab);
+    leaderboardClick: function () {
+        const selectMatchNode = cc.instantiate(this.leaderboardPrefab);
         this.canvas.addChild(selectMatchNode);
-        selectMatchNode.getComponent("MatchList").cup = 4;
+        //selectMatchNode.getComponent("MatchList").cup = 4;
     }
 });

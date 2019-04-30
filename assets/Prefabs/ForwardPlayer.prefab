@@ -28,7 +28,7 @@
       }
     ],
     "_active": true,
-    "_level": 2,
+    "_level": 1,
     "_components": [
       {
         "__id__": 11
@@ -288,7 +288,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "ForwardPlayer",
+    "_name": "player",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -412,10 +412,10 @@
       "__id__": 1
     },
     "_enabled": true,
-    "speed": 100,
+    "speed": 180,
     "power": 1500,
-    "startRotation": 40,
-    "endRotation": -40,
+    "startRotation": 60,
+    "endRotation": -60,
     "starter": false,
     "_id": ""
   },

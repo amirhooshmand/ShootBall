@@ -12,11 +12,11 @@ cc.Class({
     start() {
         var gameManagerNode = cc.find("Canvas/GameManager");
         this.gameManager = gameManagerNode.getComponent("GameManager");
+        this.goalKeeper = cc.find("Canvas/Environment/GoalKeeper").getComponent("GoalKeeper");
     },
 
     onCollisionEnter: function (other, self) {
-
-        if (other.name.startsWith('Ball')) {
+        if (other.name.startsWith('Ball') && other.tag == 1) {
             var ball = other.getComponent("Ball");
             if (!ball.canGetIt) return;
 
@@ -33,6 +33,8 @@ cc.Class({
             this.schedule(function () {
                 other.node.destroy();
             }, 1, 0);
+
+            this.goalKeeper.sad();
         }
     },
 

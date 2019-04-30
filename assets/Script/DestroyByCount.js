@@ -37,7 +37,7 @@ cc.Class({
     onCollisionEnter: function (other, self) {
 
 
-        if (other.name.startsWith('Ball')) {
+        if (other.name.startsWith('Ball') && other.tag == 0) {
             this.count--;
 
             if (this.count > 0 && this.useImage) {
