@@ -18,7 +18,7 @@
     "_parent": null,
     "_children": [],
     "_active": true,
-    "_level": 1,
+    "_level": 3,
     "_components": [
       {
         "__id__": 2
@@ -62,7 +62,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -112.7,
+      "x": -90,
       "y": 174,
       "z": 0
     },
@@ -97,7 +97,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "e44470ba-e246-431c-b417-b07f53460a2d"
+      "__uuid__": "47aff226-52df-440a-a8ad-c0a55e73c98e"
     },
     "_type": 0,
     "_sizeMode": 0,
@@ -174,7 +174,7 @@
       "x": 0,
       "y": 0
     },
-    "_radius": 50,
+    "_radius": 45,
     "_id": ""
   },
   {
@@ -185,7 +185,7 @@
       "__id__": 1
     },
     "_enabled": true,
-    "power": 5,
+    "power": 4,
     "_id": ""
   },
   {

@@ -1,0 +1,81 @@
+
+rubika.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+zard-02
+  rotate: false
+  xy: 0, 0
+  size: 1000, 977
+  orig: 1000, 977
+  offset: 0, 0
+  index: -1
+
+rubika2.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+saye-back
+  rotate: false
+  xy: 0, 0
+  size: 1000, 916
+  orig: 1000, 916
+  offset: 0, 0
+  index: -1
+
+rubika3.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+saye
+  rotate: false
+  xy: 0, 0
+  size: 850, 850
+  orig: 852, 852
+  offset: 1, 1
+  index: -1
+
+rubika4.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bala-1
+  rotate: false
+  xy: 0, 233
+  size: 761, 233
+  orig: 761, 233
+  offset: 0, 0
+  index: -1
+bala-2
+  rotate: false
+  xy: 0, 0
+  size: 761, 233
+  orig: 761, 233
+  offset: 0, 0
+  index: -1
+chap-1
+  rotate: false
+  xy: 761, 247
+  size: 233, 755
+  orig: 233, 755
+  offset: 0, 0
+  index: -1
+light
+  rotate: false
+  xy: 0, 466
+  size: 666, 536
+  orig: 668, 538
+  offset: 1, 1
+  index: -1
+
+rubika5.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chap-2
+  rotate: false
+  xy: 0, 0
+  size: 233, 755
+  orig: 233, 755
+  offset: 0, 0
+  index: -1

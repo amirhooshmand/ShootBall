@@ -7,50 +7,32 @@ cc.Class({
 
 
     start() {
-        var self = this;
+        this.gameManager = cc.find("Canvas/GameManager").getComponent("GameManager");
 
-        cc.loader.loadRes("defence/" + cc.find("DBStorage").getComponent("DBStorage").getItem("team") + "_0", cc.SpriteFrame, function (err, spriteFrame) {
-            //self.node.getComponent(cc.Sprite).spriteFrame = spriteFrame;
-        });
+        this.sprite = this.node.getComponent(cc.Sprite);
     },
 
     onCollisionEnter: function (other, self) {
 
-        if (other.name.startsWith('Ball')) {
+        if (other.name.startsWith('Ball') && other.tag == 0) {
 
             var self = this;
-            cc.loader.loadRes("defence/" + cc.find("DBStorage").getComponent("DBStorage").getItem("team") + "_1", cc.SpriteFrame, function (err, spriteFrame) {
-                //self.node.getComponent(cc.Sprite).spriteFrame = spriteFrame;
+            cc.loader.loadRes("player/defence/hit/" + this.gameManager.gameDetail.awayID, cc.SpriteFrame, function (err, spriteFrame) {
+                self.sprite.spriteFrame = spriteFrame;
             });
-
-            this.schedule(function () {
-
-            }, 1, 0);
-
-            //  var rigidbody = other.node.getComponent(cc.RigidBody);
-            //  var velocity = rigidbody.linearVelocity;
-
-
-            //  velocity.x = velocity.x * 2.7;
-            //  velocity.y = velocity.y * 2.7;
-
-            //  rigidbody.linearVelocity = velocity;
         }
     },
 
     onCollisionExit: function (other, self) {
-        var self = this;
-
-        if (other.name.startsWith('Ball')) {
-            this.schedule(function () {
-                cc.loader.loadRes("defence/" + cc.find("DBStorage").getComponent("DBStorage").getItem("team") + "_0", cc.SpriteFrame, function (err, spriteFrame) {
-                    //self.node.getComponent(cc.Sprite).spriteFrame = spriteFrame;
-                });
-            }, .1, 0);
+        if (other.name.startsWith('Ball') && other.tag == 0) {
+            this.schedule(function () { this.normal(); }, 0.3, 0);
         }
+    },
 
-
-        //cc.log("DefensePlayer exit:" + other.name);
-
+    normal: function () {
+        self = this;
+        cc.loader.loadRes("player/defence/normal/" + this.gameManager.gameDetail.awayID, cc.SpriteFrame, function (err, spriteFrame) {
+            self.sprite.spriteFrame = spriteFrame;
+        });
     },
 });

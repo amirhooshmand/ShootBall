@@ -20,6 +20,7 @@ cc.Class({
         leagueName: "",
         weekName: "",
         gameDetail: "",
+        cup: 1,
     },
 
     // onLoad () {},
@@ -30,11 +31,11 @@ cc.Class({
         this.weekName = "";
         this.homeTeam = this.DBStorage.getItem("team");
         this.awayTeam = this.gameDetail.awayID;
+        this.gameDetail.homeID = this.homeTeam;
 
         var teamManagerNode = cc.find("Canvas/TeamManager");
         this.teamManager = teamManagerNode.getComponent("TeamManager");
         this.canvas = cc.find("Canvas");
-
 
         var scoreBoard = this.node.getChildByName("stadium_scoreboard");
 
@@ -69,6 +70,7 @@ cc.Class({
         this.updateFooter(defCount, fireCount, exteraBall, freezGoalKeeper);
 
         this.setCoin();
+        this.loadingImage();
     },
 
     updateFooter: function (defCount, fireCount, exteraBall, freezGoalKeeper) {
@@ -96,7 +98,6 @@ cc.Class({
     },
 
     playClick: function () {
-        this.gameDetail.homeID = this.homeTeam;
         this.gameDetail.defCount = this.DBStorage.getItem("removeDefender", 1);
         this.gameDetail.fireCount = this.DBStorage.getItem("fireBall", 1);
         this.gameDetail.exteraBall = this.DBStorage.getItem("exteraBall", 1);
@@ -105,21 +106,33 @@ cc.Class({
         const loadingNode = cc.instantiate(this.LoadingPrefab);
         this.canvas.addChild(loadingNode);
         var datas = this.gameDetail;
+        var dbData = this.DBStorage.data;
 
-        if (this.gameDetail.id == 1)
-            cc.director.loadScene("Level1-1", function (err, data) {
-                var loginNode = cc.director.getScene();
-                var containerLogin = loginNode.getChildByName('Canvas').getChildByName('GameManager');
+        cc.director.loadScene("Level" + this.cup + "-" + this.gameDetail.week, function (err, data) {
+            var loginNode = cc.director.getScene();
+            var containerLogin = loginNode.getChildByName('Canvas').getChildByName('GameManager');
+            var db = loginNode.getChildByName('DBStorage').getComponent("DBStorage");
+            db.load(dbData);
 
-                containerLogin.getComponent("GameManager").gameDetail = datas;
-                cc.log(containerLogin.name);
-            });
-        else cc.director.loadScene("Level1-2");
+            
+
+            containerLogin.getComponent("GameManager").gameDetail = datas;
+            cc.log(containerLogin.getComponent("GameManager").gameDetail );
+        });
+    },
+
+
+
+    loadingImage: function () {
+        cc.loader.loadRes("player/forward/normal/" + this.gameDetail.homeID, cc.SpriteFrame, function (err, spriteFrame) { });
+        cc.loader.loadRes("player/forward/shoot/" + this.gameDetail.homeID, cc.SpriteFrame, function (err, spriteFrame) { });
+        cc.loader.loadRes("player/goalkeeper/normal/" + this.gameDetail.awayID, cc.SpriteFrame, function (err, spriteFrame) { });
+        cc.loader.loadRes("player/goalkeeper/freeze/" + this.gameDetail.awayID, cc.SpriteFrame, function (err, spriteFrame) { });
+        cc.loader.loadRes("player/goalkeeper/save/" + this.gameDetail.awayID, cc.SpriteFrame, function (err, spriteFrame) { });
+        cc.loader.loadRes("player/goalkeeper/sad/" + this.gameDetail.awayID, cc.SpriteFrame, function (err, spriteFrame) { });
     },
 
     getSceneName: function () {
-        //console.log(cc.game._sceneInfos)
-        //console.log(cc.director._scene._id)
         var sceneName
         var _sceneInfos = cc.game._sceneInfos
         for (var i = 0; i < _sceneInfos.length; i++) {
@@ -142,28 +155,32 @@ cc.Class({
         var exteraBall = this.DBStorage.getItem("exteraBall", 1);
         var freezGoalKeeper = this.DBStorage.getItem("freezGoalKeeper", 1);
 
-        if (id == 1 && coin >= 7500) { // defCount
-            coin = 7500;
+        if (id == 1 && coin >= 3000) { // defCount
+            coin -= 3000;
             defCount++;
             this.DBStorage.setItem("coin", coin);
             this.DBStorage.setItem("removeDefender", defCount);
-        } else if (id == 2 && coin >= 5750) { // fireCount
-            coin -= 5750;
+            this.DBStorage.save();
+        } else if (id == 2 && coin >= 2000) { // fireCount
+            coin -= 2000;
             fireCount++;
             this.DBStorage.setItem("coin", coin);
             this.DBStorage.setItem("fireBall", fireCount);
+            this.DBStorage.save();
         }
-        else if (id == 3 && coin >= 2500) { // exteraBall
-            coin -= 2500;
+        else if (id == 3 && coin >= 1500) { // exteraBall
+            coin -= 1500;
             exteraBall++;
             this.DBStorage.setItem("coin", coin);
             this.DBStorage.setItem("exteraBall", exteraBall);
+            this.DBStorage.save();
         }
-        else if (id == 4 && coin >= 1500) { // freezGoalKeeper
-            coin -= 1500;
+        else if (id == 4 && coin >= 1000) { // freezGoalKeeper
+            coin -= 1000;
             freezGoalKeeper++;
             this.DBStorage.setItem("coin", coin);
             this.DBStorage.setItem("freezGoalKeeper", freezGoalKeeper);
+            this.DBStorage.save();
         }
         else
             this.showMessage();

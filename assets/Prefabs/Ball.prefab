@@ -18,7 +18,7 @@
     "_parent": null,
     "_children": [],
     "_active": true,
-    "_level": 3,
+    "_level": 1,
     "_components": [
       {
         "__id__": 2
@@ -37,13 +37,10 @@
       },
       {
         "__id__": 7
-      },
-      {
-        "__id__": 8
       }
     ],
     "_prefab": {
-      "__id__": 9
+      "__id__": 8
     },
     "_opacity": 255,
     "_color": {
@@ -131,7 +128,7 @@
       "x": 0,
       "y": 0
     },
-    "_radius": 29.5,
+    "_radius": 30,
     "_id": ""
   },
   {
@@ -160,6 +157,7 @@
     },
     "_enabled": true,
     "canGetIt": true,
+    "fireBall": false,
     "_id": ""
   },
   {
@@ -174,7 +172,7 @@
     "_allowSleep": true,
     "_gravityScale": 5,
     "_linearDamping": 0,
-    "_angularDamping": 0,
+    "_angularDamping": 5,
     "_linearVelocity": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -187,7 +185,7 @@
     "_id": ""
   },
   {
-    "__type__": "cc.PhysicsPolygonCollider",
+    "__type__": "cc.PhysicsCircleCollider",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -197,93 +195,15 @@
     "tag": 0,
     "_density": 1,
     "_sensor": false,
-    "_friction": 0,
-    "_restitution": 0.85,
+    "_friction": 0.2,
+    "_restitution": 0.7,
     "body": null,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
       "y": 0
     },
-    "points": [
-      {
-        "__type__": "cc.Vec2",
-        "x": -4.885057471264368,
-        "y": 25
-      },
-      {
-        "__type__": "cc.Vec2",
-        "x": -15.229885057471265,
-        "y": 20.40229885057471
-      },
-      {
-        "__type__": "cc.Vec2",
-        "x": -23.275862068965516,
-        "y": 9.482758620689651
-      },
-      {
-        "__type__": "cc.Vec2",
-        "x": -24.42528735632184,
-        "y": -5.459770114942529
-      },
-      {
-        "__type__": "cc.Vec2",
-        "x": -19.25287356321839,
-        "y": -16.379310344827587
-      },
-      {
-        "__type__": "cc.Vec2",
-        "x": -10.057471264367816,
-        "y": -23.275862068965516
-      },
-      {
-        "__type__": "cc.Vec2",
-        "x": 5.4597701149425255,
-        "y": -25
-      },
-      {
-        "__type__": "cc.Vec2",
-        "x": 15.804597701149426,
-        "y": -20.402298850574713
-      },
-      {
-        "__type__": "cc.Vec2",
-        "x": 25,
-        "y": -6.609195402298852
-      },
-      {
-        "__type__": "cc.Vec2",
-        "x": 25,
-        "y": 7.183908045977006
-      },
-      {
-        "__type__": "cc.Vec2",
-        "x": 19.252873563218387,
-        "y": 17.528735632183903
-      },
-      {
-        "__type__": "cc.Vec2",
-        "x": 6.034482758620687,
-        "y": 25
-      }
-    ],
-    "_id": ""
-  },
-  {
-    "__type__": "cc.CircleCollider",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true,
-    "tag": 0,
-    "_offset": {
-      "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
-    },
-    "_radius": 30,
+    "_radius": 25,
     "_id": ""
   },
   {

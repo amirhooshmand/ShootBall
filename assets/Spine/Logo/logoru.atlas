@@ -1,0 +1,12 @@
+
+logoru.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+logoru
+  rotate: false
+  xy: 0, 0
+  size: 364, 149
+  orig: 366, 151
+  offset: 1, 1
+  index: -1

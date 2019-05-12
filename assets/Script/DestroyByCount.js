@@ -38,6 +38,8 @@ cc.Class({
 
 
         if (other.name.startsWith('Ball') && other.tag == 0) {
+            if (other.getComponent("Ball").fireBall) return;
+            
             this.count--;
 
             if (this.count > 0 && this.useImage) {

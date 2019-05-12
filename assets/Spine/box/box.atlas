@@ -1,0 +1,47 @@
+
+box.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Layer1
+  rotate: true
+  xy: 660, 229
+  size: 747, 120
+  orig: 749, 122
+  offset: 1, 1
+  index: -1
+Layer4
+  rotate: false
+  xy: 0, 686
+  size: 660, 290
+  orig: 662, 292
+  offset: 1, 1
+  index: -1
+Layer5
+  rotate: true
+  xy: 343, 53
+  size: 633, 105
+  orig: 635, 107
+  offset: 1, 1
+  index: -1
+Layer6
+  rotate: true
+  xy: 185, 28
+  size: 658, 158
+  orig: 660, 160
+  offset: 1, 1
+  index: -1
+Layer7
+  rotate: true
+  xy: 0, 0
+  size: 686, 185
+  orig: 688, 187
+  offset: 1, 1
+  index: -1
+Layer8
+  rotate: false
+  xy: 780, 886
+  size: 128, 90
+  orig: 130, 92
+  offset: 1, 1
+  index: -1

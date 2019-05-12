@@ -1,0 +1,75 @@
+
+hand.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+hand1
+  rotate: false
+  xy: 0, 324
+  size: 146, 162
+  orig: 148, 164
+  offset: 1, 1
+  index: -1
+hand10
+  rotate: false
+  xy: 292, 0
+  size: 146, 162
+  orig: 148, 164
+  offset: 1, 1
+  index: -1
+hand2
+  rotate: false
+  xy: 0, 162
+  size: 146, 162
+  orig: 148, 164
+  offset: 1, 1
+  index: -1
+hand3
+  rotate: false
+  xy: 146, 324
+  size: 146, 162
+  orig: 148, 164
+  offset: 1, 1
+  index: -1
+hand4
+  rotate: false
+  xy: 0, 0
+  size: 146, 162
+  orig: 148, 164
+  offset: 1, 1
+  index: -1
+hand5
+  rotate: false
+  xy: 146, 162
+  size: 146, 162
+  orig: 148, 164
+  offset: 1, 1
+  index: -1
+hand6
+  rotate: false
+  xy: 292, 324
+  size: 146, 162
+  orig: 148, 164
+  offset: 1, 1
+  index: -1
+hand7
+  rotate: false
+  xy: 146, 0
+  size: 146, 162
+  orig: 148, 164
+  offset: 1, 1
+  index: -1
+hand8
+  rotate: false
+  xy: 292, 162
+  size: 146, 162
+  orig: 148, 164
+  offset: 1, 1
+  index: -1
+hand9
+  rotate: false
+  xy: 438, 324
+  size: 146, 162
+  orig: 148, 164
+  offset: 1, 1
+  index: -1

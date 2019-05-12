@@ -2,33 +2,25 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        
     },
 
-    // LIFE-CYCLE CALLBACKS:
-
-    // onLoad () {},
-
-    start () {
+    start() {
         var gameManagerNode = cc.find("Canvas/GameManager");
         this.gameManager = gameManagerNode.getComponent("GameManager");
 
     },
 
-    // update (dt) {},
-
     onCollisionEnter: function (other, self) {
-
-        if(other.name.startsWith('Ball'))
-        {
+        if (other.name.startsWith('Ball')) {
             var ball = other.getComponent("Ball");
-            if(!ball.canGetIt) return;
-            
-             other.node.destroy();
+            if (!ball.canGetIt) return;
 
-             
-             this.gameManager.out();
+            this.gameManager.out();
+
+            other.node.destroy();
+
+
         }
- 
-     },
+
+    },
 });

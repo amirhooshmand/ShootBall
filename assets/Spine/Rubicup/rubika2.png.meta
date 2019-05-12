@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.0",
+  "uuid": "881f69a7-f2c0-431b-8494-b018ebb03ac3",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "rubika2": {
+      "ver": "1.0.3",
+      "uuid": "faee69f9-bf20-4345-99e3-dc4146fa58cd",
+      "rawTextureUuid": "881f69a7-f2c0-431b-8494-b018ebb03ac3",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -12,
+      "offsetY": 54,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 1000,
+      "height": 916,
+      "rawWidth": 1024,
+      "rawHeight": 1024,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

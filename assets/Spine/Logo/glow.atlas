@@ -1,0 +1,165 @@
+
+glow.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+glow2
+  rotate: false
+  xy: 0, 556
+  size: 660, 278
+  orig: 662, 280
+  offset: 1, 1
+  index: -1
+glow3
+  rotate: false
+  xy: 0, 278
+  size: 660, 278
+  orig: 662, 280
+  offset: 1, 1
+  index: -1
+glow4
+  rotate: false
+  xy: 0, 0
+  size: 660, 278
+  orig: 662, 280
+  offset: 1, 1
+  index: -1
+glow5
+  rotate: true
+  xy: 660, 174
+  size: 660, 278
+  orig: 662, 280
+  offset: 1, 1
+  index: -1
+
+glow2.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+glow6
+  rotate: false
+  xy: 0, 556
+  size: 660, 278
+  orig: 662, 280
+  offset: 1, 1
+  index: -1
+glow7
+  rotate: false
+  xy: 0, 278
+  size: 660, 278
+  orig: 662, 280
+  offset: 1, 1
+  index: -1
+glow8
+  rotate: false
+  xy: 0, 0
+  size: 660, 278
+  orig: 662, 280
+  offset: 1, 1
+  index: -1
+glow9
+  rotate: true
+  xy: 660, 174
+  size: 660, 278
+  orig: 662, 280
+  offset: 1, 1
+  index: -1
+
+glow3.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+glow10
+  rotate: false
+  xy: 0, 556
+  size: 660, 278
+  orig: 662, 280
+  offset: 1, 1
+  index: -1
+glow11
+  rotate: false
+  xy: 0, 278
+  size: 660, 278
+  orig: 662, 280
+  offset: 1, 1
+  index: -1
+glow12
+  rotate: false
+  xy: 0, 0
+  size: 660, 278
+  orig: 662, 280
+  offset: 1, 1
+  index: -1
+glow13
+  rotate: true
+  xy: 660, 174
+  size: 660, 278
+  orig: 662, 280
+  offset: 1, 1
+  index: -1
+
+glow4.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+glow14
+  rotate: false
+  xy: 0, 556
+  size: 660, 278
+  orig: 662, 280
+  offset: 1, 1
+  index: -1
+glow15
+  rotate: false
+  xy: 0, 278
+  size: 660, 278
+  orig: 662, 280
+  offset: 1, 1
+  index: -1
+glow16
+  rotate: false
+  xy: 0, 0
+  size: 660, 278
+  orig: 662, 280
+  offset: 1, 1
+  index: -1
+glow17
+  rotate: true
+  xy: 660, 174
+  size: 660, 278
+  orig: 662, 280
+  offset: 1, 1
+  index: -1
+
+glow5.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+glow18
+  rotate: false
+  xy: 0, 556
+  size: 660, 278
+  orig: 662, 280
+  offset: 1, 1
+  index: -1
+glow19
+  rotate: false
+  xy: 0, 278
+  size: 660, 278
+  orig: 662, 280
+  offset: 1, 1
+  index: -1
+glow20
+  rotate: false
+  xy: 0, 0
+  size: 660, 278
+  orig: 662, 280
+  offset: 1, 1
+  index: -1
+glow21
+  rotate: true
+  xy: 660, 174
+  size: 660, 278
+  orig: 662, 280
+  offset: 1, 1
+  index: -1

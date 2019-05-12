@@ -13,7 +13,7 @@ cc.Class({
         this.teams.push({
             name: "استقلال",
             id: 0,
-            price: 500
+            price: 10000
         });
 
         this.teams.push({
@@ -25,88 +25,88 @@ cc.Class({
         this.teams.push({
             name: "پارس جم",
             id: 2,
-            price: 150
+            price: 0
         });
 
         this.teams.push({
             name: "    پدیده",
             id: 3,
-            price: 150
+            price: 5000
         });
 
         this.teams.push({
             name: "پرسپولیس",
             id: 4,
-            price: 150
+            price: 10000
         });
 
         this.teams.push({
             name: "پیکان",
             id: 5,
-            price: 150
+            price: 0
         });
 
         this.teams.push({
             name: "تراکتورسازی",
             id: 6,
-            price: 150
+            price: 10000
         });
 
         this.teams.push({
             name: "ذوب آهن",
             id: 7,
-            price: 150,
+            price: 2000,
             numberColor: "black"
         });
 
         this.teams.push({
             name: "سایپا",
             id: 8,
-            price: 150
+            price: 0
         });
 
         this.teams.push({
             name: "سپاهان",
             id: 9,
-            price: 150,
+            price: 10000,
             numberColor: "black"
         });
 
         this.teams.push({
             name: "سپیدرود رشت",
             id: 10,
-            price: 150
+            price: 5000
         });
 
         this.teams.push({
             name: "صنعت نفت آبادان",
             id: 11,
-            price: 150
+            price: 5000
         });
 
         this.teams.push({
             name: "فولاد",
             id: 12,
-            price: 150,
+            price: 5000,
             numberColor: "black"
         });
 
         this.teams.push({
             name: "ماشین سازی",
             id: 13,
-            price: 150
+            price: 2000
         });
 
         this.teams.push({
             name: "نساجی مازندران",
             id: 14,
-            price: 150
+            price: 5000
         });
 
         this.teams.push({
             name: "نفت مسجد سلیمان",
             id: 15,
-            price: 150
+            price: 0
         });
 
 

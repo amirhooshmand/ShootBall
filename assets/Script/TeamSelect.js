@@ -22,6 +22,7 @@ cc.Class({
         //cc.log(this.node.height);
 
         //this.node.height = cc.find("Canvas").scaleY * cc.view.getFrameSize().height;
+        this.DBStorage = cc.find("DBStorage").getComponent("DBStorage");
 
         var teamManagerNode = cc.find("Canvas/TeamManager");
         this.teamManager = teamManagerNode.getComponent("TeamManager");
@@ -30,7 +31,7 @@ cc.Class({
 
         var content = cc.find("Canvas/Team PageView/view/content");
 
-        cc.find("DBStorage").getComponent("DBStorage").setItem("buyTeam_" + 1, "yes"); // استقلال خ
+
         var self = this;
         this.node.on('change-coin', function () {
             self.setCoin();
@@ -47,9 +48,9 @@ cc.Class({
 
             teamPage.getChildByName("team_logo").getChildByName("TeamNameLbl").getComponent(cc.Label).string = " " + this.teamManager.teams[i].name + "  ";
             var button = teamPage.getChildByName("SelectBtn").getComponent(cc.Button);
-            var pruches = cc.find("DBStorage").getComponent("DBStorage").getItem("buyTeam_" + this.teamManager.teams[i].id)
+            var pruches = this.DBStorage.getItem("buyTeam_" + this.teamManager.teams[i].id)
 
-            if (pruches != "yes") {
+            if (pruches != "yes" && this.teamManager.teams[i].price != 0) {
                 button.node.getChildByName("BtnLbl").getComponent(cc.Label).string = "سکه  " + this.teamManager.teams[i].price + "  ";
             }
 
@@ -127,7 +128,7 @@ cc.Class({
     },
 
     setCoin: function () {
-        var coin = cc.find("DBStorage").getComponent("DBStorage").getItem("coin", 0);
+        var coin = this.DBStorage.getItem("coin", 0);
 
         var coinBox = this.node.getChildByName("coin_box");
         coinBox.getComponentInChildren(cc.Label).string = this.replaceNum(coin.toString());
@@ -152,18 +153,26 @@ cc.Class({
     },
 
     selectTeam: function (event, customEventData) {
-        var pruches = cc.find("DBStorage").getComponent("DBStorage").getItem("buyTeam_" + this.teamManager.teams[customEventData].id)
-        if (pruches != "yes") {
-            var coin = cc.find("DBStorage").getComponent("DBStorage").getItem("coin");
+        var pruches = this.DBStorage.getItem("buyTeam_" + this.teamManager.teams[customEventData].id)
+        if (pruches != "yes" && this.teamManager.teams[customEventData].price != 0) {
+            var coin = this.DBStorage.getItem("coin");
             if (coin >= this.teamManager.teams[customEventData].price) {
-                cc.find("DBStorage").getComponent("DBStorage").setItem("team", customEventData);
-                cc.find("DBStorage").getComponent("DBStorage").setItem("buyTeam_" + this.teamManager.teams[customEventData].id, "yes");
 
-                coin -= this.teamManager.teams[customEventData].price;
-                cc.find("DBStorage").getComponent("DBStorage").setItem("coin", coin);
+                const dialog = cc.instantiate(this.dialogPrefab);
+                cc.find("Canvas").addChild(dialog);
+                var d = dialog.getComponent("Dialog");
+                d.titleLable.string = this.teamManager.teams[customEventData].name;
+                d.bodyLable.string = "میخوای این تیم رو بخری؟";
+                d.positiveBtn.getComponentInChildren(cc.Label).string = "آره";
+                d.negativeBtn.getComponentInChildren(cc.Label).string = "    فعلا نه";
 
-                cc.find("Canvas").getComponent("MainMenu").setPlayer(customEventData);
-                this.close();
+                var clickEventHandler = new cc.Component.EventHandler();
+                clickEventHandler.target = this.node; //This node is the node to which your event handler code component belongs
+                clickEventHandler.component = "TeamSelect";//This is the code file name
+                clickEventHandler.handler = "buyTeam";
+                clickEventHandler.customEventData = customEventData;
+
+                d.positiveBtn.clickEvents.push(clickEventHandler);
             }
             else {
                 const dialog = cc.instantiate(this.dialogPrefab);
@@ -185,13 +194,28 @@ cc.Class({
             //button.node.getChildByName("BtnLbl").getComponent(cc.Label).string = "سکه  " + this.teamManager.teams[i].price + "  ";
         }
         else {
-            cc.find("DBStorage").getComponent("DBStorage").setItem("team", customEventData);
+            this.DBStorage.setItem("team", customEventData);
+            this.DBStorage.save();
             cc.find("Canvas").getComponent("MainMenu").setPlayer(customEventData);
             this.close();
         }
         //cc.log("S: " + customEventData);
 
-        
+
+    },
+
+    buyTeam: function (event, customEventData) {
+        var coin = this.DBStorage.getItem("coin");
+
+        this.DBStorage.setItem("team", customEventData);
+        this.DBStorage.setItem("buyTeam_" + this.teamManager.teams[customEventData].id, "yes");
+
+        coin -= this.teamManager.teams[customEventData].price;
+        this.DBStorage.setItem("coin", coin);
+        this.DBStorage.save();
+
+        cc.find("Canvas").getComponent("MainMenu").setPlayer(customEventData);
+        this.close();
     },
 
     goToShop: function (event, customEventData) {

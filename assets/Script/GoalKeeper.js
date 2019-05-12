@@ -14,15 +14,17 @@ cc.Class({
 
         this.sprite = this.node.getComponent(cc.Sprite);
         this.move = this.node.getComponent("MoveNodeWithRandomSpeed");
-        this.normal();
+        this.save();
 
     },
 
     normal: function () {
+        this.unscheduleAllCallbacks();
+        
         self = this;
 
         cc.loader.loadRes("player/goalkeeper/normal/" + this.gameManager.gameDetail.awayID, cc.SpriteFrame, function (err, spriteFrame) {
-            self.sprite.spriteFrame = spriteFrame;
+            try { self.sprite.spriteFrame = spriteFrame; } catch (err) { }
         });
 
         this.isFreeze = false;
@@ -30,10 +32,12 @@ cc.Class({
     },
 
     freeze: function () {
+        this.unscheduleAllCallbacks();
+        
         self = this;
 
         cc.loader.loadRes("player/goalkeeper/freeze/" + this.gameManager.gameDetail.awayID, cc.SpriteFrame, function (err, spriteFrame) {
-            self.sprite.spriteFrame = spriteFrame;
+            try { self.sprite.spriteFrame = spriteFrame; } catch (err) { }
         });
         this.isFreeze = true;
 
@@ -46,25 +50,30 @@ cc.Class({
 
         if (this.isFreeze) return;
 
+        this.unscheduleAllCallbacks();
+
         self = this;
 
         cc.loader.loadRes("player/goalkeeper/save/" + this.gameManager.gameDetail.awayID, cc.SpriteFrame, function (err, spriteFrame) {
-            self.sprite.spriteFrame = spriteFrame;
+            try { self.sprite.spriteFrame = spriteFrame; } catch (err) { }
         });
 
         this.schedule(function () { this.normal(); }, 0.2, 0);
     },
 
     sad: function () {
+
+        this.unscheduleAllCallbacks();
+
         self = this;
 
         cc.loader.loadRes("player/goalkeeper/sad/" + this.gameManager.gameDetail.awayID, cc.SpriteFrame, function (err, spriteFrame) {
-            self.sprite.spriteFrame = spriteFrame;
+            try { self.sprite.spriteFrame = spriteFrame; } catch (err) { }
         });
 
         this.stop();
 
-        this.schedule(function () { this.normal(); }, 1.7, 0);
+        this.schedule(function () { this.normal(); }, 2.7, 0);
     },
 
     onCollisionEnter: function (other, self) {
@@ -77,7 +86,7 @@ cc.Class({
     stop: function () {
         this.node.stopActionByTag(1);
         this.move.elapsedTime += 10;
-        this.move.enabled = false;
         this.move.right = !this.move.right;
+        this.move.enabled = false;
     }
 });

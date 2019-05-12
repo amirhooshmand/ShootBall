@@ -28,7 +28,7 @@
       }
     ],
     "_active": true,
-    "_level": 1,
+    "_level": 3,
     "_components": [
       {
         "__id__": 11
@@ -60,15 +60,15 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -229,
-      "y": 178,
+      "x": -238.7,
+      "y": 163.3,
       "z": 0
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
+      "x": 0.85,
+      "y": 0.85,
+      "z": 0.85
     },
     "_quat": {
       "__type__": "cc.Quat",
@@ -113,7 +113,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 83,
-      "height": 130
+      "height": 90.1
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -123,7 +123,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -102.6,
+      "y": -87.3,
       "z": 0
     },
     "_scale": {
@@ -412,7 +412,7 @@
       "__id__": 1
     },
     "_enabled": true,
-    "speed": 180,
+    "duration": 0.8,
     "power": 1500,
     "startRotation": 60,
     "endRotation": -60,

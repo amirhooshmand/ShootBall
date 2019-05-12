@@ -1,0 +1,159 @@
+
+cup-band.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Layer1
+  rotate: false
+  xy: 0, 758
+  size: 165, 263
+  orig: 167, 265
+  offset: 1, 1
+  index: -1
+Layer11
+  rotate: false
+  xy: 165, 495
+  size: 165, 263
+  orig: 167, 265
+  offset: 1, 1
+  index: -1
+Layer13
+  rotate: false
+  xy: 165, 232
+  size: 165, 263
+  orig: 167, 265
+  offset: 1, 1
+  index: -1
+Layer15
+  rotate: true
+  xy: 263, 67
+  size: 165, 263
+  orig: 167, 265
+  offset: 1, 1
+  index: -1
+Layer17
+  rotate: true
+  xy: 526, 856
+  size: 165, 263
+  orig: 167, 265
+  offset: 1, 1
+  index: -1
+Layer19
+  rotate: false
+  xy: 330, 758
+  size: 165, 263
+  orig: 167, 265
+  offset: 1, 1
+  index: -1
+Layer21
+  rotate: false
+  xy: 789, 758
+  size: 165, 263
+  orig: 167, 265
+  offset: 1, 1
+  index: -1
+Layer23
+  rotate: true
+  xy: 495, 691
+  size: 165, 263
+  orig: 167, 265
+  offset: 1, 1
+  index: -1
+Layer25
+  rotate: false
+  xy: 330, 495
+  size: 165, 263
+  orig: 167, 265
+  offset: 1, 1
+  index: -1
+Layer27
+  rotate: false
+  xy: 330, 232
+  size: 165, 263
+  orig: 167, 265
+  offset: 1, 1
+  index: -1
+Layer29
+  rotate: true
+  xy: 758, 593
+  size: 165, 263
+  orig: 167, 265
+  offset: 1, 1
+  index: -1
+Layer3
+  rotate: false
+  xy: 0, 495
+  size: 165, 263
+  orig: 167, 265
+  offset: 1, 1
+  index: -1
+Layer31
+  rotate: true
+  xy: 495, 526
+  size: 165, 263
+  orig: 167, 265
+  offset: 1, 1
+  index: -1
+Layer33
+  rotate: false
+  xy: 495, 263
+  size: 165, 263
+  orig: 167, 265
+  offset: 1, 1
+  index: -1
+Layer35
+  rotate: false
+  xy: 526, 0
+  size: 165, 263
+  orig: 167, 265
+  offset: 1, 1
+  index: -1
+Layer37
+  rotate: false
+  xy: 660, 263
+  size: 165, 263
+  orig: 167, 265
+  offset: 1, 1
+  index: -1
+Layer39
+  rotate: false
+  xy: 691, 0
+  size: 165, 263
+  orig: 167, 265
+  offset: 1, 1
+  index: -1
+Layer41
+  rotate: false
+  xy: 825, 330
+  size: 165, 263
+  orig: 167, 265
+  offset: 1, 1
+  index: -1
+Layer43
+  rotate: false
+  xy: 856, 67
+  size: 165, 263
+  orig: 167, 265
+  offset: 1, 1
+  index: -1
+Layer5
+  rotate: false
+  xy: 0, 232
+  size: 165, 263
+  orig: 167, 265
+  offset: 1, 1
+  index: -1
+Layer7
+  rotate: true
+  xy: 0, 67
+  size: 165, 263
+  orig: 167, 265
+  offset: 1, 1
+  index: -1
+Layer9
+  rotate: false
+  xy: 165, 758
+  size: 165, 263
+  orig: 167, 265
+  offset: 1, 1
+  index: -1

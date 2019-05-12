@@ -1,0 +1,12 @@
+
+cup-daste.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+daste
+  rotate: false
+  xy: 0, 0
+  size: 322, 156
+  orig: 324, 158
+  offset: 1, 1
+  index: -1

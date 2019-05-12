@@ -2,9 +2,9 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        speed:
+        duration:
         {
-            default: 50,
+            default: .8,
             type: cc.Float
         },
 
@@ -16,13 +16,13 @@ cc.Class({
 
         startRotation:
         {
-            default: 150,
+            default: 75,
             type: cc.Float
         },
 
         endRotation:
         {
-            default: -150,
+            default: -75,
             type: cc.Float
         },
         starter: false,
@@ -42,7 +42,7 @@ cc.Class({
         this.aimNode.active = false;
 
         this.sprite = this.node.getChildByName("player").getComponent(cc.Sprite);
-        
+
         cc.Canvas.instance.node.on(cc.Node.EventType.TOUCH_START, function (event) {
             if (this.ball && !this.lock) {
                 this.onShoot();
@@ -53,8 +53,8 @@ cc.Class({
         }, this);
 
         if (this.starter) this.gameManager = cc.find("Canvas/GameManager").getComponent("GameManager");
-        
-        
+
+
     },
 
     findPointOnCircle: function (originX, originY, radius, angleRadians) {
@@ -66,16 +66,7 @@ cc.Class({
     update(dt) {
         if (!this.ball) return;
 
-        if (this.flag && !this.lock) {
-            this.node.angle += dt * this.speed;
-            if (this.node.angle >= this.startRotation)
-                this.flag = false;
-        }
-        else if (!this.lock) {
-            this.node.angle -= dt * this.speed;
-            if (this.node.angle <= this.endRotation)
-                this.flag = true;
-        }
+
         this.ballNode.position = this.findPointOnCircle(this.node.x, this.node.y, 60, this.node.angle - 90);
         this.ballNode.angle = this.node.angle;
     },
@@ -99,17 +90,44 @@ cc.Class({
             rigidbody.type = cc.RigidBodyType.Static;
 
 
+            var a1 = cc.rotateTo(this.duration, this.startRotation, 0);
+            var a2 = cc.rotateTo(this.duration, this.endRotation, 0);
+            a1.easing(cc.easeQuadraticActionInOut());
+            a2.easing(cc.easeQuadraticActionInOut());
+
+
+
             if (this.starter) {
                 var dest = new cc.Vec2(0, 500);
                 var action = cc.moveTo(1, dest.x, dest.y);
                 this.node.runAction(action);
 
-                this.schedule(function () {
+                this.scheduleOnce(function () {
                     this.lock = false;
                     this.childNode.active = true;
-                }, 1, 0);
+
+                    var startAction = cc.rotateTo(this.duration / 2, this.startRotation, 0);
+                    startAction.easing(cc.easeQuadraticActionInOut());
+                    this.node.runAction(startAction);
+
+                    this.scheduleOnce(function () {
+                        var seq = cc.repeatForever(cc.sequence(a2, a1));
+                        seq.setTag(1);
+                        this.node.runAction(seq);
+                    }, this.duration / 2);
+                }, 1);
             }
             else {
+                var startAction = cc.rotateTo(this.duration / 2, this.startRotation, 0);
+                startAction.easing(cc.easeQuadraticActionInOut());
+                this.node.runAction(startAction);
+
+                this.scheduleOnce(function () {
+                    var seq = cc.repeatForever(cc.sequence(a2, a1));
+                    seq.setTag(1);
+                    this.node.runAction(seq);
+                }, this.duration / 2);
+
                 this.childNode.active = true;
             }
             this.aimNode.active = false;
@@ -127,6 +145,13 @@ cc.Class({
     },
 
     onShoot: function () {
+
+        this.unscheduleAllCallbacks();
+
+        this.node.stopActionByTag(1);
+
+        var a1 = cc.rotateTo(0.3, 0, 0);
+        this.node.runAction(a1);
 
         var rigidbody = this.ballNode.getComponent(cc.RigidBody);
         rigidbody.type = cc.RigidBodyType.Dynamic;

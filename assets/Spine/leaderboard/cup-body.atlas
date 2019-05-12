@@ -1,0 +1,12 @@
+
+cup-body.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: true
+  xy: 0, 0
+  size: 250, 358
+  orig: 252, 360
+  offset: 1, 1
+  index: -1

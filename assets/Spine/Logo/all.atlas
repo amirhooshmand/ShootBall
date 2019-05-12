@@ -1,0 +1,19 @@
+
+all.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+field
+  rotate: false
+  xy: 604, 0
+  size: 289, 209
+  orig: 291, 211
+  offset: 1, 1
+  index: -1
+logzir
+  rotate: false
+  xy: 0, 29
+  size: 604, 180
+  orig: 606, 182
+  offset: 1, 1
+  index: -1

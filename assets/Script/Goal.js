@@ -2,7 +2,6 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -20,7 +19,7 @@ cc.Class({
             var ball = other.getComponent("Ball");
             if (!ball.canGetIt) return;
 
-            var physicsCircleCollider = other.getComponent(cc.PhysicsPolygonCollider);
+            var physicsCircleCollider = other.getComponent(cc.PhysicsCircleCollider);
 
             this.ballRestitution = physicsCircleCollider.restitution;
             physicsCircleCollider.restitution = 0;
