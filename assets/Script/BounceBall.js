@@ -53,7 +53,8 @@ cc.Class({
 
             physicsCircleCollider.restitution = this.ballRestitution;
             physicsCircleCollider.apply();
-            cc.log(this.node.name + ": " + other.name);
+            
+            //cc.log(this.node.name + ": " + other.name);
         }
     },
 });

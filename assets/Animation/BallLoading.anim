@@ -1,0 +1,75 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "BallLoading",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.6833333333333333,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": "2",
+  "curveData": {
+    "paths": {
+      "BALL-01": {
+        "props": {
+          "y": [
+            {
+              "frame": 0,
+              "value": 0,
+              "curve": "cubicInOut"
+            },
+            {
+              "frame": 0.16666666666666666,
+              "value": 50,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.3333333333333333,
+              "value": 0
+            }
+          ]
+        }
+      },
+      "BALL-02": {
+        "props": {
+          "y": [
+            {
+              "frame": 0,
+              "value": 0,
+              "curve": "cubicInOut"
+            },
+            {
+              "frame": 0.3333333333333333,
+              "value": 50,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.5,
+              "value": 0
+            }
+          ]
+        }
+      },
+      "BALL-03": {
+        "props": {
+          "y": [
+            {
+              "frame": 0.16666666666666666,
+              "value": 0,
+              "curve": "cubicInOut"
+            },
+            {
+              "frame": 0.5,
+              "value": 50,
+              "curve": "linear"
+            },
+            {
+              "frame": 0.6833333333333333,
+              "value": 0
+            }
+          ]
+        }
+      }
+    }
+  },
+  "events": []
+}

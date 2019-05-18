@@ -1,47 +1,94 @@
-// Learn cc.Class:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/class.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/class.html
-// Learn Attribute:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
-
 cc.Class({
     extends: cc.Component,
 
     properties: {
-        // foo: {
-        //     // ATTRIBUTES:
-        //     default: null,        // The default value will be used only when the component attaching
-        //                           // to a node for the first time
-        //     type: cc.SpriteFrame, // optional, default is typeof default
-        //     serializable: true,   // optional, default is true
-        // },
-        // bar: {
-        //     get () {
-        //         return this._bar;
-        //     },
-        //     set (value) {
-        //         this._bar = value;
-        //     }
-        // },
+        items: {
+            default: [],
+            type: cc.SpriteFrame
+        },
+        itemID: 0,
     },
 
-    // LIFE-CYCLE CALLBACKS:
+    start() {
+        this.childItem = this.node.getChildByName("ItemBox");
+        this.sprite = this.childItem.getChildByName("image").getComponent(cc.Sprite);
 
-    // onLoad () {},
+        if (this.itemID != -1)
+            this.sprite.spriteFrame = this.items[this.itemID];
 
-    start () {
+        cc.log(this.itemID);
+
+        this.childItem.active = false;
 
     },
 
-    open(){
-            var spine = this.node.getComponent(sp.Skeleton);
-            spine.animation = "animation";
-            
+    open(flag) {
+        let spine = this.node.getComponent(sp.Skeleton);
+        spine.animation = "animation";
+
+        if (this.itemID != -1) {
+            this.childItem.active = true;
+
+            var action = cc.scaleTo(0.3, 1.5, 1.5);
+            this.childItem.runAction(action);
+
+            if (flag) {
+                //save
+
+                let DBStorage = cc.find("DBStorage").getComponent("DBStorage");
+                switch (this.itemID) {
+                    case 0:
+                        var coin = DBStorage.getItem("coin", 0);
+                        coin += 100;
+                        DBStorage.setItem("coin", coin);
+                        DBStorage.save();
+                        break;
+                    case 1:
+                        var coin = DBStorage.getItem("coin", 0);
+                        coin += 200;
+                        DBStorage.setItem("coin", coin);
+                        DBStorage.save();
+                        break;
+                    case 2:
+                        var coin = DBStorage.getItem("coin", 0);
+                        coin += 300;
+                        DBStorage.setItem("coin", coin);
+                        DBStorage.save();
+                        break;
+
+                    case 3:
+                        var ball = DBStorage.getItem("exteraBall", 1);
+                        ball++;
+                        DBStorage.setItem("exteraBall", ball);
+                        DBStorage.save();
+                        break;
+                    case 4:
+                        var fire = DBStorage.getItem("fireBall", 1);
+                        fire++;
+                        DBStorage.setItem("fireBall", fire);
+                        DBStorage.save();
+                        break;
+                    case 5:
+                        var freeze = DBStorage.getItem("freezGoalKeeper", 1);
+                        freeze++;
+                        DBStorage.setItem("freezGoalKeeper", freeze);
+                        DBStorage.save();
+                        break;
+                    case 6:
+                        var vodo = DBStorage.getItem("removeDefender", 1);
+                        vodo++;
+                        DBStorage.setItem("removeDefender", vodo);
+                        DBStorage.save();
+                        break;
+                }
+
+            }
+        }
+
+        if (flag)
+            this.scheduleOnce(function () {
+                this.node.parent.getComponent("DailyReward").openAll(this.node.name);
+            }, 1);
     },
 
-    // update (dt) {},
 });

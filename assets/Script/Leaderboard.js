@@ -27,6 +27,10 @@ cc.Class({
             default: null,
             type: cc.Node
         },
+        loadingBall: {
+            default: null,
+            type: cc.Node
+        },
         weekBtn: {
             default: null,
             type: cc.Button
@@ -56,11 +60,24 @@ cc.Class({
     start() {
         this.DBStorage = cc.find("DBStorage").getComponent("DBStorage");
 
-        this.second = 20580;
+
+        var getCurrentTime = this.DBStorage.getDateTime();
+        var remainDays = 7 - Math.abs(getCurrentTime.getDay() - 5);
+
+        var newDate = this.addDays(getCurrentTime, remainDays);
+        newDate.setHours(24, 0, 0, 0);
+
+        var remaining = this.getTimeRemaining(newDate);
+
+
+        this.second = (remaining.days * 24) + (remaining.hours * 60 * 60) + (remaining.minutes * 60) + (remaining.seconds);
         this.timeLbl = this.node.getChildByName("stadium_scoreboard").getChildByName("TimeLable").getComponent(cc.Label);
+        this.dayLbl = this.node.getChildByName("stadium_scoreboard").getChildByName("DayLable").getComponent(cc.Label);
+        this.rozLbl = this.node.getChildByName("stadium_scoreboard").getChildByName("RozLable").getComponent(cc.Label);
         //this.leagueLbl = this.node.getChildByName("stadium_scoreboard").getChildByName("leagueName").getComponent(cc.Label);
 
         //this.leagueLbl.string = "";
+        this.dayLbl.string = this.replaceNum(remaining.days.toString());
         this.timeLbl.string = this.replaceNum(this.convertToHHMMSS(this.second));
 
         // Time interval in units of seconds
@@ -72,24 +89,56 @@ cc.Class({
         this.schedule(function () {
             this.second--;
             this.timeLbl.string = this.replaceNum(this.convertToHHMMSS(this.second));
+
+            remaining = this.getTimeRemaining(newDate);
+
+            if (remaining.days <= 0) {
+                this.dayLbl.node.active = false;
+                this.rozLbl.node.active = false;
+            }
+
         }, interval, repeat, delay);
 
 
-
-        for (var i = 0; i < 10; i++) {
-            const row = cc.instantiate(this.itemPrefab);
-            this.content.addChild(row);
-
-            row.getChildByName("numberLable").getComponent(cc.Label).string = this.replaceNum((i + 1).toString());
-            row.getChildByName("nameLable").getComponent(cc.Label).string = "name";
-            row.getChildByName("coinLable").getComponent(cc.Label).string = this.replaceNum((10 - i + 1).toString());
-        }
+        this.clearList();
 
         this.last = this.weekBtn;
 
-        this.getLeaderBoard("total");
-
+        this.getLeaderBoard("weekly");
     },
+    addDays(date, days) {
+        var result = new Date(date);
+        result.setDate(result.getDate() + days);
+        return result;
+    },
+
+    addItem(data) {
+        const row = cc.instantiate(this.itemPrefab);
+        this.content.addChild(row);
+
+        row.getChildByName("numberLable").getComponent(cc.Label).string = this.replaceNum(data.rank);
+        row.getChildByName("nameLable").getComponent(cc.Label).string = (data.me == "1") ? "    شما" : "    " + data.name + "    ";
+        row.getChildByName("coinLable").getComponent(cc.Label).string = this.replaceNum(data.total);
+    },
+    getTimeRemaining(endtime) {
+        var t = Date.parse(endtime) - Date.parse(new Date());
+        var seconds = Math.floor((t / 1000) % 60);
+        var minutes = Math.floor((t / 1000 / 60) % 60);
+        var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+        var days = Math.floor(t / (1000 * 60 * 60 * 24));
+        return {
+            'total': t,
+            'days': days,
+            'hours': hours,
+            'minutes': minutes,
+            'seconds': seconds
+        };
+    },
+
+    clearList() {
+        this.content.removeAllChildren();
+    },
+
     replaceNum: function (input) {//۱۲۳۴۵۶۷۸۹۰
         return input.replace(/1/g, "۱").replace(/2/g, "۲").replace(/3/g, "۳").replace(/4/g, "۴").replace(/5/g, "۵").replace(/6/g, "۶").replace(/7/g, "۷").replace(/8/g, "۸").replace(/9/g, "۹").replace(/0/g, "۰");
     },
@@ -133,18 +182,33 @@ cc.Class({
 
         var sprite = this.dayBtn.getComponent(cc.Sprite);
         sprite.spriteFrame = this.iconVolumeOn;
+
+        this.loadingBall.active = true;
+
+        this.clearList();
+        this.getLeaderBoard("daily");
     },
     weekClick: function () {
         this.offBtn();
 
         var sprite = this.weekBtn.getComponent(cc.Sprite);
         sprite.spriteFrame = this.iconVolumeOn;
+
+        this.loadingBall.active = true;
+
+        this.clearList();
+        this.getLeaderBoard("weekly");
     },
     allClick: function () {
         this.offBtn();
 
         var sprite = this.allBtn.getComponent(cc.Sprite);
         sprite.spriteFrame = this.iconVolumeOn;
+
+        this.loadingBall.active = true;
+
+        this.clearList();
+        this.getLeaderBoard("total");
     },
 
     createCORSRequest: function (method, url) {
@@ -172,7 +236,9 @@ cc.Class({
     },
     getLeaderBoard: function (type) {
 
-        var url = "http://rubika3.rakhtkan.net/getLeaderBoard.php";
+        //xhr.abort();
+
+        var url = "http://rubika1.rakhtkan.net/getLeaderBoard.php";
         var xhr = this.createCORSRequest("POST", url);
         if (!xhr) {
             cc.log('CORS not supported');
@@ -188,7 +254,7 @@ cc.Class({
     },
 
     xhrGetCallback: function (event) {
-        var lb = cc.director.getScene().getChildByName('Canvas').getChildByName('LeaderBoard').getComponent("LeaderBoard");
+        var lb = cc.director.getScene().getChildByName('Canvas').getChildByName('LeaderBoard').getComponent("Leaderboard");
 
         if (typeof event == 'undefined') {
 
@@ -196,9 +262,23 @@ cc.Class({
         }
         if (event.currentTarget.readyState === 4 && (event.currentTarget.status >= 200 && event.currentTarget.status < 300)) {
             cc.log(this.responseText);
+
+            lb.loadingBall.active = false;
+            lb.clearList();
+
+            var json = JSON.parse(this.responseText);
+
+            for (let i = 0; i < json.length; i++) {
+                if (i != 0) {
+                    var node = new cc.Node('Space');
+                    node.height = 100;
+                    lb.content.addChild(node);
+                }
+
+                for (let j = 0; j < json[i].length; j++) {
+                    lb.addItem(json[i][j]);
+                }
+            }
         }
     },
-
-
-    // update (dt) {},
 });

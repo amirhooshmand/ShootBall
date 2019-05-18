@@ -1,0 +1,82 @@
+
+kactus-01.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Layer1
+  rotate: false
+  xy: 491, 527
+  size: 62, 38
+  orig: 64, 40
+  offset: 1, 1
+  index: -1
+Layer10
+  rotate: true
+  xy: 574, 753
+  size: 62, 38
+  orig: 64, 40
+  offset: 1, 1
+  index: -1
+Layer11
+  rotate: true
+  xy: 574, 877
+  size: 74, 43
+  orig: 76, 45
+  offset: 1, 1
+  index: -1
+Layer3
+  rotate: false
+  xy: 638, 974
+  size: 76, 36
+  orig: 78, 38
+  offset: 1, 1
+  index: -1
+Layer5
+  rotate: true
+  xy: 574, 815
+  size: 62, 38
+  orig: 64, 40
+  offset: 1, 1
+  index: -1
+Layer6
+  rotate: false
+  xy: 574, 951
+  size: 64, 59
+  orig: 66, 61
+  offset: 1, 1
+  index: -1
+Layer7
+  rotate: false
+  xy: 417, 522
+  size: 74, 43
+  orig: 76, 45
+  offset: 1, 1
+  index: -1
+Layer8
+  rotate: false
+  xy: 417, 462
+  size: 44, 60
+  orig: 46, 62
+  offset: 1, 1
+  index: -1
+Layer9
+  rotate: true
+  xy: 417, 400
+  size: 62, 38
+  orig: 64, 40
+  offset: 1, 1
+  index: -1
+goldun
+  rotate: false
+  xy: 0, 565
+  size: 574, 445
+  orig: 576, 447
+  offset: 1, 1
+  index: -1
+kactus
+  rotate: false
+  xy: 0, 0
+  size: 417, 565
+  orig: 419, 567
+  offset: 1, 1
+  index: -1

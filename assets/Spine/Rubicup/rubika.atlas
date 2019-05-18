@@ -15,18 +15,6 @@ rubika2.png
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-saye-back
-  rotate: false
-  xy: 0, 0
-  size: 1000, 916
-  orig: 1000, 916
-  offset: 0, 0
-  index: -1
-
-rubika3.png
-format: RGBA8888
-filter: Linear,Linear
-repeat: none
 saye
   rotate: false
   xy: 0, 0
@@ -35,7 +23,7 @@ saye
   offset: 1, 1
   index: -1
 
-rubika4.png
+rubika3.png
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -68,7 +56,7 @@ light
   offset: 1, 1
   index: -1
 
-rubika5.png
+rubika4.png
 format: RGBA8888
 filter: Linear,Linear
 repeat: none

@@ -7,6 +7,8 @@ cc.Class({
 
 
     start() {
+            
+
         this.gameManager = cc.find("Canvas/GameManager").getComponent("GameManager");
 
         this.sprite = this.node.getComponent(cc.Sprite);
@@ -15,6 +17,8 @@ cc.Class({
     onCollisionEnter: function (other, self) {
 
         if (other.name.startsWith('Ball') && other.tag == 0) {
+
+            this.unscheduleAllCallbacks();
 
             var self = this;
             cc.loader.loadRes("player/defence/hit/" + this.gameManager.gameDetail.awayID, cc.SpriteFrame, function (err, spriteFrame) {

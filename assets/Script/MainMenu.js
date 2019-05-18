@@ -1,3 +1,5 @@
+
+
 cc.Class({
     extends: cc.Component,
 
@@ -22,6 +24,14 @@ cc.Class({
             default: null,
             type: cc.Prefab,
         },
+        IntroPrefab: {
+            default: null,
+            type: cc.Prefab,
+        },
+        dailyRewardPrefab: {
+            default: null,
+            type: cc.Prefab,
+        },
         diactiveBartarCup: {
             default: null,
             type: cc.SpriteFrame
@@ -34,6 +44,10 @@ cc.Class({
 
     start() {
 
+
+
+
+        //cc.log(window.orientation);
         window.scrollTo(0, 1);
 
         //this.DBStorage.setData("coin", 5500);
@@ -61,7 +75,7 @@ cc.Class({
         }*/
 
 
-        this.loadImage(0);
+        //this.loadImage(0);
 
         this.canvas = cc.find("Canvas");
 
@@ -80,13 +94,47 @@ cc.Class({
 
         var self = this;
         this.node.on('load-db', function () {
-            self.setPlayer(self.DBStorage.getItem("team"));
+            cc.log("++ : " + self.DBStorage.data);
+            if (self.DBStorage.getItem("team", -1) == -1) {
+                const introNode = cc.instantiate(self.IntroPrefab);
+                self.canvas.addChild(introNode);
+            } else {
+                self.setPlayer(self.DBStorage.getItem("team"));
+                self.dailyCheck();
+            }
         });
+
+        if (this.DBStorage.getItem("team", -1) != -1)
+            this.setPlayer(self.DBStorage.getItem("team"));
+
     },
 
     setPlayer: function (selectedteamID) {
         var playerSpine = cc.find("Canvas/shelf_2/Player/PlayerSpine").getComponent("PlayerOnMenu");
         playerSpine.setPlayer(selectedteamID);
+    },
+
+    dailyCheck() {
+        var getCurrentTime = this.DBStorage.getDateTime();
+        var getLastTime;
+        if (this.DBStorage.getItem("lastRewardTime", '-1') != '-1')
+            getLastTime = new Date(this.DBStorage.getItem("lastRewardTime"));
+        else {
+            this.DBStorage.setItem("lastRewardTime", getCurrentTime);
+            this.DBStorage.save();
+            return;
+        }
+        var diffSecond = (getCurrentTime - getLastTime) / 1000;
+
+        var h = Math.floor(diffSecond / 3600);
+
+        if (h >= 24) {
+            const dailyNode = cc.instantiate(this.dailyRewardPrefab);
+            this.canvas.addChild(dailyNode);
+
+            this.DBStorage.setItem("lastRewardTime", getCurrentTime);
+            this.DBStorage.save();
+        }
     },
 
     loadImage: function (j) {
@@ -119,6 +167,12 @@ cc.Class({
 
         const selectTeamNode = cc.instantiate(this.selectTeamPrefab);
         this.canvas.addChild(selectTeamNode);
+    },
+    teamSelectClickFromIntro: function () {
+
+        const selectTeamNode = cc.instantiate(this.selectTeamPrefab);
+        this.canvas.addChild(selectTeamNode);
+        selectTeamNode.getChildByName("Icon_back").destroy();
     },
     rubikupClick: function () {
         const selectMatchNode = cc.instantiate(this.selectMatchPrefab);

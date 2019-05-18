@@ -28,13 +28,15 @@ cc.Class({
 
         homeID: 5,
     },
-    onLoad(){
+    onLoad() {
         cc.director.getPhysicsManager().enabled = true;
         cc.director.getCollisionManager().enabled = true;
+
+        this.DBStorage = cc.find("DBStorage").getComponent("DBStorage");
+        this.homeID = this.DBStorage.getItem("team");
     },
 
     start() {
-        
         this.node.angle = (this.startRotation + this.endRotation) / 2;
 
         this.flag = false;
@@ -63,20 +65,18 @@ cc.Class({
     update(dt) {
         if (!this.ball) return;
 
-
         this.ballNode.position = this.findPointOnCircle(this.node.x, this.node.y, 60, this.node.angle - 90);
         this.ballNode.angle = this.node.angle;
     },
 
     onCollisionEnter: function (other, self) {
-
         if (other.name.startsWith("Ball") && other.tag == 0 && !this.ball) {
+
 
             this.ballNode = other.node;
             this.ballNode.stopActionByTag(1);
 
             var ball = other.getComponent("Ball");
-            if (!ball.canGetIt) return;
 
             var rigidbody = other.getComponent(cc.RigidBody);
             var velocity = new cc.Vec2(0, 0);
@@ -101,9 +101,9 @@ cc.Class({
             }, this.duration / 2);
 
             this.childNode.active = true;
+            this.aimNode.active = false;
+            this.ball = true;
         }
-        this.aimNode.active = false;
-        this.ball = true;
 
     },
 

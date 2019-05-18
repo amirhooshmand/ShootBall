@@ -51,7 +51,9 @@ cc.Class({
         this.awayGoal = this.gameDetail.awayGoal;
         this.homeGoal = this.gameDetail.homeGoal;
 
-        cc.log(this.gameDetail);
+        this.ballParent = cc.find("Canvas/Environment/BallParent");
+
+        //cc.log(this.gameDetail);
 
         if (this.gameDetail.time == 0) this.timeLbl.destroy();
         else {
@@ -85,7 +87,8 @@ cc.Class({
                 var childById = parent.children[i];
                 var name = childById.name;
 
-                if (name == "ForwardPlayer") {
+
+                if (name.startsWith("ForwardPlayer")) {
                     var sprite = childById.getChildByName("player").getComponent(cc.Sprite);
                     sprite.spriteFrame = spriteFrame;
                 }
@@ -100,6 +103,19 @@ cc.Class({
 
                 if (name == "DefensePlayer") {
                     var sprite = childById.getComponent(cc.Sprite);
+                    sprite.spriteFrame = spriteFrame;
+                }
+            }
+        });
+
+        cc.loader.loadRes("player/playMaker/normal/" + this.gameDetail.homeID, cc.SpriteFrame, function (err, spriteFrame) {
+            var parent = cc.find("Canvas/Environment");
+            for (var i = 0; i < parent.children.length; i++) {
+                var childById = parent.children[i];
+                var name = childById.name;
+
+                if (name == "PlayMaker") {
+                    var sprite = childById.getChildByName("player").getComponent(cc.Sprite);
                     sprite.spriteFrame = spriteFrame;
                 }
             }
@@ -135,7 +151,16 @@ cc.Class({
     },
 
     newBall: function (delay) {
+
+        
+
         this.scheduleOnce(function () {
+
+            for (var i = 0; i < this.ballParent.children.length; i++) {
+                var childById = this.ballParent.children[i];
+                cc.log(childById.name.startsWith('Ball'));
+                if (childById.name.startsWith('Ball')) return;
+            }
 
             if (this.ballCount > 0 || this.infinityBall) {
                 var addBallNode = cc.find("Canvas/Environment/AddBall");
@@ -170,6 +195,8 @@ cc.Class({
     endMatch: function () {
 
         cc.director.getPhysicsManager().enabled = false;
+        if (this.awayGoal != this.homeGoal)
+            this.node.getChildByName("EndMatch").getComponent(cc.AudioSource).play();
 
         this.scheduleOnce(function () {
             var detail = [];
@@ -220,7 +247,7 @@ cc.Class({
     },
 
     penaltiResualt(goal) {
-        var delay = 2;
+        var delay = 2.6;
 
         this.node.getChildByName("EndMatch").getComponent(cc.AudioSource).play();
 
@@ -229,7 +256,7 @@ cc.Class({
             const goalEvent = cc.instantiate(this.goalEventPrefab);
             canvas.addChild(goalEvent);
             goalEvent.getComponentInChildren(cc.Label).string = "پنالتی";
-        } else delay = 1;
+        } else delay = 1.7;
 
         this.scheduleOnce(function () {
 

@@ -130,6 +130,11 @@ cc.Class({
         cc.loader.loadRes("player/goalkeeper/freeze/" + this.gameDetail.awayID, cc.SpriteFrame, function (err, spriteFrame) { });
         cc.loader.loadRes("player/goalkeeper/save/" + this.gameDetail.awayID, cc.SpriteFrame, function (err, spriteFrame) { });
         cc.loader.loadRes("player/goalkeeper/sad/" + this.gameDetail.awayID, cc.SpriteFrame, function (err, spriteFrame) { });
+        cc.loader.loadRes("player/defense/normal/" + this.gameDetail.awayID, cc.SpriteFrame, function (err, spriteFrame) { });
+        cc.loader.loadRes("player/defense/hit/" + this.gameDetail.awayID, cc.SpriteFrame, function (err, spriteFrame) { });
+        cc.loader.loadRes("player/playMaker/normal/" + this.gameDetail.awayID, cc.SpriteFrame, function (err, spriteFrame) { });
+        cc.loader.loadRes("player/playMaker/shoot/" + this.gameDetail.awayID, cc.SpriteFrame, function (err, spriteFrame) { });
+
     },
 
     getSceneName: function () {

@@ -51,7 +51,7 @@ cc.Class({
             var pruches = this.DBStorage.getItem("buyTeam_" + this.teamManager.teams[i].id)
 
             if (pruches != "yes" && this.teamManager.teams[i].price != 0) {
-                button.node.getChildByName("BtnLbl").getComponent(cc.Label).string = "سکه  " + this.teamManager.teams[i].price + "  ";
+                button.node.getChildByName("BtnLbl").getComponent(cc.Label).string = this.replaceNum("سکه  " + this.teamManager.teams[i].price + "  ");
             }
 
             var clickEventHandler = new cc.Component.EventHandler();

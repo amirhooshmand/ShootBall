@@ -2,8 +2,13 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        canGetIt: true,
         fireBall: false,
+        inHand: false,
+    },
+    
+    setFire(){
+        this.fireBall = true;
+        this.node.color = new cc.Color(247 , 156, 156);
     },
 
     start() {
@@ -16,7 +21,6 @@ cc.Class({
         var velocity = this.rigidbody.linearVelocity;
         //cc.log(velocity);
 
-
         if (Math.abs(velocity.x) > this.max) {
             velocity.y = this.max / Math.abs(velocity.x) * velocity.y;
             this.rigidbody.linearVelocity = new cc.Vec2(((velocity.x < 0) ? -this.max : this.max), velocity.y);
@@ -27,6 +31,11 @@ cc.Class({
             this.rigidbody.linearVelocity = new cc.Vec2(velocity.x, ((velocity.y < 0) ? -this.max : this.max));
         }
 
+        if(Math.abs(velocity.y) < 1 && Math.abs(velocity.x) < 1)
+        {
+            velocity.y = 500;
+            this.rigidbody.linearVelocity = velocity;
+        }
     },
 
     onCollisionExit: function (other, self) {
@@ -51,5 +60,8 @@ cc.Class({
             other.node.color = new cc.Color(80 , 80, 80);
         }
     },
+
+    //onCollisionStay: function (other, self) {        
+    //},
 
 });

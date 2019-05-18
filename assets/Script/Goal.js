@@ -17,7 +17,6 @@ cc.Class({
     onCollisionEnter: function (other, self) {
         if (other.name.startsWith('Ball') && other.tag == 1) {
             var ball = other.getComponent("Ball");
-            if (!ball.canGetIt) return;
 
             var physicsCircleCollider = other.getComponent(cc.PhysicsCircleCollider);
 

@@ -30,7 +30,7 @@ cc.Class({
         this.DBStorage = cc.find("DBStorage").getComponent("DBStorage");
 
         this.rubicup = [];
-        this.rubicup.push({ id: 1, ballCount: 3, homeGoal: 0, awayGoal: 3, awayID: 2, time: 0 });
+        this.rubicup.push({ id: 1, ballCount: 4, homeGoal: 3, awayGoal: 3, awayID: 2, time: 0 });
         this.rubicup.push({ id: 1, ballCount: 5, homeGoal: 0, awayGoal: 2, awayID: 3, time: 0 });
         this.rubicup.push({ id: 2, ballCount: 5, homeGoal: 0, awayGoal: 2, awayID: 6, time: 0 });
         this.rubicup.push({ id: 3, ballCount: 5, homeGoal: 0, awayGoal: 2, awayID: 8, time: 0 });
@@ -127,7 +127,6 @@ cc.Class({
     },
 
     matchClick: function (event, customEventData) {
-        cc.log("test: " + this.DBStorage.getItem(this.cup + "_" + "week_" + (customEventData.week - 1) + "_score", -5));
         //if (this.DBStorage.getItem(this.cup + "_" + "week_" + (customEventData.week - 1) + "_score", -1) >= 1)
         {
 

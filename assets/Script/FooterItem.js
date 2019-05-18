@@ -104,8 +104,7 @@ cc.Class({
         var balls = cc.find("Canvas/Environment/BallParent").children;
         for (var i = 0; i < balls.length; i++) {
             var b = balls[i].getComponent("Ball");
-            if (b.canGetIt)
-                b.fireBall = true;
+                b.setFire();
         }
     },
 

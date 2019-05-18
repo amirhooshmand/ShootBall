@@ -13,7 +13,6 @@ cc.Class({
         },
     },
 
-
     load: function (data) {
         this.data = data;
 
@@ -23,25 +22,22 @@ cc.Class({
     start() {
         this.canvas = cc.find("Canvas");
 
-        this.setItem("userID", 34); this.setItem("userName", "amir"); this.setItem("team", 1); this.setItem("coin", 100000);
+        //this.setItem("userID", 34); this.setItem("userName", "amir"); this.setItem("team", 2); this.setItem("lastRewardTime", '2019-05-18T08:33:56.000Z'); this.setItem("coin", 100000); if (this.callBackNode != null) this.callBackNode.emit('load-db');
 
         if (this.data == "{}") {
-            var userToken = androidApp.getUserToken(); //2505gflotyzmoczgmbuliajdojusaybk
+            var userToken = androidApp.getUserToken(); //2508ppktfuxpnefmuiugqinpxyrkmvlm
             this.getUserData(userToken);
         }
 
         var CryptoJS = require("crypto-js");
 
-        
         var encrypted = CryptoJS.AES.encrypt("amir hossein سییب", 'Secret Passphrase').toString();;
-        
+
         var bytes = CryptoJS.AES.decrypt(encrypted, 'Secret Passphrase');
         var decrypted = bytes.toString(CryptoJS.enc.Utf8);
 
-        cc.log(encrypted);
-        cc.log(decrypted);
-
-
+        //cc.log(encrypted);
+        //cc.log(decrypted);
     },
     createCORSRequest: function (method, url) {
         var xhr = cc.loader.getXMLHttpRequest();
@@ -94,7 +90,10 @@ cc.Class({
         }
         if (event.currentTarget.readyState === 4 && (event.currentTarget.status >= 200 && event.currentTarget.status < 300)) {
 
-            if (this.responseText == "0 results") {/*db.data = "{}";*/db.setItem("coin", 5000); } else db.data = this.responseText;
+            if (this.responseText == "0 results") { db.setItem("coin", 5000); } else db.data = this.responseText;
+
+            db.setItem("lastLoginTime", db.getDateTime());
+            db.save();
 
             if (db.callBackNode != null)
                 db.callBackNode.emit('load-db');
@@ -139,7 +138,14 @@ cc.Class({
         if (event.currentTarget.readyState === 4 && (event.currentTarget.status >= 200 && event.currentTarget.status < 300)) {
             var json = JSON.parse(this.responseText);
 
+            //{"status":"OK","status_det":"OK","data":{"status":"Done","user_data":{"user_id":"827023719","name":"","family":"","username":"amir_hosh"}}}
+
+
             db.setItem("userID", json.data.user_data.user_id);
+            db.setItem("userName", json.data.user_data.username);
+            if (json.data.user_data.name != "")
+                db.setItem("name", json.data.user_data.name);
+
             db.loadDBFromServer();
         }
     },
@@ -170,6 +176,39 @@ cc.Class({
         cc.log(this.data);
 
         return data;
+    },
+
+    getDateTime() {
+        var xmlHttp;
+        function srvTime() {
+            try {
+                //FF, Opera, Safari, Chrome
+                xmlHttp = new XMLHttpRequest();
+            }
+            catch (err1) {
+                //IE
+                try {
+                    xmlHttp = new ActiveXObject('Msxml2.XMLHTTP');
+                }
+                catch (err2) {
+                    try {
+                        xmlHttp = new ActiveXObject('Microsoft.XMLHTTP');
+                    }
+                    catch (eerr3) {
+                        //AJAX not supported, use CPU time.
+                        alert("AJAX not supported");
+                    }
+                }
+            }
+            xmlHttp.open('HEAD', window.location.href.toString(), false);
+            xmlHttp.setRequestHeader("Content-Type", "text/html");
+            xmlHttp.send('');
+            return xmlHttp.getResponseHeader("Date");
+        }
+
+        var st = srvTime();
+        var date = new Date(st);
+        return date;
     },
 
     save: function () {

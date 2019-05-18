@@ -1,6 +1,6 @@
 {
   "ver": "2.3.0",
-  "uuid": "8f4028b9-d80f-4756-8b1d-e83e40d338e8",
+  "uuid": "6d1acfa3-18e2-4597-9b05-35244d507018",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -9,8 +9,8 @@
   "subMetas": {
     "rubika": {
       "ver": "1.0.3",
-      "uuid": "5efb94e8-6d43-4485-b045-ed48a18cf54a",
-      "rawTextureUuid": "8f4028b9-d80f-4756-8b1d-e83e40d338e8",
+      "uuid": "b7720590-585e-431c-b93e-64550acc0283",
+      "rawTextureUuid": "6d1acfa3-18e2-4597-9b05-35244d507018",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

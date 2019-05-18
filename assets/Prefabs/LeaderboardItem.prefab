@@ -316,7 +316,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 54.14,
-      "height": 25
+      "height": 40
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -365,7 +365,7 @@
     "_string": "name",
     "_N$string": "name",
     "_fontSize": 25,
-    "_lineHeight": 25,
+    "_lineHeight": 40,
     "_enableWrapText": true,
     "_N$file": {
       "__uuid__": "541726b3-e4a3-4ae7-a887-f638698f41cb"

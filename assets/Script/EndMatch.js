@@ -42,11 +42,10 @@ cc.Class({
     },
 
     win() {
+        //this.node.getChildByName("Next Button").getComponentInChilderen(cc.Label).string = "بازی\nبعد";
 
         var lastScore = this.DBStorage.getItem(this.gameDetail.cup + "_week_" + this.gameDetail.week + "_score", 0);
         var currentScore = 100;
-
-        //if (lastScore <= 0) currentScore += 100; // for win
 
         currentScore += (this.gameDetail.homeGoal - (this.gameDetail.homeGoal - this.gameDetail.awayGoal)) * 25; // goal
         currentScore += (this.gameDetail.homeGoal - this.gameDetail.awayGoal) * 50; // extend goal
@@ -54,7 +53,7 @@ cc.Class({
         this.node.getChildByName("losePlayer").destroy();
 
         var bubble = this.node.getChildByName("speech_bubble");
-        bubble.getChildByName("dec").getComponent(cc.Label).string = this.replaceNum("امتیاز شما " + currentScore + " است");
+        bubble.getChildByName("dec").getComponent(cc.Label).string = this.replaceNum("امتیاز شما\n" + currentScore);
 
         if (lastScore < currentScore) {
 
@@ -78,10 +77,20 @@ cc.Class({
     },
 
     lose() {
+        this.node.getChildByName("Next Button").getComponentInChildren(cc.Label).string = "بازی\n    دوباره";
+
         this.node.getChildByName("winPlayer").destroy();
 
         var bubble = this.node.getChildByName("speech_bubble");
         bubble.getChildByName("dec").getComponent(cc.Label).string = this.replaceNum("): باختی\nدوباره تلاش کن");
+    },
+
+    next() {
+        if (this.gameDetail.win) {
+
+        } else {
+            
+        }
     },
 
     back() {
@@ -122,14 +131,19 @@ cc.Class({
     },
     sendScore: function (score) {
 
-        var url = "http://rubika3.rakhtkan.net/updateLeaderBoard.php";
+        var url = "http://rubika1.rakhtkan.net/updateLeaderBoard.php";
         var xhr = this.createCORSRequest("POST", url);
         if (!xhr) {
             cc.log('CORS not supported');
         }
 
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        var arg = "user=" + this.DBStorage.getItem("userID") + "&name=" + this.DBStorage.getItem("userName") + "&point=" + score;
+        var name = "";
+        if (this.DBStorage.getItem("name", "") != "")
+            name = this.DBStorage.getItem("name", "");
+        else name = this.DBStorage.getItem("userName");
+
+        var arg = "user=" + this.DBStorage.getItem("userID") + "&name=" + name + "&point=" + score;
 
         try { xhr.send(arg); }
         catch (error) { cc.log(error); }

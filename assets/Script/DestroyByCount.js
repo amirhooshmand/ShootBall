@@ -25,7 +25,7 @@ cc.Class({
 
     start() {
         this.count = this.maxCount;
-        //cc.log(data.iconSF.name);
+        //cc.log(this.node.name);
 
         this.sprite = this.node.getComponent(cc.Sprite);
         if (this.useImage) {
@@ -34,7 +34,7 @@ cc.Class({
         }
     },
 
-    onCollisionEnter: function (other, self) {
+    onCollisionExit: function (other, self) {
 
 
         if (other.name.startsWith('Ball') && other.tag == 0) {
@@ -54,4 +54,6 @@ cc.Class({
             }
         }
     },
+
+    
 });

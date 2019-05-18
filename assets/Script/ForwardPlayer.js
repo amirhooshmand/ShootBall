@@ -27,6 +27,9 @@ cc.Class({
         },
         starter: false,
     },
+    onLoad() {
+        if (this.starter) this.node.name = "ForwardPlayer-Starter";
+    },
     start() {
         this.gameManager = cc.find("Canvas/GameManager").getComponent("GameManager");
 
@@ -36,9 +39,9 @@ cc.Class({
         this.ball = false;
         this.lock = this.starter;
 
-        this.childNode = this.node.getChildByName("Arrow");
+        this.arrowNode = this.node.getChildByName("Arrow");
         this.aimNode = this.node.getChildByName("Aim");
-        this.childNode.active = false;
+        this.arrowNode.active = false;
         this.aimNode.active = false;
 
         this.sprite = this.node.getChildByName("player").getComponent(cc.Sprite);
@@ -53,8 +56,6 @@ cc.Class({
         }, this);
 
         if (this.starter) this.gameManager = cc.find("Canvas/GameManager").getComponent("GameManager");
-
-
     },
 
     findPointOnCircle: function (originX, originY, radius, angleRadians) {
@@ -76,19 +77,16 @@ cc.Class({
         if (other.name.startsWith("Ball") && other.tag == 0 && !this.ball) {
 
             this.ballNode = other.node;
-            this.ballNode.stopActionByTag(1);
+            this.ballNode.stopActionByTag(2);
 
             var ball = other.getComponent("Ball");
-            if (!ball.canGetIt) return;
+            ball.ballInHand = true;
 
             var rigidbody = other.getComponent(cc.RigidBody);
-            var physicsCircleCollider = other.getComponent(cc.PhysicsCircleCollider);
-            var circleCollider = other.getComponent(cc.CircleCollider);
             var velocity = new cc.Vec2(0, 0);
 
             rigidbody.linearVelocity = velocity;
             rigidbody.type = cc.RigidBodyType.Static;
-
 
             var a1 = cc.rotateTo(this.duration, this.startRotation, 0);
             var a2 = cc.rotateTo(this.duration, this.endRotation, 0);
@@ -96,6 +94,8 @@ cc.Class({
             a2.easing(cc.easeQuadraticActionInOut());
 
 
+            //this.ballColider = this.ballNode.getComponent(cc.CircleCollider);
+            //this.ballColider.enabled = false;
 
             if (this.starter) {
                 var dest = new cc.Vec2(0, 500);
@@ -104,7 +104,7 @@ cc.Class({
 
                 this.scheduleOnce(function () {
                     this.lock = false;
-                    this.childNode.active = true;
+                    this.arrowNode.active = true;
 
                     var startAction = cc.rotateTo(this.duration / 2, this.startRotation, 0);
                     startAction.easing(cc.easeQuadraticActionInOut());
@@ -112,26 +112,35 @@ cc.Class({
 
                     this.scheduleOnce(function () {
                         var seq = cc.repeatForever(cc.sequence(a2, a1));
-                        seq.setTag(1);
+                        seq.setTag(2);
                         this.node.runAction(seq);
                     }, this.duration / 2);
                 }, 1);
             }
             else {
+                var circleCollider = other.getComponent(cc.CircleCollider);
+                //circleCollider.enabled = false;
+
                 var startAction = cc.rotateTo(this.duration / 2, this.startRotation, 0);
                 startAction.easing(cc.easeQuadraticActionInOut());
                 this.node.runAction(startAction);
 
                 this.scheduleOnce(function () {
                     var seq = cc.repeatForever(cc.sequence(a2, a1));
-                    seq.setTag(1);
+                    seq.setTag(2);
                     this.node.runAction(seq);
                 }, this.duration / 2);
 
-                this.childNode.active = true;
+                this.arrowNode.active = true;
             }
             this.aimNode.active = false;
             this.ball = true;
+        }
+    },
+    onCollisionExit: function (other, self) {
+        if (other.name.startsWith("Ball") && other.tag == 0) {
+            var ball = other.getComponent("Ball");
+            ball.ballInHand = false;
         }
     },
 
@@ -148,7 +157,7 @@ cc.Class({
 
         this.unscheduleAllCallbacks();
 
-        this.node.stopActionByTag(1);
+        this.node.stopActionByTag(2);
 
         var a1 = cc.rotateTo(0.3, 0, 0);
         this.node.runAction(a1);
@@ -161,9 +170,12 @@ cc.Class({
 
         rigidbody.applyForceToCenter(temp);
 
-        this.childNode.active = false;
+        this.arrowNode.active = false;
         this.lock = this.starter;
         this.ball = false;
+
+        var circleCollider = this.ballNode.getComponent(cc.CircleCollider);
+        //circleCollider.enabled = true;
 
         this.shoot();
 

@@ -18,7 +18,7 @@
     "_parent": null,
     "_children": [],
     "_active": true,
-    "_level": 3,
+    "_level": 1,
     "_components": [
       {
         "__id__": 2
@@ -62,15 +62,15 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -90,
-      "y": 174,
+      "x": 192,
+      "y": 169,
       "z": 0
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
+      "x": 0.88,
+      "y": 0.88,
+      "z": 0.88
     },
     "_quat": {
       "__type__": "cc.Quat",
@@ -174,7 +174,7 @@
       "x": 0,
       "y": 0
     },
-    "_radius": 45,
+    "_radius": 46,
     "_id": ""
   },
   {

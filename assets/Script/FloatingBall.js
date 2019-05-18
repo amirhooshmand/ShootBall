@@ -9,7 +9,7 @@ cc.Class({
         },
     },
 
-    start () {
+    start() {
         var seq = cc.repeatForever(
             cc.sequence(
                 cc.rotateTo(this.duration, 180, 180),
@@ -18,14 +18,17 @@ cc.Class({
         this.node.getChildByName("Star").runAction(seq);
     },
 
-    onCollisionEnter: function (other, self) {
+    onCollisionExit: function (other, self) {
 
-        if(!this.canGetIt && other.name.startsWith('Ball'))
-        {
+        if (other.name.startsWith('Ball') && other.tag == 0) {
+
+            var ball = other.getComponent("Ball");
+            if (ball.ballInHand) return;
+
             this.node.removeAllChildren();
 
-             var rigidbody = this.node.getComponent(cc.RigidBody);
-             rigidbody.type = cc.RigidBodyType.Dynamic;
+            var rigidbody = this.node.getComponent(cc.RigidBody);
+            rigidbody.type = cc.RigidBodyType.Dynamic;
         }
-     },
+    },
 });
