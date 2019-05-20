@@ -1,0 +1,19 @@
+
+bartar.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bartar
+  rotate: false
+  xy: 0, 0
+  size: 546, 938
+  orig: 548, 940
+  offset: 1, 1
+  index: -1
+shine
+  rotate: false
+  xy: 546, 790
+  size: 146, 148
+  orig: 148, 150
+  offset: 1, 1
+  index: -1

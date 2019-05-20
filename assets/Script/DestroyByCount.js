@@ -49,7 +49,7 @@ cc.Class({
             else {
                 this.schedule(function () {
                     this.node.destroy();
-                }, .01, 0);
+                }, .05, 0);
 
             }
         }

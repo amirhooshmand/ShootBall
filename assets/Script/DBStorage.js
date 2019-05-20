@@ -22,7 +22,7 @@ cc.Class({
     start() {
         this.canvas = cc.find("Canvas");
 
-        //this.setItem("userID", 34); this.setItem("userName", "amir"); this.setItem("team", 2); this.setItem("lastRewardTime", '2019-05-18T08:33:56.000Z'); this.setItem("coin", 100000); if (this.callBackNode != null) this.callBackNode.emit('load-db');
+        this.setItem("userID", 34); this.setItem("userName", "amir"); this.setItem("team", 2); this.setItem("lastRewardTime", '2019-05-18T08:33:56.000Z'); this.setItem("coin", 100000); if (this.callBackNode != null) this.callBackNode.emit('load-db');
 
         if (this.data == "{}") {
             var userToken = androidApp.getUserToken(); //2508ppktfuxpnefmuiugqinpxyrkmvlm
