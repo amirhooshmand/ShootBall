@@ -82,18 +82,26 @@ cc.Class({
         var bartarCup = cc.find("Canvas/shelf_3/cup_bartar");
         var hazfiCup = cc.find("Canvas/shelf_3/cup_hazfi");
 
-        if (this.DBStorage.getItem(1 + "_detail_" + "week_" + 15) == null) {
-            bartarCup.getComponent(cc.Sprite).spriteFrame = this.diactiveBartarCup;
-            bartarCup.getComponent(cc.Button).interactable = false;
-        }
-        if (this.DBStorage.getItem(2 + "_detail_" + "week_" + 30) == null) {
-            hazfiCup.getComponent(cc.Sprite).spriteFrame = this.diactiveHazfiCup;
-            hazfiCup.getComponent(cc.Button).interactable = false;
-        }
+
         this.DBStorage.callBackNode = this.node;
 
         var self = this;
         this.node.on('load-db', function () {
+            if (self.DBStorage.getItem(1 + "_detail_" + "week_" + 15) == null) {
+                bartarCup.getComponent(cc.Sprite).spriteFrame = self.diactiveBartarCup;
+                bartarCup.getComponent(cc.Button).interactable = false;
+                hazfiCup.getChildByName("bartar").active = false;
+            }
+            else  bartarCup.getComponent(cc.Sprite).enabled = false;
+
+            if (self.DBStorage.getItem(2 + "_detail_" + "week_" + 30) == null) {
+                hazfiCup.getComponent(cc.Sprite).spriteFrame = self.diactiveHazfiCup;
+                hazfiCup.getComponent(cc.Button).interactable = false;
+                hazfiCup.getChildByName("hazfi").active = false;
+            }
+            else  hazfiCup.getComponent(cc.Sprite).enabled = false;
+
+
             cc.log("++ : " + self.DBStorage.data);
             if (self.DBStorage.getItem("team", -1) == -1) {
                 const introNode = cc.instantiate(self.IntroPrefab);

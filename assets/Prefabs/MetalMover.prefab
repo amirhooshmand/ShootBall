@@ -18,7 +18,7 @@
     "_parent": null,
     "_children": [],
     "_active": true,
-    "_level": 3,
+    "_level": 1,
     "_components": [
       {
         "__id__": 2
@@ -193,12 +193,12 @@
     "duration": 2,
     "startPos": {
       "__type__": "cc.Vec2",
-      "x": 80,
+      "x": 60,
       "y": 50
     },
     "endPos": {
       "__type__": "cc.Vec2",
-      "x": -80,
+      "x": -60,
       "y": -50
     },
     "delay": true,

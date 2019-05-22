@@ -1,18 +1,18 @@
 
-bartar.png
+hazfi.png
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-bartar
+hazfi
   rotate: false
-  xy: 0, 0
-  size: 546, 938
-  orig: 548, 940
+  xy: 2, 152
+  size: 739, 739
+  orig: 741, 741
   offset: 1, 1
   index: -1
 shine
   rotate: false
-  xy: 546, 790
+  xy: 2, 2
   size: 146, 148
   orig: 148, 150
   offset: 1, 1

@@ -32,8 +32,7 @@ cc.Class({
             var childById = environment.children[i];
             var name = childById.name;
 
-            if (childById == this.node)
-                cc.log("Yes is detected");
+            if (childById == this.node) { }
             else if (name == "ForwardPlayer" || name == "PlayMaker") {
                 this.player.push(childById);
             }

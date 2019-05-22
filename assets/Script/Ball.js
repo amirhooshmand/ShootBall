@@ -5,10 +5,10 @@ cc.Class({
         fireBall: false,
         inHand: false,
     },
-    
-    setFire(){
+
+    setFire() {
         this.fireBall = true;
-        this.node.color = new cc.Color(247 , 156, 156);
+        this.node.color = new cc.Color(247, 156, 156);
     },
 
     start() {
@@ -31,8 +31,7 @@ cc.Class({
             this.rigidbody.linearVelocity = new cc.Vec2(velocity.x, ((velocity.y < 0) ? -this.max : this.max));
         }
 
-        if(Math.abs(velocity.y) < 1 && Math.abs(velocity.x) < 1)
-        {
+        if (Math.abs(velocity.y) < 1 && Math.abs(velocity.x) < 1) {
             velocity.y = 500;
             this.rigidbody.linearVelocity = velocity;
         }
@@ -56,8 +55,18 @@ cc.Class({
                 physicsBoxCollider.enabled = false;
             }
 
+            var moveNode = other.getComponent("MoveNode");
+            if (moveNode) {
+                moveNode.enabled = false;
+            }
+
+            var rotateNode = other.getComponent("RotateNode");
+            if (rotateNode) {
+                rotateNode.enabled = false;
+            }
+
             other.node.opacity = 70;
-            other.node.color = new cc.Color(80 , 80, 80);
+            other.node.color = new cc.Color(80, 80, 80);
         }
     },
 

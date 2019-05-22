@@ -115,9 +115,9 @@ cc.Class({
 
         this.players.push({
             teamID: 0,
-            number: 17,
+            number: 5,
             headName: "team_ss_humam",
-            bodyColor: 0,
+            bodyColor: 2,
         });
         this.players.push({
             teamID: 0,
@@ -254,9 +254,9 @@ cc.Class({
         });
         this.players.push({
             teamID: 7,
-            number: 10,
+            number: 18,
             headName: "team_zob_khalat",
-            bodyColor: 0,
+            bodyColor: 3,
         });
         this.players.push({
             teamID: 7,
@@ -330,9 +330,9 @@ cc.Class({
         });
         this.players.push({
             teamID: 11,
-            number: 17,
+            number: 10,
             headName: "team_naft_pakdel",
-            bodyColor: 0,
+            bodyColor: 1,
         });
         this.players.push({
             teamID: 11,

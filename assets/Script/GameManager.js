@@ -55,6 +55,8 @@ cc.Class({
 
         //cc.log(this.gameDetail);
 
+        if (this.gameDetail.time == null) { /*cc.director.loadScene("StartMenu");*/ this.infinityBall = true; this.newBall(0.1); return; }
+
         if (this.gameDetail.time == 0) this.timeLbl.destroy();
         else {
             this.timeLbl.string = this.replaceNum(this.gameDetail.time.toString());
@@ -152,7 +154,7 @@ cc.Class({
 
     newBall: function (delay) {
 
-        
+
 
         this.scheduleOnce(function () {
 

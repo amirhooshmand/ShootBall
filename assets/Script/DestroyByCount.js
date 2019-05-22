@@ -34,7 +34,7 @@ cc.Class({
         }
     },
 
-    onCollisionExit: function (other, self) {
+    /*onCollisionExit: function (other, self) {
 
 
         if (other.name.startsWith('Ball') && other.tag == 0) {
@@ -50,6 +50,27 @@ cc.Class({
                 this.schedule(function () {
                     this.node.destroy();
                 }, .05, 0);
+
+            }
+        }
+    },*/
+
+    onEndContact: function (contact, selfCollider, otherCollider) {
+        cc.log(otherCollider.name);
+
+        if (otherCollider.name.startsWith('Ball') && otherCollider.tag == 0) {
+            if (otherCollider.getComponent("Ball").fireBall) return;
+            
+            this.count--;
+
+            if (this.count > 0 && this.useImage) {
+                var data = this.items[this.count - 1];
+                this.sprite.spriteFrame = data.iconSF;
+            }
+            else {
+                this.schedule(function () {
+                    this.node.destroy();
+                }, .1, 0);
 
             }
         }

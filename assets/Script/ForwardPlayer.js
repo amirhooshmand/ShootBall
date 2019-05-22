@@ -99,7 +99,7 @@ cc.Class({
 
             if (this.starter) {
                 var dest = new cc.Vec2(0, 500);
-                var action = cc.moveTo(1, dest.x, dest.y);
+                var action = cc.moveTo(0.5, dest.x, dest.y);
                 this.node.runAction(action);
 
                 this.scheduleOnce(function () {
@@ -115,7 +115,7 @@ cc.Class({
                         seq.setTag(2);
                         this.node.runAction(seq);
                     }, this.duration / 2);
-                }, 1);
+                }, 0.5);
             }
             else {
                 var circleCollider = other.getComponent(cc.CircleCollider);
