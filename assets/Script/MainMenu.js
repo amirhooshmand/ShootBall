@@ -24,6 +24,10 @@ cc.Class({
             default: null,
             type: cc.Prefab,
         },
+        aboutUsPrefab: {
+            default: null,
+            type: cc.Prefab,
+        },
         IntroPrefab: {
             default: null,
             type: cc.Prefab,
@@ -87,19 +91,20 @@ cc.Class({
 
         var self = this;
         this.node.on('load-db', function () {
+            cc.log(self.DBStorage.getItem(1 + "_detail_" + "week_" + 15));
             if (self.DBStorage.getItem(1 + "_detail_" + "week_" + 15) == null) {
                 bartarCup.getComponent(cc.Sprite).spriteFrame = self.diactiveBartarCup;
                 bartarCup.getComponent(cc.Button).interactable = false;
                 hazfiCup.getChildByName("bartar").active = false;
             }
-            else  bartarCup.getComponent(cc.Sprite).enabled = false;
+            else bartarCup.getComponent(cc.Sprite).enabled = false;
 
             if (self.DBStorage.getItem(2 + "_detail_" + "week_" + 30) == null) {
                 hazfiCup.getComponent(cc.Sprite).spriteFrame = self.diactiveHazfiCup;
                 hazfiCup.getComponent(cc.Button).interactable = false;
                 hazfiCup.getChildByName("hazfi").active = false;
             }
-            else  hazfiCup.getComponent(cc.Sprite).enabled = false;
+            else hazfiCup.getComponent(cc.Sprite).enabled = false;
 
 
             cc.log("++ : " + self.DBStorage.data);
@@ -165,7 +170,8 @@ cc.Class({
     },
 
     aboutUsClick: function () {
-
+        const storeNode = cc.instantiate(this.aboutUsPrefab);
+        this.canvas.addChild(storeNode);
     },
     storeClick: function () {
         const storeNode = cc.instantiate(this.StorePrefab);
@@ -202,12 +208,13 @@ cc.Class({
         this.canvas.addChild(leaderboardNode);
     },
 
-    openEndMatch(gameDetail) {
+    openEndMatch(detail, gameDetail) {
         this.canvas = cc.find("Canvas");
 
         const endMatchNode = cc.instantiate(this.endMatchPrefab);
         this.canvas.addChild(endMatchNode);
 
+        endMatchNode.getComponent("EndMatch").detail = detail;
         endMatchNode.getComponent("EndMatch").gameDetail = gameDetail;
     }
 });

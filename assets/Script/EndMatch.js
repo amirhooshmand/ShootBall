@@ -2,6 +2,7 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
+        detail: "",
         gameDetail: ""
     },
 
@@ -14,41 +15,44 @@ cc.Class({
 
         var scoreBoard = this.node.getChildByName("stadium_scoreboard");
 
-        cc.loader.loadRes("logo/" + this.gameDetail.homeID, cc.SpriteFrame, function (err, spriteFrame) {
+        cc.loader.loadRes("logo/" + this.detail.homeID, cc.SpriteFrame, function (err, spriteFrame) {
             scoreBoard.getChildByName("HomeLogo").getComponent(cc.Sprite).spriteFrame = spriteFrame;
         });
 
-        cc.loader.loadRes("logo/" + this.gameDetail.awayID, cc.SpriteFrame, function (err, spriteFrame) {
+        cc.loader.loadRes("logo/" + this.detail.awayID, cc.SpriteFrame, function (err, spriteFrame) {
             scoreBoard.getChildByName("AwayLogo").getComponent(cc.Sprite).spriteFrame = spriteFrame;
         });
 
-        scoreBoard.getChildByName("HomeLable").getComponent(cc.Label).string = this.teamManager.teams[this.gameDetail.homeID].name;
-        scoreBoard.getChildByName("AwayLable").getComponent(cc.Label).string = this.teamManager.teams[this.gameDetail.awayID].name;
+        scoreBoard.getChildByName("HomeLable").getComponent(cc.Label).string = this.teamManager.teams[this.detail.homeID].name;
+        scoreBoard.getChildByName("AwayLable").getComponent(cc.Label).string = this.teamManager.teams[this.detail.awayID].name;
 
         var leagueName = "";
-        if (this.gameDetail.cup == 1) leagueName = "روبیکاپ      ";
-        else if (this.gameDetail.cup == 1) leagueName = "لیگ برتر";
-        else if (this.gameDetail.cup == 1) leagueName = "جام حذفی";
+        if (this.detail.cup == 1) leagueName = "روبیکاپ      ";
+        else if (this.detail.cup == 1) leagueName = "لیگ برتر";
+        else if (this.detail.cup == 1) leagueName = "جام حذفی";
 
         scoreBoard.getChildByName("leagueName").getComponent(cc.Label).string = leagueName;
-        scoreBoard.getChildByName("weekLable").getComponent(cc.Label).string = "هفته " + this.replaceNum(this.gameDetail.week.toString());
+        scoreBoard.getChildByName("weekLable").getComponent(cc.Label).string = "هفته " + this.replaceNum(this.detail.week.toString());
 
         var bubble = this.node.getChildByName("speech_bubble");
         bubble.getChildByName("dec").getComponent(cc.Label).string = this.replaceNum("امتیاز شما\nاینقدر است");
 
-        if (this.gameDetail.win)
+        if (this.detail.win)
             this.win();
         else this.lose();
+
+        if (this.detail.cup == 3 && this.detail.week == 30)
+            this.node.getChildByName("Next Button").destroy();
     },
 
     win() {
         //this.node.getChildByName("Next Button").getComponentInChilderen(cc.Label).string = "بازی\nبعد";
 
-        var lastScore = this.DBStorage.getItem(this.gameDetail.cup + "_week_" + this.gameDetail.week + "_score", 0);
+        var lastScore = this.DBStorage.getItem(this.detail.cup + "_week_" + this.detail.week + "_score", 0);
         var currentScore = 100;
 
-        currentScore += (this.gameDetail.homeGoal - (this.gameDetail.homeGoal - this.gameDetail.awayGoal)) * 25; // goal
-        currentScore += (this.gameDetail.homeGoal - this.gameDetail.awayGoal) * 50; // extend goal
+        currentScore += (this.detail.homeGoal - (this.detail.homeGoal - this.detail.awayGoal)) * 25; // goal
+        currentScore += (this.detail.homeGoal - this.detail.awayGoal) * 50; // extend goal
 
         this.node.getChildByName("losePlayer").destroy();
 
@@ -57,17 +61,17 @@ cc.Class({
 
         if (lastScore < currentScore) {
 
-            if (this.gameDetail.cup == 1) {
-                if (this.gameDetail.week == 16) {
-                    var f = this.DBStorage.getItem("scoreofEndCup" + this.gameDetail.cup, 0);
+            if (this.detail.cup == 1) {
+                if (this.detail.week == 16) {
+                    var f = this.DBStorage.getItem("scoreofEndCup" + this.detail.cup, 0);
                     if (f == 0) {
                         currentScore += 1000;
-                        this.DBStorage.setItem("scoreofEndCup" + this.gameDetail.cup, 1);
+                        this.DBStorage.setItem("scoreofEndCup" + this.detail.cup, 1);
                     }
                 }
             }
-            this.DBStorage.setItem(this.gameDetail.cup + "_detail_" + "week_" + this.gameDetail.week, this.gameDetail.homeGoal + " - " + this.gameDetail.awayGoal)
-            this.DBStorage.setItem(this.gameDetail.cup + "_week_" + this.gameDetail.week + "_score", currentScore);
+            this.DBStorage.setItem(this.detail.cup + "_detail_" + "week_" + this.detail.week, this.detail.homeGoal + " - " + this.detail.awayGoal)
+            this.DBStorage.setItem(this.detail.cup + "_week_" + this.detail.week + "_score", currentScore);
             this.DBStorage.save();
 
             this.sendScore(currentScore);
@@ -86,18 +90,34 @@ cc.Class({
     },
 
     next() {
-        if (this.gameDetail.win) {
+        if (this.detail.win) {
+            var mainMenu = cc.find("Canvas").getComponent("MainMenu");
 
+            if (this.detail.cup == 1 && this.detail.week != 15) mainMenu.rubikupClick();
+            else if (this.detail.cup == 1) mainMenu.premierLeague_1Click();
+
+            if (this.detail.cup == 2 && this.detail.week != 30) mainMenu.premierLeague_1Click();
+            else if (this.detail.cup == 2) mainMenu.cupClick();
+
+            if (this.detail.cup == 3) mainMenu.cupClick();
         } else {
-            
+            var gdetail = this.gameDetail;
+            var dbData = this.DBStorage.data;
+
+            cc.director.loadScene("Level" + this.detail.cup + "-" + this.detail.week, function (err, data) {
+                var sceneNode = cc.director.getScene();
+                var gameManager = sceneNode.getChildByName('Canvas').getChildByName('GameManager');
+                var db = sceneNode.getChildByName('DBStorage').getComponent("DBStorage");
+                db.load(dbData);
+
+                gameManager.getComponent("GameManager").gameDetail = gdetail;
+
+            });
         }
     },
 
     back() {
-        var mainMenu = cc.find("Canvas").getComponent("MainMenu");
-        if (this.gameDetail.cup == 1) mainMenu.rubikupClick();
-        else if (this.gameDetail.cup == 2) mainMenu.premierLeague_1Click();
-        else if (this.gameDetail.cup == 3) mainMenu.cupClick();
+
 
         this.node.destroy();
     },

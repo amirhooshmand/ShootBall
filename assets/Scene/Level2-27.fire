@@ -47,9 +47,9 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.6502040940888074,
-      "y": 0.6502040940888074,
-      "z": 0.6502040940888074
+      "x": 0.8683673469387756,
+      "y": 0.8683673469387756,
+      "z": 0.8683673469387756
     },
     "_quat": {
       "__type__": "cc.Quat",
@@ -997,7 +997,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "a1DaZjsuFKpaLOaRsOQlWE"
   },
@@ -5009,8 +5009,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 164.3,
-      "y": 63.3,
+      "x": 164,
+      "y": 51,
       "z": 0
     },
     "_scale": {
@@ -5140,7 +5140,7 @@
       "__id__": 156
     },
     "_enabled": true,
-    "duration": 2,
+    "duration": 1.5,
     "startPos": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -5215,8 +5215,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -161.3,
-      "y": 63.3,
+      "x": -161,
+      "y": 51,
       "z": 0
     },
     "_scale": {
@@ -5346,7 +5346,7 @@
       "__id__": 163
     },
     "_enabled": true,
-    "duration": 2,
+    "duration": 1.5,
     "startPos": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -5421,8 +5421,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -78.5,
-      "y": 20.2,
+      "x": -79,
+      "y": -4,
       "z": 0
     },
     "_scale": {
@@ -5552,7 +5552,7 @@
       "__id__": 170
     },
     "_enabled": true,
-    "duration": 2,
+    "duration": 1.5,
     "startPos": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -5628,7 +5628,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 6,
-      "y": 20.2,
+      "y": -4,
       "z": 0
     },
     "_scale": {
@@ -5758,7 +5758,7 @@
       "__id__": 177
     },
     "_enabled": true,
-    "duration": 2,
+    "duration": 1.5,
     "startPos": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -5833,8 +5833,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 93.4,
-      "y": 20.2,
+      "x": 93,
+      "y": -4,
       "z": 0
     },
     "_scale": {
@@ -5964,7 +5964,7 @@
       "__id__": 184
     },
     "_enabled": true,
-    "duration": 2,
+    "duration": 1.5,
     "startPos": {
       "__type__": "cc.Vec2",
       "x": 0,

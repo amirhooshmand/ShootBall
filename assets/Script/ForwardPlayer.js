@@ -75,12 +75,15 @@ cc.Class({
     onCollisionEnter: function (other, self) {
 
         if (other.name.startsWith("Ball") && other.tag == 0 && !this.ball) {
-
+            
+            
+            var ball = other.getComponent("Ball");
+            if (ball.inHand) return;
+            
             this.ballNode = other.node;
             this.ballNode.stopActionByTag(2);
-
-            var ball = other.getComponent("Ball");
-            ball.ballInHand = true;
+            
+            ball.inHand = true;
 
             var rigidbody = other.getComponent(cc.RigidBody);
             var velocity = new cc.Vec2(0, 0);
@@ -140,7 +143,7 @@ cc.Class({
     onCollisionExit: function (other, self) {
         if (other.name.startsWith("Ball") && other.tag == 0) {
             var ball = other.getComponent("Ball");
-            ball.ballInHand = false;
+            ball.inHand = false;
         }
     },
 
@@ -180,7 +183,6 @@ cc.Class({
         this.shoot();
 
         if (this.starter) {
-
             this.node.removeComponent(cc.CircleCollider);
             //circleCollider.enable = false;
 

@@ -47,9 +47,9 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.2830177701832288,
-      "y": 0.2830177701832288,
-      "z": 0.2830177701832288
+      "x": 0.8683673469387756,
+      "y": 0.8683673469387756,
+      "z": 0.8683673469387756
     },
     "_quat": {
       "__type__": "cc.Quat",
@@ -4596,7 +4596,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "fdouJoSXlHt5vjIBYyBDwr"
   },
@@ -4834,7 +4834,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "a0WW0ZumFIyL4YsG6UJjmO"
   },
@@ -5072,7 +5072,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "6ctRUSfzBHZ7M9XmDXA830"
   },
@@ -5310,7 +5310,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "15fT6/PyFBIaHbTm4U9uHB"
   },
@@ -5548,7 +5548,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "78s4UOFZZGGqSb1UAsWPtK"
   },
@@ -5786,7 +5786,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "8a6dvkCDZLB6AL2U89a290"
   },
@@ -6024,7 +6024,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "23ZhTotX5MlLFlg95plMoG"
   },
@@ -6254,7 +6254,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "16g3I3QEJEkorufX3pnAVP"
   },
@@ -6484,7 +6484,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "b9Ie5gVL1E04P0k9qnaZsw"
   },
@@ -6714,7 +6714,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "28YZndwRZC7r5MdaseZlFj"
   },
@@ -6944,7 +6944,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "f1SDHrV45Lyrj2CiBQTITT"
   },
@@ -7174,7 +7174,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "baX2UH8D5BD4wBw/mqXCCo"
   },
@@ -7404,7 +7404,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "9ajfQXJ5hJkYm3vbzF92uw"
   },
@@ -7634,7 +7634,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "f0SpddsGRFA4XQkixuHxWb"
   },
@@ -7864,7 +7864,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "c3WkNFnyxP3rJlkHs2wJeV"
   },
@@ -8094,7 +8094,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "03pnDrE3RPfpkOZOGYRpdX"
   },
@@ -8324,7 +8324,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "d6Jty03pxFQ4l8JERHWoAV"
   },
@@ -8554,7 +8554,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "28LD9xxZxJbpJUYcvLGr0A"
   },
@@ -9329,8 +9329,8 @@
     },
     "_enabled": true,
     "duration": 3,
-    "startRotation": 180,
-    "endRotation": 180,
+    "startRotation": -180,
+    "endRotation": -180,
     "_id": "2aKaDHmQxIqY9o30LD6cvx"
   },
   {

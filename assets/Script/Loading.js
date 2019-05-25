@@ -32,7 +32,7 @@ cc.Class({
         this.hinttext.push("       توپ آتشی همه ی موانع رو از سر راه برمیداره");
         this.hinttext.push("       برای اینکه وسط بازی توپ کم نیاری بهتره از فروشگاه\nسه توپ اضافه رو بخری");
         this.hinttext.push("       اگه بتونی جیمی جامپو بگیری، سه توپ اضافه\nجایزه میگیری");
-
+        
         var rnd = Math.floor(Math.random() * this.hinttext.length);
 
         this.hintLbl.string = this.hinttext[rnd];

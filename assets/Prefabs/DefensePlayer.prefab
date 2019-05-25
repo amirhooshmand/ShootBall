@@ -18,7 +18,7 @@
     "_parent": null,
     "_children": [],
     "_active": true,
-    "_level": 1,
+    "_level": 3,
     "_components": [
       {
         "__id__": 2
@@ -62,8 +62,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 192,
-      "y": 169,
+      "x": -6.4,
+      "y": -136.9,
       "z": 0
     },
     "_scale": {
@@ -134,7 +134,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": ""
   },
@@ -174,7 +174,7 @@
       "x": 0,
       "y": 0
     },
-    "_radius": 46,
+    "_radius": 45,
     "_id": ""
   },
   {

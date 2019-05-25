@@ -22,11 +22,27 @@ cc.Class({
     start() {
         this.canvas = cc.find("Canvas");
 
-        this.setItem("userID", 34); this.setItem("1_detail_week_15", "3 - 2"); this.setItem("2_detail_week_30", "3 - 2"); this.setItem("userName", "amir"); this.setItem("team", 2); this.setItem("lastRewardTime", '2019-06-20T08:33:56.000Z'); this.setItem("coin", 100000); if (this.callBackNode != null) this.callBackNode.emit('load-db');
+        //\"userID\":34,\"1_detail_week_15\":\"3 - 2\",\"2_detail_week_30\":\"3 - 2\",
+        //this.setItem("userID", 34); this.setItem("1_detail_week_15", "3 - 2"); this.setItem("2_detail_week_30", "3 - 2"); this.setItem("userName", "amir"); this.setItem("team", 2); this.setItem("lastRewardTime", '2019-06-20T08:33:56.000Z'); this.setItem("coin", 100000); if (this.callBackNode != null) this.callBackNode.emit('load-db');
+        //this.data = "{\"userName\":\"amir\",\"team\":2,\"lastRewardTime\":\"2019-06-20T08:33:56.000Z\",\"coin\":100000,\"1_week_0_score\":1,\"1_detail_week_1\":\"3 - 1\",\"1_week_1_score\":225,\"1_detail_week_2\":\"5 - 2\",\"1_week_2_score\":300}";
+
+
+
 
         if (this.data == "{}") {
-            var userToken = androidApp.getUserToken(); //2508ppktfuxpnefmuiugqinpxyrkmvlm
-            this.getUserData(userToken);
+
+            this.data = cc.sys.localStorage.getItem('userData');
+            if (this.data == null) {
+                this.data = "{}";
+                this.setItem("userID", 34);
+            }
+            if (this.callBackNode != null)
+                this.callBackNode.emit('load-db');
+
+            //var userData = JSON.parse(cc.sys.localStorage.getItem('userData'));
+
+            //var userToken = androidApp.getUserToken(); //2508ppktfuxpnefmuiugqinpxyrkmvlm
+            //this.getUserData(userToken);
         }
 
         var CryptoJS = require("crypto-js");
@@ -212,6 +228,8 @@ cc.Class({
     },
 
     save: function () {
+        cc.sys.localStorage.setItem("userData", this.data);
+
         var url = "http://rubika1.rakhtkan.net/userUpdate.php";
         var xhr = this.createCORSRequest("POST", url);
         if (!xhr) {

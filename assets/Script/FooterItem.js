@@ -25,8 +25,8 @@ cc.Class({
 
         this.DBStorage = cc.find("DBStorage").getComponent("DBStorage");
 
-        if (this.gameManager.gameDetail.ballCount == -1)
-            this.node.getChildByName("ShopItem3").destroy();
+        //if (this.gameManager.gameDetail.ballCount == -1)
+            //this.node.getChildByName("ShopItem3").destroy();
     },
 
     onItemClick: function (event, id) {
@@ -48,6 +48,10 @@ cc.Class({
             anim.on('finished', function (event) { eventNode.destroy(); });
 
         } else if (id == 2 && fireCount > 0) { // fireCount
+
+            var balls = cc.find("Canvas/Environment/BallParent").children;
+            if (balls.length == 0) return;
+
             fireCount--;
             this.DBStorage.setItem("fireBall", fireCount);
             this.fireBall();
@@ -97,14 +101,14 @@ cc.Class({
         var gk = cc.find("Canvas/Environment/GoalKeeper")
         gk.destroy();
 
-        this.node.getChildByName("ShopItem1").destroy();
+        //this.node.getChildByName("ShopItem1").destroy();
     },
 
     fireBall: function () {
         var balls = cc.find("Canvas/Environment/BallParent").children;
         for (var i = 0; i < balls.length; i++) {
             var b = balls[i].getComponent("Ball");
-                b.setFire();
+            b.setFire();
         }
     },
 

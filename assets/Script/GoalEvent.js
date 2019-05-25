@@ -21,10 +21,17 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     onLoad() {
+
+
+        var sound = cc.sys.localStorage.getItem("audio");
+
+
         var rnd = Math.floor(Math.random() * this.clips.length);
         var audio = this.node.getComponent(cc.AudioSource);
         audio.clip = this.clips[rnd];
-        audio.play();
+        
+        if (sound == 1)
+            audio.play();
 
         var self = this;
         var anim = this.node.getComponent(cc.Animation);

@@ -39,7 +39,7 @@ cc.Class({
 
         this.scheduleOnce(function () {
             this.node.destroy();
-        }, 100);
+        }, 11);
 
         this.gameManager = cc.find("Canvas/GameManager").getComponent("GameManager");
 
@@ -48,6 +48,11 @@ cc.Class({
 
     onCollisionEnter: function (other, self) {
         if (other.name.startsWith('Ball') && other.tag == 0 && !this.dead) {
+
+            var ball = other.getComponent("Ball");
+            if (ball.inHand) return;
+
+
             this.anim.setAnimation(0, "fall", false);
             this.timeScale = 2;
 
@@ -58,7 +63,7 @@ cc.Class({
 
             this.scheduleOnce(function () {
                 this.node.destroy();
-            }, 9);
+            }, 1.2);
 
             this.gameManager.ballCount += 3;
             this.gameManager.setLableCount();

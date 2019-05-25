@@ -191,7 +191,9 @@
     "PenaltiPrefab": {
       "__uuid__": "11cd62dc-e2f0-4abb-9fb4-1e7291c577a2"
     },
-    "JimyJumpPrefab": null,
+    "JimyJumpPrefab": {
+      "__uuid__": "47862f03-0b83-46b2-830b-8642c06e9c85"
+    },
     "infinityBall": false,
     "_id": ""
   },

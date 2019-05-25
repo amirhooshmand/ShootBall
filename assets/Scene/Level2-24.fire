@@ -47,9 +47,9 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.5281298335442691,
-      "y": 0.5281298335442691,
-      "z": 0.5281298335442691
+      "x": 0.8683673469387756,
+      "y": 0.8683673469387756,
+      "z": 0.8683673469387756
     },
     "_quat": {
       "__type__": "cc.Quat",
@@ -1514,7 +1514,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "1875OUYGZEeoQPjac7/FTx"
   },
@@ -1714,7 +1714,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "55g0LX2WBDvo05mUsYmUGY"
   },
@@ -1914,7 +1914,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "67DLi5OVlEFo8CHELoOOmU"
   },
@@ -2152,7 +2152,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "60yADJT4tNbrx/JxOnwavs"
   },
@@ -2390,7 +2390,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "8eBCT0sytHi4maSq+oe7Oi"
   },
@@ -2628,7 +2628,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "01muXifTNKw4icEFjaok4f"
   },
@@ -2866,7 +2866,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "fa16TyEDdDq6JDzwpk5q1+"
   },
@@ -3104,7 +3104,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "feaSIdqldBxJvnLTOpV0uw"
   },
@@ -3342,7 +3342,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "e77/tGiB1Cf5u85OXiWU3t"
   },
@@ -3580,7 +3580,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "0fb03/TAlLg4GbJTTLwr+v"
   },
@@ -3818,7 +3818,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "3eaU2aUGxCvK0YcCYJbs75"
   },
@@ -4056,7 +4056,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "9dzkKc+fRF5KgZ0hxfkT1L"
   },
@@ -4294,7 +4294,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "433O+O7GxOcJveN7NLiTjq"
   },
@@ -4532,7 +4532,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "a0n2M56XhAZb+rIUmMfYwS"
   },
@@ -4770,7 +4770,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "23V9SMv0lBa7uohUGplUu8"
   },
@@ -5008,7 +5008,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "b8J/WYef5Ji56n94/HXfri"
   },
@@ -5246,7 +5246,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "6fKaH4e3hHRJ7Pa40LXgXn"
   },
@@ -5484,7 +5484,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "4dYE78astFsoTW0weWQr4/"
   },
@@ -5722,7 +5722,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "09QOqquoZImqse68fpCSre"
   },
@@ -5960,7 +5960,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "dcybgTI81O/KUVo8RHHM2f"
   },
@@ -6198,7 +6198,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "b8glIDwnVDq5RAMtl67hyh"
   },
@@ -6436,7 +6436,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "a4vgOolIhPSZCwOjccEtZM"
   },
@@ -6674,7 +6674,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "8bBjcyeZVPVrK9VE9hTz77"
   },
@@ -6912,7 +6912,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "40F3FHq49JCbzwNkAWWLoZ"
   },
@@ -7150,7 +7150,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "f1fEwd1rRHjIXNjBlwZrpa"
   },
@@ -7388,7 +7388,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "b5/lMxT8ZIYqkGyv6AndAr"
   },
@@ -7626,7 +7626,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "e658YxoS9LxZfcO/OYW9Mz"
   },
@@ -7864,7 +7864,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "68boZ8QEpEuaHQVfEOaHj2"
   },
@@ -8102,7 +8102,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "79+AqF0X9E96bWLlSaPIQ6"
   },
@@ -8340,7 +8340,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "d9EU4dYkJH14DdeG+DF9bC"
   },
@@ -8578,7 +8578,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "3dkY9JqTFBSpPiGS2JTb/Q"
   },
@@ -8816,7 +8816,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "21OZmAPtZGY74A2RToYXs+"
   },
@@ -9054,7 +9054,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "17kRP1v1JMqJOoFZsM2FAY"
   },
@@ -9284,7 +9284,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "56AmtoLjNA2aj0nbSVve7w"
   },
@@ -9514,7 +9514,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "0aTRMzfzBAqoOza3sz76kF"
   },
@@ -9744,7 +9744,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "d5oF5Gf6tHu66ulAodIqF8"
   },
@@ -9974,7 +9974,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "add1Iu0c9FHIDjhSKSVf+c"
   },
@@ -10204,7 +10204,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "ffKqgovyhK66CwWvz/lbBM"
   },
@@ -10434,7 +10434,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "6e3Y/vqLFGK74O7IJrBQvh"
   },
@@ -10664,7 +10664,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "efCbwivXNHvJ8Uu01FQm5z"
   },
@@ -10894,7 +10894,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "23+zMkua5EjaFN6sXxM0UC"
   },
@@ -11124,7 +11124,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "47VniRtgNG/4dfXit3swDz"
   },
@@ -11354,7 +11354,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "a6NOfKsHlMOphFYIhMJeVl"
   },
@@ -11584,7 +11584,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "91ab4xN7lPLL25qjknupX4"
   },

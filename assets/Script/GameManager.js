@@ -41,6 +41,14 @@ cc.Class({
 
 
     start() {
+
+
+        var sound = cc.sys.localStorage.getItem("audio");
+        var bgAudio = cc.find("Canvas/Background Audio");
+        if (sound == 0) {
+            bgAudio.destroy();
+        }
+
         self = this;
 
         this.ballCount = this.gameDetail.ballCount;
@@ -53,6 +61,7 @@ cc.Class({
 
         this.ballParent = cc.find("Canvas/Environment/BallParent");
 
+        this.jimyJump();
         //cc.log(this.gameDetail);
 
         if (this.gameDetail.time == null) { /*cc.director.loadScene("StartMenu");*/ this.infinityBall = true; this.newBall(0.1); return; }
@@ -136,6 +145,21 @@ cc.Class({
         this.setScoreboardLogo();
     },
 
+    jimyJump() {
+        if (this.gameDetail.ballCount - this.gameDetail.awayGoal <= 2) {
+            var rnd = Math.floor(Math.random() * 11);
+            if (rnd >= 7) {
+                var time = (Math.random() * 11) + 10
+                cc.log("time: " + time);
+                this.scheduleOnce(function () {
+                    var environment = cc.find("Canvas/Environment");
+                    const jj = cc.instantiate(this.JimyJumpPrefab);
+                    environment.addChild(jj);
+                }, time);
+            }
+        }
+    },
+
     goal: function () {
         this.homeGoal++;
         this.newBall(2);
@@ -148,7 +172,7 @@ cc.Class({
     },
 
     out: function () {
-        this.newBall(1);
+        this.newBall(0.2);
         //this.awayGoal++;
     },
 
@@ -196,8 +220,10 @@ cc.Class({
 
     endMatch: function () {
 
+        var sound = cc.sys.localStorage.getItem("audio");
+        
         cc.director.getPhysicsManager().enabled = false;
-        if (this.awayGoal != this.homeGoal)
+        if (this.awayGoal != this.homeGoal && sound == 1)
             this.node.getChildByName("EndMatch").getComponent(cc.AudioSource).play();
 
         this.scheduleOnce(function () {
@@ -217,6 +243,7 @@ cc.Class({
                 else
                     detail.win = false;
                 var dbData = this.DBStorage.data;
+                var gd = this.gameDetail;
 
                 cc.director.loadScene("StartMenu", function (err, data) {
                     var loginNode = cc.director.getScene();
@@ -224,7 +251,7 @@ cc.Class({
                     var db = loginNode.getChildByName('DBStorage').getComponent("DBStorage");
                     db.load(dbData);
 
-                    containerLogin.getComponent("MainMenu").openEndMatch(detail);
+                    containerLogin.getComponent("MainMenu").openEndMatch(detail, gd);
                 });
             }
         }, 2);

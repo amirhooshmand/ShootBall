@@ -6,7 +6,7 @@ cc.Class({
         if (other.name.startsWith('Ball') && other.tag == 0) {
 
             var ball = other.getComponent("Ball");
-            if (ball.ballInHand) return;
+            if (ball.inHand) return;
 
             var sparkAnim = other.getComponent("SparkAnimation");
             sparkAnim.enabled = true;

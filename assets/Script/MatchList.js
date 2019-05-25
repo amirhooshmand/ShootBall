@@ -36,8 +36,8 @@ cc.Class({
         this.rubicup.push({ id: 4, ballCount: 8, homeGoal: 0, awayGoal: 3, awayID: 8, time: 0 });
         this.rubicup.push({ id: 5, ballCount: 5, homeGoal: 0, awayGoal: 2, awayID: 7, time: 0 });
         this.rubicup.push({ id: 6, ballCount: 8, homeGoal: 0, awayGoal: 2, awayID: 9, time: 0 });
-        this.rubicup.push({ id: 7, ballCount: 7, homeGoal: 0, awayGoal: 1, awayID: 0, time: 0 });
-        this.rubicup.push({ id: 8, ballCount: 4, homeGoal: 0, awayGoal: 4, awayID: 10, time: 55 });
+        this.rubicup.push({ id: 7, ballCount: -1, homeGoal: 0, awayGoal: 1, awayID: 0, time: 55 });
+        this.rubicup.push({ id: 8, ballCount: 4, homeGoal: 0, awayGoal: 4, awayID: 10, time: 0 });
         this.rubicup.push({ id: 9, ballCount: 9, homeGoal: 0, awayGoal: 3, awayID: 11, time: 0 });
         this.rubicup.push({ id: 10, ballCount: 5, homeGoal: 0, awayGoal: 3, awayID: 12, time: 0 });
         this.rubicup.push({ id: 11, ballCount: 7, homeGoal: 0, awayGoal: 3, awayID: 4, time: 0 });
@@ -80,20 +80,37 @@ cc.Class({
         this.league.push({ id: 30, ballCount: 10, homeGoal: 0, awayGoal: 5, awayID: 7, time: 70 });
 
         this.hazfi = [];
-        this.hazfi.push({ id: 1, ballCount: 5, homeGoal: 0, awayGoal: 3, awayID: 8, time: 0 });
-        this.hazfi.push({ id: 2, ballCount: 10, homeGoal: 0, awayGoal: 4, awayID: 2, time: 0 });
-        this.hazfi.push({ id: 3, ballCount: 12, homeGoal: 0, awayGoal: 5, awayID: 3, time: 0 });
-        this.hazfi.push({ id: 4, ballCount: 10, homeGoal: 0, awayGoal: 3, awayID: 13, time: 0 });
-        this.hazfi.push({ id: 5, ballCount: 6, homeGoal: 0, awayGoal: 4, awayID: 0, time: 0 });
-        this.hazfi.push({ id: 7, ballCount: 4, homeGoal: 0, awayGoal: 5, awayID: 11, time: 0 });
-        this.hazfi.push({ id: 8, ballCount: 10, homeGoal: 0, awayGoal: 3, awayID: 6, time: 0 });
-        this.hazfi.push({ id: 9, ballCount: 9, homeGoal: 0, awayGoal: 3, awayID: 7, time: 0 });
-        this.hazfi.push({ id: 10, ballCount: 3, homeGoal: 0, awayGoal: 4, awayID: 15, time: 0 });
-        this.hazfi.push({ id: 11, ballCount: 10, homeGoal: 0, awayGoal: 4, awayID: 5, time: 0 });
-        this.hazfi.push({ id: 12, ballCount: 5, homeGoal: 0, awayGoal: 3, awayID: 9, time: 0 });
-        this.hazfi.push({ id: 13, ballCount: 7, homeGoal: 0, awayGoal: 1, awayID: 1, time: 0 });
-        this.hazfi.push({ id: 14, ballCount: 5, homeGoal: 0, awayGoal: 3, awayID: 12, time: 0 });
-        this.hazfi.push({ id: 15, ballCount: 9, homeGoal: 0, awayGoal: 4, awayID: 10, time: 0 });
+        this.hazfi.push({ id: 1, ballCount: 5, homeGoal: 0, awayGoal: 4, awayID: 4, time: 0 });
+        this.hazfi.push({ id: 2, ballCount: 10, homeGoal: 0, awayGoal: 4, awayID: 8, time: 0 });
+        this.hazfi.push({ id: 3, ballCount: 12, homeGoal: 0, awayGoal: 5, awayID: 2, time: 0 });
+        this.hazfi.push({ id: 4, ballCount: 8, homeGoal: 0, awayGoal: 3, awayID: 3, time: 0 });
+        this.hazfi.push({ id: 5, ballCount: 8, homeGoal: 0, awayGoal: 4, awayID: 13, time: 0 });
+        this.hazfi.push({ id: 6, ballCount: 11, homeGoal: 0, awayGoal: 5, awayID: 0, time: 55 });
+        this.hazfi.push({ id: 7, ballCount: 10, homeGoal: 0, awayGoal: 4, awayID: 11, time: 0 });
+        this.hazfi.push({ id: 8, ballCount: 6, homeGoal: 0, awayGoal: 3, awayID: 6, time: 0 });
+        this.hazfi.push({ id: 9, ballCount: 11, homeGoal: 0, awayGoal: 5, awayID: 7, time: 0 });
+        this.hazfi.push({ id: 10, ballCount: 10, homeGoal: 0, awayGoal: 3, awayID: 15, time: 0 });
+        this.hazfi.push({ id: 11, ballCount: 11, homeGoal: 0, awayGoal: 4, awayID: 5, time: 0 });
+        this.hazfi.push({ id: 12, ballCount: 7, homeGoal: 0, awayGoal: 4, awayID: 9, time: 0 });
+        this.hazfi.push({ id: 13, ballCount: 10, homeGoal: 0, awayGoal: 4, awayID: 1, time: 0 });
+        this.hazfi.push({ id: 14, ballCount: 10, homeGoal: 0, awayGoal: 5, awayID: 12, time: 0 });
+        this.hazfi.push({ id: 15, ballCount: 5, homeGoal: 0, awayGoal: 1, awayID: 10, time: 0 });
+
+        this.hazfi.push({ id: 16, ballCount: 7, homeGoal: 0, awayGoal: 3, awayID: 4, time: 0 });
+        this.hazfi.push({ id: 17, ballCount: 10, homeGoal: 0, awayGoal: 3, awayID: 8, time: 0 });
+        this.hazfi.push({ id: 18, ballCount: 8, homeGoal: 0, awayGoal: 4, awayID: 2, time: 0 });
+        this.hazfi.push({ id: 19, ballCount: 10, homeGoal: 0, awayGoal: 3, awayID: 3, time: 0 });
+        this.hazfi.push({ id: 20, ballCount: 11, homeGoal: 0, awayGoal: 4, awayID: 13, time: 0 });
+        this.hazfi.push({ id: 21, ballCount: 4, homeGoal: 0, awayGoal: 5, awayID: 0, time: 0 });
+        this.hazfi.push({ id: 22, ballCount: 6, homeGoal: 0, awayGoal: 7, awayID: 11, time: 0 });
+        this.hazfi.push({ id: 23, ballCount: 10, homeGoal: 0, awayGoal: 4, awayID: 6, time: 0 });
+        this.hazfi.push({ id: 24, ballCount: 8, homeGoal: 0, awayGoal: 3, awayID: 7, time: 0 });
+        this.hazfi.push({ id: 25, ballCount: 5, homeGoal: 0, awayGoal: 5, awayID: 15, time: 0 });
+        this.hazfi.push({ id: 26, ballCount: 9, homeGoal: 0, awayGoal: 4, awayID: 5, time: 0 });
+        this.hazfi.push({ id: 27, ballCount: 11, homeGoal: 0, awayGoal: 7, awayID: 9, time: 0 });
+        this.hazfi.push({ id: 28, ballCount: 7, homeGoal: 0, awayGoal: 3, awayID: 1, time: 55 });
+        this.hazfi.push({ id: 29, ballCount: 11, homeGoal: 0, awayGoal: 7, awayID: 12, time: 0 });
+        this.hazfi.push({ id: 30, ballCount: 10, homeGoal: 0, awayGoal: 2, awayID: 10, time: 0 });
 
 
         var teamManagerNode = cc.find("Canvas/TeamManager");
@@ -111,7 +128,7 @@ cc.Class({
 
         var currentLvl = 1;
         this.lastPlayer = null;
-        this.DBStorage.setItem(this.cup + "_" + "week_" + 0 + "_score", 1);
+        this.DBStorage.setItem(1 + "_" + "week_" + 0 + "_score", 1);
 
 
         if (this.cup == 1)
@@ -121,6 +138,7 @@ cc.Class({
         else if (this.cup == 3)
             var matchList = this.hazfi;
 
+        var activeItem = 0;
 
         for (var i = 0; i < matchList.length; i++) {
             if (matchList[i].awayID == this.DBStorage.getItem("team", 1))
@@ -180,7 +198,7 @@ cc.Class({
 
         }
 
-        this.node.getComponent(cc.ScrollView).scrollToPercentVertical(1 / 16, 1);
+        this.node.getComponent(cc.ScrollView).scrollToPercentVertical(currentLvl / 16, 1);
         //this.node.getComponent(cc.ScrollView).scrollToBottom(1);
     },
 

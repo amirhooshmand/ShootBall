@@ -73,6 +73,17 @@ cc.Class({
         this.ball.runAction(action);
 
         this.shoot();
+
+        var ballComponent = this.ball.getComponent("Ball");
+
+        var colider = this.ball.getComponent(cc.CircleCollider);
+        colider.enabled = false;
+
+        this.scheduleOnce(function () {
+            colider.enabled = true;
+            ballComponent.inHand = false;
+        }, this.passDuration)
+
     },
 
     onShoot: function () {
@@ -90,7 +101,7 @@ cc.Class({
         this.forceShoot = this.ballInHand = false;
 
         var ball = this.ballNode.getComponent("Ball");
-        ball.ballInHand = false;
+        ball.inHand = false;
 
         this.shoot();
     },
@@ -117,7 +128,7 @@ cc.Class({
             this.aimNode.active = false;
 
             var ball = other.getComponent("Ball");
-            ball.ballInHand = true;
+            ball.inHand = true;
 
             this.ballNode = other.node;
             this.ballNode.stopActionByTag(1);

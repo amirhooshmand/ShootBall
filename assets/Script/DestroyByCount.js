@@ -56,7 +56,7 @@ cc.Class({
     },*/
 
     onEndContact: function (contact, selfCollider, otherCollider) {
-        cc.log(otherCollider.name);
+        //cc.log(otherCollider.name);
 
         if (otherCollider.name.startsWith('Ball') && otherCollider.tag == 0) {
             if (otherCollider.getComponent("Ball").fireBall) return;
