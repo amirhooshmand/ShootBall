@@ -21,12 +21,13 @@ cc.Class({
         },
     },
 
-    start () {
+    start() {
         var seq = cc.repeatForever(
             cc.sequence(
                 cc.rotateBy(this.duration, this.startRotation, this.startRotation),
                 cc.rotateBy(this.duration, this.endRotation, this.endRotation)
             ));
+        seq.tag = 1;
         this.node.runAction(seq);
     },
 

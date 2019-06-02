@@ -26,10 +26,13 @@ cc.Class({
         this.DBStorage = cc.find("DBStorage").getComponent("DBStorage");
 
         //if (this.gameManager.gameDetail.ballCount == -1)
-            //this.node.getChildByName("ShopItem3").destroy();
+        //this.node.getChildByName("ShopItem3").destroy();
     },
 
     onItemClick: function (event, id) {
+
+        if (this.gameManager.end) return;
+
 
         var defCount = this.DBStorage.getItem("removeDefender", 1);
         var fireCount = this.DBStorage.getItem("fireBall", 1);

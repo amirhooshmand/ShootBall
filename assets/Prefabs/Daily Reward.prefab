@@ -46,7 +46,7 @@
       }
     ],
     "_active": true,
-    "_level": 2,
+    "_level": 1,
     "_components": [
       {
         "__id__": 124
@@ -82,7 +82,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 490,
+      "y": 980,
       "z": 0
     },
     "_scale": {
@@ -4040,6 +4040,9 @@
       "__id__": 1
     },
     "_enabled": true,
+    "LoadingPrefab": {
+      "__uuid__": "0337cafc-409e-4df6-9044-adf8b93dc59d"
+    },
     "_id": ""
   },
   {

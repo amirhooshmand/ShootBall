@@ -3145,7 +3145,7 @@
       "__id__": 87
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -3375,7 +3375,7 @@
       "__id__": 98
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -3605,7 +3605,7 @@
       "__id__": 109
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -3835,7 +3835,7 @@
       "__id__": 120
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -4065,7 +4065,7 @@
       "__id__": 131
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -4295,7 +4295,7 @@
       "__id__": 142
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -4525,7 +4525,7 @@
       "__id__": 153
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -4755,7 +4755,7 @@
       "__id__": 164
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -4985,7 +4985,7 @@
       "__id__": 175
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -9683,7 +9683,7 @@
     "_volume": 1,
     "_mute": false,
     "_loop": true,
-    "playOnLoad": true,
+    "playOnLoad": false,
     "preload": false,
     "_id": "beRPgrPvZF97pNyTANAmbw"
   },

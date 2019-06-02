@@ -1511,7 +1511,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 245,
-      "y": -676,
+      "y": -730,
       "z": 0
     },
     "_scale": {
@@ -2045,9 +2045,7 @@
     "_enabled": true,
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_spriteFrame": {
-      "__uuid__": "a523d0cc-e00c-4c35-b495-c7906d3deb2c"
-    },
+    "_spriteFrame": null,
     "_type": 0,
     "_sizeMode": 1,
     "_fillType": 0,
@@ -2146,9 +2144,7 @@
     "_enabled": true,
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_spriteFrame": {
-      "__uuid__": "6aeef4df-3afc-4c70-957a-702417169b46"
-    },
+    "_spriteFrame": null,
     "_type": 0,
     "_sizeMode": 1,
     "_fillType": 0,
@@ -2221,7 +2217,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": -245,
-      "y": -676,
+      "y": -730,
       "z": 0
     },
     "_scale": {
@@ -2489,6 +2485,7 @@
       "__id__": 1
     },
     "_enabled": true,
+    "detail": "",
     "gameDetail": "",
     "_id": ""
   },

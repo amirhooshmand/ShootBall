@@ -70,7 +70,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 960,
+      "y": 980,
       "z": 0
     },
     "_scale": {
@@ -608,7 +608,7 @@
     "_N$startAxis": 0,
     "_N$paddingLeft": 0,
     "_N$paddingRight": 0,
-    "_N$paddingTop": 0,
+    "_N$paddingTop": 100,
     "_N$paddingBottom": 100,
     "_N$spacingX": 0,
     "_N$spacingY": 10,

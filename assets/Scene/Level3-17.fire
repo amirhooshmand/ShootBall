@@ -18,9 +18,6 @@
       },
       {
         "__id__": 289
-      },
-      {
-        "__id__": 291
       }
     ],
     "_active": false,
@@ -7719,7 +7716,7 @@
     "_volume": 1,
     "_mute": false,
     "_loop": true,
-    "playOnLoad": true,
+    "playOnLoad": false,
     "preload": false,
     "_id": "beRPgrPvZF97pNyTANAmbw"
   },
@@ -9801,93 +9798,5 @@
     },
     "callBackNode": null,
     "_id": "20U4YQw6VKYZZJxtn/hpsA"
-  },
-  {
-    "__type__": "cc.Node",
-    "_name": "17",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 1
-    },
-    "_children": [],
-    "_active": false,
-    "_level": 1,
-    "_components": [
-      {
-        "__id__": 292
-      }
-    ],
-    "_prefab": null,
-    "_opacity": 149,
-    "_color": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_contentSize": {
-      "__type__": "cc.Size",
-      "width": 632,
-      "height": 833.5
-    },
-    "_anchorPoint": {
-      "__type__": "cc.Vec2",
-      "x": 0.48286329808068934,
-      "y": 0.5025676396186793
-    },
-    "_position": {
-      "__type__": "cc.Vec3",
-      "x": 307,
-      "y": 610.2,
-      "z": 0
-    },
-    "_scale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
-    "_quat": {
-      "__type__": "cc.Quat",
-      "x": 0,
-      "y": 0,
-      "z": 0,
-      "w": 1
-    },
-    "_skewX": 0,
-    "_skewY": 0,
-    "_zIndex": 0,
-    "_is3DNode": false,
-    "groupIndex": 0,
-    "_id": "89ZOjt+QJDFbOyt/UERMVr"
-  },
-  {
-    "__type__": "cc.Sprite",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 291
-    },
-    "_enabled": true,
-    "_srcBlendFactor": 770,
-    "_dstBlendFactor": 771,
-    "_spriteFrame": {
-      "__uuid__": "34e86be5-755b-4f9b-bf90-f431e55e7e45"
-    },
-    "_type": 0,
-    "_sizeMode": 0,
-    "_fillType": 0,
-    "_fillCenter": {
-      "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
-    },
-    "_fillStart": 0,
-    "_fillRange": 0,
-    "_isTrimmedMode": true,
-    "_state": 0,
-    "_atlas": null,
-    "_id": "bebUHAQ/VNr6btGi0sgYr+"
   }
 ]

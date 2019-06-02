@@ -1,6 +1,6 @@
 {
   "android-instant": {
-    "REMOTE_SERVER_ROOT": "",
+    "REMOTE_SERVER_ROOT": "http://192.168.1.131:7456/preview-android-instant/",
     "host": "",
     "pathPattern": "",
     "recordPath": "",

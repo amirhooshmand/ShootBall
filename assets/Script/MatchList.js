@@ -81,35 +81,35 @@ cc.Class({
 
         this.hazfi = [];
         this.hazfi.push({ id: 1, ballCount: 5, homeGoal: 0, awayGoal: 4, awayID: 4, time: 0 });
-        this.hazfi.push({ id: 2, ballCount: 10, homeGoal: 0, awayGoal: 4, awayID: 8, time: 0 });
-        this.hazfi.push({ id: 3, ballCount: 12, homeGoal: 0, awayGoal: 5, awayID: 2, time: 0 });
-        this.hazfi.push({ id: 4, ballCount: 8, homeGoal: 0, awayGoal: 3, awayID: 3, time: 0 });
-        this.hazfi.push({ id: 5, ballCount: 8, homeGoal: 0, awayGoal: 4, awayID: 13, time: 0 });
-        this.hazfi.push({ id: 6, ballCount: 11, homeGoal: 0, awayGoal: 5, awayID: 0, time: 55 });
-        this.hazfi.push({ id: 7, ballCount: 10, homeGoal: 0, awayGoal: 4, awayID: 11, time: 0 });
-        this.hazfi.push({ id: 8, ballCount: 6, homeGoal: 0, awayGoal: 3, awayID: 6, time: 0 });
-        this.hazfi.push({ id: 9, ballCount: 11, homeGoal: 0, awayGoal: 5, awayID: 7, time: 0 });
-        this.hazfi.push({ id: 10, ballCount: 10, homeGoal: 0, awayGoal: 3, awayID: 15, time: 0 });
-        this.hazfi.push({ id: 11, ballCount: 11, homeGoal: 0, awayGoal: 4, awayID: 5, time: 0 });
-        this.hazfi.push({ id: 12, ballCount: 7, homeGoal: 0, awayGoal: 4, awayID: 9, time: 0 });
-        this.hazfi.push({ id: 13, ballCount: 10, homeGoal: 0, awayGoal: 4, awayID: 1, time: 0 });
-        this.hazfi.push({ id: 14, ballCount: 10, homeGoal: 0, awayGoal: 5, awayID: 12, time: 0 });
-        this.hazfi.push({ id: 15, ballCount: 5, homeGoal: 0, awayGoal: 1, awayID: 10, time: 0 });
+        this.hazfi.push({ id: 2, ballCount: 10, homeGoal: 0, awayGoal: 4, awayID: 4, time: 0 });
+        this.hazfi.push({ id: 3, ballCount: 12, homeGoal: 0, awayGoal: 5, awayID: 8, time: 0 });
+        this.hazfi.push({ id: 4, ballCount: 8, homeGoal: 0, awayGoal: 3, awayID: 8, time: 0 });
+        this.hazfi.push({ id: 5, ballCount: 8, homeGoal: 0, awayGoal: 4, awayID: 2, time: 0 });
+        this.hazfi.push({ id: 6, ballCount: 11, homeGoal: 0, awayGoal: 5, awayID: 2, time: 55 });
+        this.hazfi.push({ id: 7, ballCount: 10, homeGoal: 0, awayGoal: 4, awayID: 3, time: 0 });
+        this.hazfi.push({ id: 8, ballCount: 6, homeGoal: 0, awayGoal: 3, awayID: 3, time: 0 });
+        this.hazfi.push({ id: 9, ballCount: 11, homeGoal: 0, awayGoal: 5, awayID: 13, time: 0 });
+        this.hazfi.push({ id: 10, ballCount: 10, homeGoal: 0, awayGoal: 3, awayID: 13, time: 0 });
+        this.hazfi.push({ id: 11, ballCount: 11, homeGoal: 0, awayGoal: 4, awayID: 0, time: 0 });
+        this.hazfi.push({ id: 12, ballCount: 7, homeGoal: 0, awayGoal: 4, awayID: 0, time: 0 });
+        this.hazfi.push({ id: 13, ballCount: 10, homeGoal: 0, awayGoal: 4, awayID: 11, time: 0 });
+        this.hazfi.push({ id: 14, ballCount: 10, homeGoal: 0, awayGoal: 5, awayID: 11, time: 0 });
+        this.hazfi.push({ id: 15, ballCount: 5, homeGoal: 0, awayGoal: 1, awayID: 6, time: 0 });
 
-        this.hazfi.push({ id: 16, ballCount: 7, homeGoal: 0, awayGoal: 3, awayID: 4, time: 0 });
-        this.hazfi.push({ id: 17, ballCount: 10, homeGoal: 0, awayGoal: 3, awayID: 8, time: 0 });
-        this.hazfi.push({ id: 18, ballCount: 8, homeGoal: 0, awayGoal: 4, awayID: 2, time: 0 });
-        this.hazfi.push({ id: 19, ballCount: 10, homeGoal: 0, awayGoal: 3, awayID: 3, time: 0 });
-        this.hazfi.push({ id: 20, ballCount: 11, homeGoal: 0, awayGoal: 4, awayID: 13, time: 0 });
-        this.hazfi.push({ id: 21, ballCount: 4, homeGoal: 0, awayGoal: 5, awayID: 0, time: 0 });
-        this.hazfi.push({ id: 22, ballCount: 6, homeGoal: 0, awayGoal: 7, awayID: 11, time: 0 });
-        this.hazfi.push({ id: 23, ballCount: 10, homeGoal: 0, awayGoal: 4, awayID: 6, time: 0 });
-        this.hazfi.push({ id: 24, ballCount: 8, homeGoal: 0, awayGoal: 3, awayID: 7, time: 0 });
-        this.hazfi.push({ id: 25, ballCount: 5, homeGoal: 0, awayGoal: 5, awayID: 15, time: 0 });
-        this.hazfi.push({ id: 26, ballCount: 9, homeGoal: 0, awayGoal: 4, awayID: 5, time: 0 });
-        this.hazfi.push({ id: 27, ballCount: 11, homeGoal: 0, awayGoal: 7, awayID: 9, time: 0 });
-        this.hazfi.push({ id: 28, ballCount: 7, homeGoal: 0, awayGoal: 3, awayID: 1, time: 55 });
-        this.hazfi.push({ id: 29, ballCount: 11, homeGoal: 0, awayGoal: 7, awayID: 12, time: 0 });
+        this.hazfi.push({ id: 16, ballCount: 7, homeGoal: 0, awayGoal: 3, awayID: 6, time: 0 });
+        this.hazfi.push({ id: 17, ballCount: 10, homeGoal: 0, awayGoal: 3, awayID: 7, time: 0 });
+        this.hazfi.push({ id: 18, ballCount: 8, homeGoal: 0, awayGoal: 4, awayID: 7, time: 0 });
+        this.hazfi.push({ id: 19, ballCount: 10, homeGoal: 0, awayGoal: 3, awayID: 15, time: 0 });
+        this.hazfi.push({ id: 20, ballCount: 11, homeGoal: 0, awayGoal: 4, awayID: 15, time: 0 });
+        this.hazfi.push({ id: 21, ballCount: 4, homeGoal: 0, awayGoal: 5, awayID: 5, time: 0 });
+        this.hazfi.push({ id: 22, ballCount: 6, homeGoal: 0, awayGoal: 7, awayID: 5, time: 0 });
+        this.hazfi.push({ id: 23, ballCount: 10, homeGoal: 0, awayGoal: 4, awayID: 9, time: 0 });
+        this.hazfi.push({ id: 24, ballCount: 8, homeGoal: 0, awayGoal: 3, awayID: 9, time: 0 });
+        this.hazfi.push({ id: 25, ballCount: 5, homeGoal: 0, awayGoal: 5, awayID: 1, time: 0 });
+        this.hazfi.push({ id: 26, ballCount: 9, homeGoal: 0, awayGoal: 4, awayID: 1, time: 0 });
+        this.hazfi.push({ id: 27, ballCount: 11, homeGoal: 0, awayGoal: 7, awayID:12, time: 0 });
+        this.hazfi.push({ id: 28, ballCount: 7, homeGoal: 0, awayGoal: 3, awayID: 12, time: 55 });
+        this.hazfi.push({ id: 29, ballCount: 11, homeGoal: 0, awayGoal: 7, awayID: 10, time: 0 });
         this.hazfi.push({ id: 30, ballCount: 10, homeGoal: 0, awayGoal: 2, awayID: 10, time: 0 });
 
 
@@ -128,7 +128,7 @@ cc.Class({
 
         var currentLvl = 1;
         this.lastPlayer = null;
-        this.DBStorage.setItem(1 + "_" + "week_" + 0 + "_score", 1);
+        this.DBStorage.setItem(this.cup + "_" + "week_" + 0 + "_score", 1);
 
 
         if (this.cup == 1)
@@ -198,12 +198,12 @@ cc.Class({
 
         }
 
-        this.node.getComponent(cc.ScrollView).scrollToPercentVertical(currentLvl / 16, 1);
+        this.node.getComponent(cc.ScrollView).scrollToPercentVertical(currentLvl / matchList.length, 1);
         //this.node.getComponent(cc.ScrollView).scrollToBottom(1);
     },
 
     matchClick: function (event, customEventData) {
-        //if (this.DBStorage.getItem(this.cup + "_" + "week_" + (customEventData.week - 1) + "_score", -1) >= 1)
+        if (this.DBStorage.getItem(this.cup + "_" + "week_" + (customEventData.week - 1) + "_score", -1) >= 1)
         {
 
             this.activePlayer(this.lastPlayer, false);
@@ -217,7 +217,7 @@ cc.Class({
             canvas.addChild(playMatch);
 
             var leagueName = "";
-            if (this.cup == 1) leagueName = "روبیکاپ      ";
+            if (this.cup == 1) leagueName = "شوتکاپ";
             else if (this.cup == 1) leagueName = "لیگ برتر";
             else if (this.cup == 1) leagueName = "جام حذفی";
 

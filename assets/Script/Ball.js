@@ -44,25 +44,37 @@ cc.Class({
             var circleCollider = other.getComponent(cc.CircleCollider);
             if (circleCollider) {
                 var physicsCircleCollider = other.getComponent(cc.PhysicsCircleCollider);
-                circleCollider.enabled = false;
-                physicsCircleCollider.enabled = false;
+                if (physicsCircleCollider)
+                    other.node.removeComponent(cc.PhysicsCircleCollider);
+
+                other.node.removeComponent(cc.CircleCollider);
             }
 
             var boxCollider = other.getComponent(cc.BoxCollider);
             if (boxCollider) {
-                var physicsBoxCollider = other.getComponent(cc.PhysicsBoxCollider);
                 boxCollider.enabled = false;
-                physicsBoxCollider.enabled = false;
+                var physicsBoxCollider = other.getComponent(cc.PhysicsBoxCollider);
+                if (physicsBoxCollider)
+                    other.node.removeComponent(cc.PhysicsBoxCollider);
+
+                other.node.removeComponent(cc.CircleCollider);
             }
 
             var moveNode = other.getComponent("MoveNode");
             if (moveNode) {
+                other.node.stopActionByTag(1);
                 moveNode.enabled = false;
             }
 
             var rotateNode = other.getComponent("RotateNode");
             if (rotateNode) {
+                other.node.stopActionByTag(1);
                 rotateNode.enabled = false;
+            }
+
+            var sparkAnim = other.getComponent("SparkAnimation");
+            if (sparkAnim) {
+                sparkAnim.enabled = false;
             }
 
             other.node.opacity = 70;

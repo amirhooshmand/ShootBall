@@ -3321,7 +3321,7 @@
   {
     "__type__": "Item",
     "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
+      "__uuid__": "a75e1d22-e1e1-442e-93ee-5f8eb7e57947"
     }
   },
   {
@@ -3559,7 +3559,7 @@
   {
     "__type__": "Item",
     "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
+      "__uuid__": "a75e1d22-e1e1-442e-93ee-5f8eb7e57947"
     }
   },
   {
@@ -3797,7 +3797,7 @@
   {
     "__type__": "Item",
     "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
+      "__uuid__": "a75e1d22-e1e1-442e-93ee-5f8eb7e57947"
     }
   },
   {
@@ -4035,7 +4035,7 @@
   {
     "__type__": "Item",
     "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
+      "__uuid__": "a75e1d22-e1e1-442e-93ee-5f8eb7e57947"
     }
   },
   {
@@ -4273,7 +4273,7 @@
   {
     "__type__": "Item",
     "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
+      "__uuid__": "a75e1d22-e1e1-442e-93ee-5f8eb7e57947"
     }
   },
   {
@@ -4511,7 +4511,7 @@
   {
     "__type__": "Item",
     "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
+      "__uuid__": "a75e1d22-e1e1-442e-93ee-5f8eb7e57947"
     }
   },
   {
@@ -4700,7 +4700,7 @@
       "__id__": 164
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -4930,7 +4930,7 @@
       "__id__": 175
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -5160,7 +5160,7 @@
       "__id__": 186
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -5390,7 +5390,7 @@
       "__id__": 197
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -5620,7 +5620,7 @@
       "__id__": 208
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -5850,7 +5850,7 @@
       "__id__": 219
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -6080,7 +6080,7 @@
       "__id__": 230
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -6310,7 +6310,7 @@
       "__id__": 241
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -11913,7 +11913,7 @@
     "_volume": 1,
     "_mute": false,
     "_loop": true,
-    "playOnLoad": true,
+    "playOnLoad": false,
     "preload": false,
     "_id": "beRPgrPvZF97pNyTANAmbw"
   },
@@ -13874,8 +13874,6 @@
       "__id__": 2
     },
     "_enabled": true,
-    "userlable": null,
-    "responseTxt": "testing...",
     "_id": "b38n5vsjNGSYQpqrZ9iIkh"
   },
   {

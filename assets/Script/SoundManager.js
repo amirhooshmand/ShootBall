@@ -20,8 +20,10 @@ cc.Class({
         var bgAudio = cc.find("Canvas/BackgroundMusic").getComponent(cc.AudioSource);
 
         if (sound == 0) {
-            bgAudio.pause();
             this.node.getComponent(cc.Sprite).spriteFrame = this.soundOffIcon;
+        }
+        else {
+            bgAudio.play();
         }
     },
 
@@ -30,6 +32,7 @@ cc.Class({
 
         var bgAudio = cc.find("Canvas/BackgroundMusic").getComponent(cc.AudioSource);
 
+
         if (sound == 1) {
             this.node.getComponent(cc.Sprite).spriteFrame = this.soundOffIcon;
             bgAudio.pause();
@@ -37,7 +40,11 @@ cc.Class({
         }
         else {
             this.node.getComponent(cc.Sprite).spriteFrame = this.soundOnIcon;
-            bgAudio.resume();
+            if (bgAudio.getCurrentTime() == 0)
+                bgAudio.play();
+            else
+                bgAudio.resume();
+                
             cc.sys.localStorage.setItem("audio", 1);
         }
     }

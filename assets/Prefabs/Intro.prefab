@@ -37,7 +37,7 @@
       }
     ],
     "_active": true,
-    "_level": 2,
+    "_level": 1,
     "_components": [
       {
         "__id__": 36
@@ -197,7 +197,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "3b8e50aa-98ec-4c13-bda9-58268ff46f9a"
     },
     "fileId": "ecJ0b5MndCqoiOewYR2uJm",
     "sync": false
@@ -252,7 +252,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 0,
+      "x": -14,
       "y": 0,
       "z": 0
     },
@@ -441,7 +441,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "3b8e50aa-98ec-4c13-bda9-58268ff46f9a"
     },
     "fileId": "71IjMpvldACqPsLfrRNRMH",
     "sync": false
@@ -542,7 +542,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "3b8e50aa-98ec-4c13-bda9-58268ff46f9a"
     },
     "fileId": "4a4+BaccZP+KZ8WAljHp9i",
     "sync": false
@@ -712,7 +712,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "3b8e50aa-98ec-4c13-bda9-58268ff46f9a"
     },
     "fileId": "37hJt190VGRIMz6MNXcw53",
     "sync": false
@@ -813,7 +813,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "3b8e50aa-98ec-4c13-bda9-58268ff46f9a"
     },
     "fileId": "32U/0Yb9JMSYQCc2jJoD1Q",
     "sync": false
@@ -914,7 +914,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "3b8e50aa-98ec-4c13-bda9-58268ff46f9a"
     },
     "fileId": "24aGoe895ABr8yjwdwR1Yt",
     "sync": false
@@ -925,7 +925,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "3b8e50aa-98ec-4c13-bda9-58268ff46f9a"
     },
     "fileId": "fdCPfaIIZL1pI+meLwvmu0",
     "sync": false
@@ -1027,7 +1027,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "3b8e50aa-98ec-4c13-bda9-58268ff46f9a"
     },
     "fileId": "fc0uhXWKVJGoz3dl3Qi1a+",
     "sync": false
@@ -1061,7 +1061,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 474.12,
-      "height": 40
+      "height": 55
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1110,7 +1110,7 @@
     "_string": "   به بازی شوتبالیستا خوش اومدی",
     "_N$string": "   به بازی شوتبالیستا خوش اومدی",
     "_fontSize": 40,
-    "_lineHeight": 40,
+    "_lineHeight": 55,
     "_enableWrapText": true,
     "_N$file": {
       "__uuid__": "2296813c-bf0a-4445-b1ab-e4a35c5e4f3c"
@@ -1129,7 +1129,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "3b8e50aa-98ec-4c13-bda9-58268ff46f9a"
     },
     "fileId": "dbE4nk1FNOoJ5jBGAf0hb0",
     "sync": false
@@ -1163,7 +1163,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 540.76,
-      "height": 40
+      "height": 55
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1212,7 +1212,7 @@
     "_string": "            برای شروع باید یه تیم انتخاب کنی ",
     "_N$string": "            برای شروع باید یه تیم انتخاب کنی ",
     "_fontSize": 40,
-    "_lineHeight": 40,
+    "_lineHeight": 55,
     "_enableWrapText": true,
     "_N$file": {
       "__uuid__": "2296813c-bf0a-4445-b1ab-e4a35c5e4f3c"
@@ -1231,7 +1231,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "3b8e50aa-98ec-4c13-bda9-58268ff46f9a"
     },
     "fileId": "a4+0zRoZZC97y+HYLA8UsX",
     "sync": false
@@ -1332,7 +1332,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "3b8e50aa-98ec-4c13-bda9-58268ff46f9a"
     },
     "fileId": "a9KZ1VYbdBEKvvOzAhGPS0",
     "sync": false
@@ -1481,7 +1481,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "3b8e50aa-98ec-4c13-bda9-58268ff46f9a"
     },
     "fileId": "7fwB2HZYVIwptkUZDte33l",
     "sync": false

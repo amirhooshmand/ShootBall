@@ -32,6 +32,10 @@ cc.Class({
             default: null,
             type: cc.Prefab,
         },
+        Intro2Prefab: {
+            default: null,
+            type: cc.Prefab,
+        },
         dailyRewardPrefab: {
             default: null,
             type: cc.Prefab,
@@ -48,19 +52,19 @@ cc.Class({
 
     start() {
 
-
+        //cc.sys.localStorage.clear();
 
 
         //cc.log(window.orientation);
-        window.scrollTo(0, 1);
+        //window.scrollTo(0, 1);
 
-        //this.DBStorage.setData("coin", 5500);
 
         //cc.log(this.DBStorage.getItem("coin", 545555));
 
         var teamManagerNode = cc.find("Canvas/TeamManager");
         this.teamManager = teamManagerNode.getComponent("TeamManager");
         this.DBStorage = cc.find("DBStorage").getComponent("DBStorage");
+
 
         /*for (var j = 0; j < this.teamManager.players.length; j++) {
                 
@@ -79,35 +83,55 @@ cc.Class({
         }*/
 
 
-        //this.loadImage(0);
+        //
 
         this.canvas = cc.find("Canvas");
 
         var bartarCup = cc.find("Canvas/shelf_3/cup_bartar");
         var hazfiCup = cc.find("Canvas/shelf_3/cup_hazfi");
 
+        var self = this;
+
+        if (self.DBStorage.getItem(1 + "_detail_" + "week_" + 15) == null) {
+            bartarCup.getComponent(cc.Sprite).spriteFrame = self.diactiveBartarCup;
+            bartarCup.getComponent(cc.Button).interactable = false;
+            bartarCup.getChildByName("bartar").active = false;
+        }
+        else bartarCup.getComponent(cc.Sprite).enabled = false;
+
+        if (self.DBStorage.getItem(2 + "_detail_" + "week_" + 30) == null) {
+            hazfiCup.getComponent(cc.Sprite).spriteFrame = self.diactiveHazfiCup;
+            hazfiCup.getComponent(cc.Button).interactable = false;
+            hazfiCup.getChildByName("hazfi").active = false;
+        }
+        else hazfiCup.getComponent(cc.Sprite).enabled = false;
 
         this.DBStorage.callBackNode = this.node;
 
-        var self = this;
         this.node.on('load-db', function () {
-            cc.log(self.DBStorage.getItem(1 + "_detail_" + "week_" + 15));
+
             if (self.DBStorage.getItem(1 + "_detail_" + "week_" + 15) == null) {
                 bartarCup.getComponent(cc.Sprite).spriteFrame = self.diactiveBartarCup;
                 bartarCup.getComponent(cc.Button).interactable = false;
-                hazfiCup.getChildByName("bartar").active = false;
+                bartarCup.getChildByName("bartar").active = false;
             }
-            else bartarCup.getComponent(cc.Sprite).enabled = false;
+            else {
+                bartarCup.getComponent(cc.Sprite).enabled = false;
+                bartarCup.getComponent(cc.Button).interactable = true;
+                bartarCup.getChildByName("bartar").active = true;
+            }
 
             if (self.DBStorage.getItem(2 + "_detail_" + "week_" + 30) == null) {
                 hazfiCup.getComponent(cc.Sprite).spriteFrame = self.diactiveHazfiCup;
                 hazfiCup.getComponent(cc.Button).interactable = false;
                 hazfiCup.getChildByName("hazfi").active = false;
             }
-            else hazfiCup.getComponent(cc.Sprite).enabled = false;
+            else {
+                hazfiCup.getComponent(cc.Sprite).enabled = false;
+                hazfiCup.getComponent(cc.Button).interactable = true;
+                hazfiCup.getChildByName("hazfi").active = true;
+            }
 
-
-            cc.log("++ : " + self.DBStorage.data);
             if (self.DBStorage.getItem("team", -1) == -1) {
                 const introNode = cc.instantiate(self.IntroPrefab);
                 self.canvas.addChild(introNode);
@@ -117,12 +141,23 @@ cc.Class({
             }
         });
 
-        if (this.DBStorage.getItem("team", -1) != -1)
-            this.setPlayer(self.DBStorage.getItem("team"));
+        if (this.DBStorage.getItem("team", -1) != -1) {
 
+            this.setPlayer(self.DBStorage.getItem("team"));
+        }
     },
 
     setPlayer: function (selectedteamID) {
+
+        if (this.DBStorage.getItem("intro2", -1) == -1) {
+
+            this.DBStorage.setItem("intro2", 1)
+            this.DBStorage.save();
+
+            const introNode = cc.instantiate(this.Intro2Prefab);
+            this.canvas.addChild(introNode);
+        }
+
         var playerSpine = cc.find("Canvas/shelf_2/Player/PlayerSpine").getComponent("PlayerOnMenu");
         playerSpine.setPlayer(selectedteamID);
     },
@@ -149,26 +184,6 @@ cc.Class({
             this.DBStorage.save();
         }
     },
-
-    loadImage: function (j) {
-        //for (var j = 0; j < this.teamManager.players.length; j++) {
-        if (j < this.teamManager.players.length) {
-            var self = this;
-            cc.loader.loadRes("player/body/" + this.teamManager.players[j].bodyColor, cc.SpriteFrame, function (err, spriteFrame) { });
-
-            cc.loader.loadRes("player/head/" + this.teamManager.players[j].headName, cc.SpriteFrame, function (err, spriteFrame) { });
-            cc.loader.loadRes("jersey/" + this.teamManager.players[j].teamID, cc.SpriteFrame, function (err, spriteFrame) {
-                self.loadImage(++j);
-            });
-
-            cc.loader.loadRes("logo/" + this.teamManager.players[j].teamID, cc.SpriteFrame, function (err, spriteFrame) { });
-        }
-        else {
-            var loading = cc.find("Canvas/Loading");
-            loading.destroy();
-        }
-    },
-
     aboutUsClick: function () {
         const storeNode = cc.instantiate(this.aboutUsPrefab);
         this.canvas.addChild(storeNode);

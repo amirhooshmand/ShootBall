@@ -12899,6 +12899,9 @@
     "dialogPrefab": {
       "__uuid__": "7953b3f8-35e3-48d8-bd5c-f3a83e2e4bf1"
     },
+    "LoadingPrefab": {
+      "__uuid__": "0337cafc-409e-4df6-9044-adf8b93dc59d"
+    },
     "_id": ""
   },
   {

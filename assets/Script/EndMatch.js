@@ -27,7 +27,7 @@ cc.Class({
         scoreBoard.getChildByName("AwayLable").getComponent(cc.Label).string = this.teamManager.teams[this.detail.awayID].name;
 
         var leagueName = "";
-        if (this.detail.cup == 1) leagueName = "روبیکاپ      ";
+        if (this.detail.cup == 1) leagueName = "شوتکاپ";
         else if (this.detail.cup == 1) leagueName = "لیگ برتر";
         else if (this.detail.cup == 1) leagueName = "جام حذفی";
 
@@ -43,6 +43,8 @@ cc.Class({
 
         if (this.detail.cup == 3 && this.detail.week == 30)
             this.node.getChildByName("Next Button").destroy();
+
+        this.DBStorage.load(this.DBStorage.data);
     },
 
     win() {
@@ -54,6 +56,11 @@ cc.Class({
         currentScore += (this.detail.homeGoal - (this.detail.homeGoal - this.detail.awayGoal)) * 25; // goal
         currentScore += (this.detail.homeGoal - this.detail.awayGoal) * 50; // extend goal
 
+        var sprite = this.node.getChildByName("winPlayer").getComponent(cc.Sprite);
+        cc.loader.loadRes("player/defence/normal/" + this.detail.homeID, cc.SpriteFrame, function (err, spriteFrame) {
+            sprite.spriteFrame = spriteFrame;
+        });
+
         this.node.getChildByName("losePlayer").destroy();
 
         var bubble = this.node.getChildByName("speech_bubble");
@@ -61,15 +68,18 @@ cc.Class({
 
         if (lastScore < currentScore) {
 
-            if (this.detail.cup == 1) {
-                if (this.detail.week == 16) {
-                    var f = this.DBStorage.getItem("scoreofEndCup" + this.detail.cup, 0);
-                    if (f == 0) {
-                        currentScore += 1000;
-                        this.DBStorage.setItem("scoreofEndCup" + this.detail.cup, 1);
-                    }
+            if ((this.detail.cup == 1 && this.detail.week == 15) ||
+                (this.detail.cup == 2 && this.detail.week == 30) ||
+                (this.detail.cup == 3 && this.detail.week == 30)) {
+                var f = this.DBStorage.getItem("scoreofEndCup" + this.detail.cup, 0);
+
+                if (f == 0) {
+
+                    currentScore += 1000;
+                    this.DBStorage.setItem("scoreofEndCup" + this.detail.cup, 1);
                 }
             }
+
             this.DBStorage.setItem(this.detail.cup + "_detail_" + "week_" + this.detail.week, this.detail.homeGoal + " - " + this.detail.awayGoal)
             this.DBStorage.setItem(this.detail.cup + "_week_" + this.detail.week + "_score", currentScore);
             this.DBStorage.save();
@@ -82,6 +92,11 @@ cc.Class({
 
     lose() {
         this.node.getChildByName("Next Button").getComponentInChildren(cc.Label).string = "بازی\n    دوباره";
+
+        var sprite = this.node.getChildByName("losePlayer").getComponent(cc.Sprite);
+        cc.loader.loadRes("player/goalkeeper/sad/" + this.detail.homeID, cc.SpriteFrame, function (err, spriteFrame) {
+            sprite.spriteFrame = spriteFrame;
+        });
 
         this.node.getChildByName("winPlayer").destroy();
 
@@ -151,20 +166,26 @@ cc.Class({
     },
     sendScore: function (score) {
 
-        var url = "http://rubika1.rakhtkan.net/updateLeaderBoard.php";
+        var url = window.location.href + "updateLeaderBoard.php";
         var xhr = this.createCORSRequest("POST", url);
         if (!xhr) {
             cc.log('CORS not supported');
         }
 
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        var name = "";
-        if (this.DBStorage.getItem("name", "") != "")
-            name = this.DBStorage.getItem("name", "");
-        else name = this.DBStorage.getItem("userName");
+        var user = cc.sys.localStorage.getItem("userID");
+        var name = cc.sys.localStorage.getItem("name");
+        //if (this.DBStorage.getItem("name", "") != "")
+        //name = this.DBStorage.getItem("name", "");
+        //else name = this.DBStorage.getItem("userName");
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        var CryptoJS = require("crypto-js");
+        var encrypted = cc.sys.localStorage.getItem("token");
+        var bytes = CryptoJS.AES.decrypt(encrypted, 'sd1bfI8Puqj0&!jdvqL');
+        var token = bytes.toString(CryptoJS.enc.Utf8);
 
-        var arg = "user=" + this.DBStorage.getItem("userID") + "&name=" + name + "&point=" + score;
-
+        var arg = "user=" + user + "&name=" + name + "&point=" + score + "&token=" + token;
+        console.log(arg);
         try { xhr.send(arg); }
         catch (error) { cc.log(error); }
     },

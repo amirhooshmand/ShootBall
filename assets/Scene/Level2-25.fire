@@ -1823,7 +1823,7 @@
     "_enabled": true,
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 1,
-    "_custom": false,
+    "_custom": true,
     "_file": {
       "__uuid__": "b2687ac4-099e-403c-a192-ff477686f4f5"
     },
@@ -1833,7 +1833,7 @@
     "_stopped": true,
     "playOnLoad": true,
     "autoRemoveOnFinish": false,
-    "totalParticles": 200,
+    "totalParticles": 50,
     "duration": -1,
     "emissionRate": 999.999985098839,
     "life": 0.20000000298023224,
@@ -2452,17 +2452,17 @@
     "_enabled": true,
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 1,
-    "_custom": false,
+    "_custom": true,
     "_file": {
       "__uuid__": "b2687ac4-099e-403c-a192-ff477686f4f5"
     },
     "_spriteFrame": {
       "__uuid__": "472df5d3-35e7-4184-9e6c-7f41bee65ee3"
     },
-    "_stopped": true,
+    "_stopped": false,
     "playOnLoad": true,
     "autoRemoveOnFinish": false,
-    "totalParticles": 200,
+    "totalParticles": 50,
     "duration": -1,
     "emissionRate": 999.999985098839,
     "life": 0.20000000298023224,
@@ -3081,7 +3081,7 @@
     "_enabled": true,
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 1,
-    "_custom": false,
+    "_custom": true,
     "_file": {
       "__uuid__": "b2687ac4-099e-403c-a192-ff477686f4f5"
     },
@@ -3091,7 +3091,7 @@
     "_stopped": true,
     "playOnLoad": true,
     "autoRemoveOnFinish": false,
-    "totalParticles": 200,
+    "totalParticles": 50,
     "duration": -1,
     "emissionRate": 999.999985098839,
     "life": 0.20000000298023224,
@@ -3710,7 +3710,7 @@
     "_enabled": true,
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 1,
-    "_custom": false,
+    "_custom": true,
     "_file": {
       "__uuid__": "b2687ac4-099e-403c-a192-ff477686f4f5"
     },
@@ -3720,7 +3720,7 @@
     "_stopped": true,
     "playOnLoad": true,
     "autoRemoveOnFinish": false,
-    "totalParticles": 200,
+    "totalParticles": 50,
     "duration": -1,
     "emissionRate": 999.999985098839,
     "life": 0.20000000298023224,
@@ -4339,7 +4339,7 @@
     "_enabled": true,
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 1,
-    "_custom": false,
+    "_custom": true,
     "_file": {
       "__uuid__": "b2687ac4-099e-403c-a192-ff477686f4f5"
     },
@@ -4349,7 +4349,7 @@
     "_stopped": true,
     "playOnLoad": true,
     "autoRemoveOnFinish": false,
-    "totalParticles": 200,
+    "totalParticles": 50,
     "duration": -1,
     "emissionRate": 999.999985098839,
     "life": 0.20000000298023224,
@@ -4968,7 +4968,7 @@
     "_enabled": true,
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 1,
-    "_custom": false,
+    "_custom": true,
     "_file": {
       "__uuid__": "b2687ac4-099e-403c-a192-ff477686f4f5"
     },
@@ -4978,7 +4978,7 @@
     "_stopped": true,
     "playOnLoad": true,
     "autoRemoveOnFinish": false,
-    "totalParticles": 200,
+    "totalParticles": 50,
     "duration": -1,
     "emissionRate": 999.999985098839,
     "life": 0.20000000298023224,
@@ -5597,7 +5597,7 @@
     "_enabled": true,
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 1,
-    "_custom": false,
+    "_custom": true,
     "_file": {
       "__uuid__": "b2687ac4-099e-403c-a192-ff477686f4f5"
     },
@@ -5607,7 +5607,7 @@
     "_stopped": true,
     "playOnLoad": true,
     "autoRemoveOnFinish": false,
-    "totalParticles": 200,
+    "totalParticles": 50,
     "duration": -1,
     "emissionRate": 999.999985098839,
     "life": 0.20000000298023224,
@@ -10401,7 +10401,7 @@
     "_volume": 1,
     "_mute": false,
     "_loop": true,
-    "playOnLoad": true,
+    "playOnLoad": false,
     "preload": false,
     "_id": "beRPgrPvZF97pNyTANAmbw"
   },
@@ -12362,8 +12362,6 @@
       "__id__": 2
     },
     "_enabled": true,
-    "userlable": null,
-    "responseTxt": "testing...",
     "_id": "b38n5vsjNGSYQpqrZ9iIkh"
   },
   {

@@ -27,26 +27,16 @@ cc.Class({
         var coin = this.DBStorage.getItem("coin", 0);
 
 
-        var userToken = androidApp.getUserToken();
-
-        this.scheduleOnce(function () {
-            this.checkPayment(userToken, this.orderID, this.paymentToken);
-        }, 5);
-
-        this.orderID = (Math.floor(Math.random() * 99999999));
-
-        this.itemPending = id;
-
         if (id == 1) {
-            this.openPaymentPage(userToken, this.orderID, 100);
+            this.openPaymentPage(6000);
         } else if (id == 2) {
-            this.openPaymentPage(userToken, this.orderID, 100);
+            this.openPaymentPage(23000);
         }
         else if (id == 3) {
-            this.openPaymentPage(userToken, this.orderID, 100);
+            this.openPaymentPage(45000);
         }
         else if (id == 4) {
-            this.openPaymentPage(userToken, this.orderID, 100);
+            this.openPaymentPage(70000);
         }
 
 
@@ -75,92 +65,12 @@ cc.Class({
         }
         return xhr;
     },
-    openPaymentPage: function (userToken, orderID, amount) {
+    openPaymentPage: function (amount) {
+        var user = cc.sys.localStorage.getItem("userID");
 
-        var url = "http://rubika1.rakhtkan.net/getPaymentApi.php";
-        var xhr = this.createCORSRequest("POST", url);
-        if (!xhr) {
-            cc.log('CORS not supported');
-        }
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-        var arg = "user_token=" + userToken + "&app_token=NGDLPYOULRCSIQJBFSGITSTGCLQQYQDBEPDAZYAYBQFWOIOYZGRLOIHUNXJDHXWU&order_id=" + orderID + "&amount=" + amount;
-
-        try { xhr.send(arg); }
-        catch (error) { cc.log(error); }
-
-        xhr.onreadystatechange = this.xhrPaymentCallback;
-
-        //this.data = cc.sys.localStorage.getItem("data");
-    },
-
-    xhrPaymentCallback: function (event) {
-        var db = cc.director.getScene().getChildByName('Canvas').getChildByName('Shop').getComponent("Shop");
-
-        if (typeof event == 'undefined') {
-            return;
-        }
-        if (event.currentTarget.readyState === 4 && (event.currentTarget.status >= 200 && event.currentTarget.status < 300)) {
-            var json = JSON.parse(this.responseText);
-
-            db.paymentToken = json.data.payment_token;
-
-            var payment_token = json.data.payment_token;
-            androidApp.clientAction(
-                '{"track_id":"my-payment","type":"Payment","button_payment":{"button_payment_token":"' +
-                payment_token + '"},"title":"پرداخت"}');
-        }
-    },
-    checkPayment: function (userToken, orderID, paymentToken) {
-
-        var url = "http://rubika1.rakhtkan.net/getPaymentStatusApi.php";
-        var xhr = this.createCORSRequest("POST", url);
-        if (!xhr) {
-            cc.log('CORS not supported');
-        }
-
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        var arg = "user_token=" + userToken + "&app_token=NGDLPYOULRCSIQJBFSGITSTGCLQQYQDBEPDAZYAYBQFWOIOYZGRLOIHUNXJDHXWU&order_id=" + orderID + "&payment_token=" + paymentToken;
-
-        try { xhr.send(arg); }
-        catch (error) { cc.log(error); }
-
-        xhr.onreadystatechange = this.xhrCheckPaymentCallback;
-
-        //this.data = cc.sys.localStorage.getItem("data");
-    },
-
-    xhrCheckPaymentCallback: function (event) {
-        var db = cc.director.getScene().getChildByName('Canvas').getChildByName('Shop').getComponent("Shop");
-
-        if (typeof event == 'undefined') {
-            return;
-        }
-        if (event.currentTarget.readyState === 4 && (event.currentTarget.status >= 200 && event.currentTarget.status < 300)) {
-
-            var json = JSON.parse(this.responseText);
-            if (json.data.status == "Done") {
-                db.showMessage("خرید موفق", "خرید با موفقیت انحام شد", " باشه");
-                var coin = db.DBStorage.getItem("coin", 0);
-
-                if (db.itemPending == 1) {
-                    coin += 5000;
-                } else if (db.itemPending == 2) {
-                    coin += 20000;
-                }
-                else if (db.itemPending == 3) {
-                    coin += 45000;
-                }
-                else if (db.itemPending == 4) {
-                    coin += 80000;
-                }
-                db.DBStorage.setItem("coin", coin);
-                db.DBStorage.save();
-
-                db.setCoin();
-            }
-            //
-        }
+        var arg = "amount=" + amount + "&user=" + user+"&url=" + window.location.href + "afterZarinpalPayment.php";
+        var url = window.location.href + "sendToZarinpalPayment.php?" + arg;
+        window.open(url, "_self");
     },
 
     setCoin: function () {

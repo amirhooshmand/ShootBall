@@ -14,9 +14,23 @@ cc.Class({
             default: null,
             type: cc.Prefab,
         },
+        LoadingPrefab: {
+            default: null,
+            type: cc.Prefab,
+        },
     },
 
     start() {
+        this.canvas = cc.find("Canvas");
+        var teamManagerNode = cc.find("Canvas/TeamManager");
+        this.teamManager = teamManagerNode.getComponent("TeamManager");
+        var content = cc.find("Canvas/Team PageView/view/content");
+        
+        
+        this.loadingNode = cc.instantiate(this.LoadingPrefab);
+        this.canvas.addChild(this.loadingNode);
+
+        this.loadImage(0);
 
         //cc.log(cc.view.getFrameSize().height);
         //cc.log(this.node.height);
@@ -24,12 +38,6 @@ cc.Class({
         //this.node.height = cc.find("Canvas").scaleY * cc.view.getFrameSize().height;
         this.DBStorage = cc.find("DBStorage").getComponent("DBStorage");
 
-        var teamManagerNode = cc.find("Canvas/TeamManager");
-        this.teamManager = teamManagerNode.getComponent("TeamManager");
-
-        this.canvas = cc.find("Canvas");
-
-        var content = cc.find("Canvas/Team PageView/view/content");
 
 
         var self = this;
@@ -224,6 +232,22 @@ cc.Class({
 
         storeNode.getComponent("Shop").callBackNode = this.node;
 
+    },
+    loadImage: function (j) {
+        if (j < this.teamManager.players.length) {
+            var self = this;
+            cc.loader.loadRes("player/body/" + this.teamManager.players[j].bodyColor, cc.SpriteFrame, function (err, spriteFrame) { });
+
+            cc.loader.loadRes("player/head/" + this.teamManager.players[j].headName, cc.SpriteFrame, function (err, spriteFrame) { });
+            cc.loader.loadRes("jersey/" + this.teamManager.players[j].teamID, cc.SpriteFrame, function (err, spriteFrame) {
+                self.loadImage(++j);
+            });
+
+            cc.loader.loadRes("logo/" + this.teamManager.players[j].teamID, cc.SpriteFrame, function (err, spriteFrame) { });
+        }
+        else {
+            this.loadingNode.destroy();
+        }
     },
 
 

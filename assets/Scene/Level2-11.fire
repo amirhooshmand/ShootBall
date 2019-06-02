@@ -7067,7 +7067,7 @@
       "__type__": "cc.Vec3",
       "x": 1.5,
       "y": 1.5,
-      "z": 1
+      "z": 1.5
     },
     "_quat": {
       "__type__": "cc.Quat",
@@ -7087,7 +7087,7 @@
   },
   {
     "__type__": "cc.ParticleSystem",
-    "_name": "",
+    "_name": "New Particle<ParticleSystem>",
     "_objFlags": 0,
     "node": {
       "__id__": 217
@@ -7256,7 +7256,7 @@
   },
   {
     "__type__": "cc.Sprite",
-    "_name": "",
+    "_name": "Star<Sprite>",
     "_objFlags": 0,
     "node": {
       "__id__": 220
@@ -7357,7 +7357,7 @@
   },
   {
     "__type__": "cc.Sprite",
-    "_name": "",
+    "_name": "BALL-02<Sprite>",
     "_objFlags": 0,
     "node": {
       "__id__": 223
@@ -7696,7 +7696,7 @@
       "__type__": "cc.Vec3",
       "x": 1.5,
       "y": 1.5,
-      "z": 1
+      "z": 1.5
     },
     "_quat": {
       "__type__": "cc.Quat",
@@ -7716,7 +7716,7 @@
   },
   {
     "__type__": "cc.ParticleSystem",
-    "_name": "",
+    "_name": "New Particle<ParticleSystem>",
     "_objFlags": 0,
     "node": {
       "__id__": 236
@@ -7885,7 +7885,7 @@
   },
   {
     "__type__": "cc.Sprite",
-    "_name": "",
+    "_name": "Star<Sprite>",
     "_objFlags": 0,
     "node": {
       "__id__": 239
@@ -7986,7 +7986,7 @@
   },
   {
     "__type__": "cc.Sprite",
-    "_name": "",
+    "_name": "BALL-02<Sprite>",
     "_objFlags": 0,
     "node": {
       "__id__": 242
@@ -9043,7 +9043,7 @@
       "__id__": 278
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -9273,7 +9273,7 @@
       "__id__": 289
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -9503,7 +9503,7 @@
       "__id__": 300
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -9733,7 +9733,7 @@
       "__id__": 311
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -9963,7 +9963,7 @@
       "__id__": 322
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -10193,7 +10193,7 @@
       "__id__": 333
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -10423,7 +10423,7 @@
       "__id__": 344
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -10653,7 +10653,7 @@
       "__id__": 355
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -10883,7 +10883,7 @@
       "__id__": 366
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -11113,7 +11113,7 @@
       "__id__": 377
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -11343,7 +11343,7 @@
       "__id__": 388
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -11573,7 +11573,7 @@
       "__id__": 399
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -11803,7 +11803,7 @@
       "__id__": 410
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -12033,7 +12033,7 @@
       "__id__": 421
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -14952,7 +14952,7 @@
     "_volume": 1,
     "_mute": false,
     "_loop": true,
-    "playOnLoad": true,
+    "playOnLoad": false,
     "preload": false,
     "_id": "beRPgrPvZF97pNyTANAmbw"
   },

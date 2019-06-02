@@ -52,7 +52,7 @@ cc.Class({
         if (other.name.startsWith('Ball') && other.tag == 1) {
             var physicsCircleCollider = other.getComponent(cc.PhysicsCircleCollider);
 
-            physicsCircleCollider.restitution = this.ballRestitution;
+            physicsCircleCollider.restitution = 0.7;//this.ballRestitution;
             physicsCircleCollider.apply();
             
             //cc.log(this.node.name + ": " + other.name);

@@ -82,6 +82,11 @@ cc.Class({
         this.scheduleOnce(function () {
             colider.enabled = true;
             ballComponent.inHand = false;
+
+            var dest = this.findPointOnCircle(this.player[this.count].position.x,
+                this.player[this.count].position.y, 65, this.player[this.count].angle - 90);
+            this.ball.position = dest;
+            
         }, this.passDuration)
 
     },
@@ -125,9 +130,12 @@ cc.Class({
 
     onCollisionEnter: function (other, self) {
         if (other.name.startsWith("Ball") && other.tag == 0 && !this.ballInHand) {
-            this.aimNode.active = false;
 
             var ball = other.getComponent("Ball");
+            if (ball.inHand) return;
+
+            this.aimNode.active = false;
+
             ball.inHand = true;
 
             this.ballNode = other.node;

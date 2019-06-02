@@ -37,6 +37,7 @@ cc.Class({
         },
 
         infinityBall: false,
+        end: false,
     },
 
 
@@ -44,9 +45,13 @@ cc.Class({
 
 
         var sound = cc.sys.localStorage.getItem("audio");
-        var bgAudio = cc.find("Canvas/Background Audio");
+        var bgAudio = cc.find("Canvas/Background Audio").getComponent(cc.AudioSource);
+
         if (sound == 0) {
-            bgAudio.destroy();
+            bgAudio.node.destroy();
+        }
+        else {
+            bgAudio.play();
         }
 
         self = this;
@@ -61,7 +66,8 @@ cc.Class({
 
         this.ballParent = cc.find("Canvas/Environment/BallParent");
 
-        this.jimyJump();
+        if (this.ballCount != -1)
+            this.jimyJump();
         //cc.log(this.gameDetail);
 
         if (this.gameDetail.time == null) { /*cc.director.loadScene("StartMenu");*/ this.infinityBall = true; this.newBall(0.1); return; }
@@ -166,6 +172,12 @@ cc.Class({
         this.setScoreboardGoal();
 
         var canvas = cc.find("Canvas");
+
+        if (canvas.getChildByName("goalEvent")) {
+            canvas.getChildByName("goalEvent").getComponentInChildren(cc.Label).string = this.replaceNum(this.homeGoal.toString() + " - " + this.awayGoal.toString());
+            return;
+        }
+
         const goalEvent = cc.instantiate(this.goalEventPrefab);
         canvas.addChild(goalEvent);
         goalEvent.getComponentInChildren(cc.Label).string = this.replaceNum(this.homeGoal.toString() + " - " + this.awayGoal.toString());
@@ -219,9 +231,11 @@ cc.Class({
     },
 
     endMatch: function () {
+        this.end = true;
+        this.unscheduleAllCallbacks();
 
         var sound = cc.sys.localStorage.getItem("audio");
-        
+
         cc.director.getPhysicsManager().enabled = false;
         if (this.awayGoal != this.homeGoal && sound == 1)
             this.node.getChildByName("EndMatch").getComponent(cc.AudioSource).play();
@@ -264,6 +278,8 @@ cc.Class({
 
     },
     draw: function () {
+
+
         var addBallNode = cc.find("Canvas/Environment/AddBall");
         addBallNode.removeAllChildren();
 
@@ -278,7 +294,10 @@ cc.Class({
     penaltiResualt(goal) {
         var delay = 2.6;
 
-        this.node.getChildByName("EndMatch").getComponent(cc.AudioSource).play();
+        var sound = cc.sys.localStorage.getItem("audio");
+
+        if (sound == 1)
+            this.node.getChildByName("EndMatch").getComponent(cc.AudioSource).play();
 
         if (goal) {
             var canvas = cc.find("Canvas");
@@ -302,6 +321,7 @@ cc.Class({
 
 
             var dbData = this.DBStorage.data;
+            var gd = this.gameDetail;
 
             cc.director.loadScene("StartMenu", function (err, data) {
                 var loginNode = cc.director.getScene();
@@ -309,7 +329,7 @@ cc.Class({
                 var db = loginNode.getChildByName('DBStorage').getComponent("DBStorage");
                 db.load(dbData);
 
-                containerLogin.getComponent("MainMenu").openEndMatch(detail);
+                containerLogin.getComponent("MainMenu").openEndMatch(detail, gd);
             });
         }, delay);
     },

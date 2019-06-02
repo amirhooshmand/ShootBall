@@ -44,9 +44,9 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 1.994984285923422,
-      "y": 1.994984285923422,
-      "z": 1.994984285923422
+      "x": 0.8683673469387756,
+      "y": 0.8683673469387756,
+      "z": 0.8683673469387756
     },
     "_quat": {
       "__type__": "cc.Quat",
@@ -2992,7 +2992,7 @@
       "__id__": 83
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -3222,7 +3222,7 @@
       "__id__": 94
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -3452,7 +3452,7 @@
       "__id__": 105
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -3682,7 +3682,7 @@
       "__id__": 116
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -3912,7 +3912,7 @@
       "__id__": 127
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -4142,7 +4142,7 @@
       "__id__": 138
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -4372,7 +4372,7 @@
       "__id__": 149
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -4602,7 +4602,7 @@
       "__id__": 160
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -4832,7 +4832,7 @@
       "__id__": 171
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -5062,7 +5062,7 @@
       "__id__": 182
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -5292,7 +5292,7 @@
       "__id__": 193
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -5522,7 +5522,7 @@
       "__id__": 204
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -5752,7 +5752,7 @@
       "__id__": 215
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -5982,7 +5982,7 @@
       "__id__": 226
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -6258,7 +6258,7 @@
   {
     "__type__": "Item",
     "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
+      "__uuid__": "a75e1d22-e1e1-442e-93ee-5f8eb7e57947"
     }
   },
   {
@@ -6483,7 +6483,7 @@
   {
     "__type__": "Item",
     "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
+      "__uuid__": "a75e1d22-e1e1-442e-93ee-5f8eb7e57947"
     }
   },
   {
@@ -6708,7 +6708,7 @@
   {
     "__type__": "Item",
     "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
+      "__uuid__": "a75e1d22-e1e1-442e-93ee-5f8eb7e57947"
     }
   },
   {
@@ -6933,7 +6933,7 @@
   {
     "__type__": "Item",
     "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
+      "__uuid__": "a75e1d22-e1e1-442e-93ee-5f8eb7e57947"
     }
   },
   {
@@ -9982,7 +9982,7 @@
     "_volume": 1,
     "_mute": false,
     "_loop": true,
-    "playOnLoad": true,
+    "playOnLoad": false,
     "preload": false,
     "_id": "beRPgrPvZF97pNyTANAmbw"
   },

@@ -47,9 +47,9 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 1.2111498572083612,
-      "y": 1.2111498572083612,
-      "z": 1.2111498572083612
+      "x": 0.8683673469387756,
+      "y": 0.8683673469387756,
+      "z": 0.8683673469387756
     },
     "_quat": {
       "__type__": "cc.Quat",
@@ -4800,9 +4800,7 @@
   },
   {
     "__type__": "Item",
-    "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
-    }
+    "iconSF": null
   },
   {
     "__type__": "Item",
@@ -5038,9 +5036,7 @@
   },
   {
     "__type__": "Item",
-    "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
-    }
+    "iconSF": null
   },
   {
     "__type__": "Item",
@@ -5276,9 +5272,7 @@
   },
   {
     "__type__": "Item",
-    "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
-    }
+    "iconSF": null
   },
   {
     "__type__": "Item",
@@ -6856,13 +6850,13 @@
       "__id__": 211
     },
     "_enabled": true,
-    "tag": 1,
+    "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
       "y": 0
     },
-    "_radius": 40,
+    "_radius": 30,
     "_id": "2dXmYkRF5KbpFx3J4X43GN"
   },
   {
@@ -8114,13 +8108,13 @@
       "__id__": 249
     },
     "_enabled": true,
-    "tag": 1,
+    "tag": 0,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
       "y": 0
     },
-    "_radius": 40,
+    "_radius": 30,
     "_id": "13ACPKhQlDloChB6z3sudk"
   },
   {
@@ -11208,7 +11202,7 @@
     "_volume": 1,
     "_mute": false,
     "_loop": true,
-    "playOnLoad": true,
+    "playOnLoad": false,
     "preload": false,
     "_id": "beRPgrPvZF97pNyTANAmbw"
   },

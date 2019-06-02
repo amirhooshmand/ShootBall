@@ -44,9 +44,9 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.8683673469387753,
-      "y": 0.8683673469387753,
-      "z": 0.8683673469387753
+      "x": 0.8683673469387756,
+      "y": 0.8683673469387756,
+      "z": 0.8683673469387756
     },
     "_quat": {
       "__type__": "cc.Quat",
@@ -4240,9 +4240,7 @@
   },
   {
     "__type__": "Item",
-    "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
-    }
+    "iconSF": null
   },
   {
     "__type__": "Item",
@@ -4465,9 +4463,7 @@
   },
   {
     "__type__": "Item",
-    "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
-    }
+    "iconSF": null
   },
   {
     "__type__": "Item",
@@ -4690,9 +4686,7 @@
   },
   {
     "__type__": "Item",
-    "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
-    }
+    "iconSF": null
   },
   {
     "__type__": "Item",
@@ -4915,9 +4909,7 @@
   },
   {
     "__type__": "Item",
-    "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
-    }
+    "iconSF": null
   },
   {
     "__type__": "Item",
@@ -5095,7 +5087,7 @@
       "__id__": 164
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -5325,7 +5317,7 @@
       "__id__": 175
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -5555,7 +5547,7 @@
       "__id__": 186
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -5785,7 +5777,7 @@
       "__id__": 197
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -6015,7 +6007,7 @@
       "__id__": 208
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -6245,7 +6237,7 @@
       "__id__": 219
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -6475,7 +6467,7 @@
       "__id__": 230
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -6705,7 +6697,7 @@
       "__id__": 241
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -6935,7 +6927,7 @@
       "__id__": 252
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -7165,7 +7157,7 @@
       "__id__": 263
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -7395,7 +7387,7 @@
       "__id__": 274
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -7625,7 +7617,7 @@
       "__id__": 285
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -7855,7 +7847,7 @@
       "__id__": 296
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -8085,7 +8077,7 @@
       "__id__": 307
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -8315,7 +8307,7 @@
       "__id__": 318
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -8545,7 +8537,7 @@
       "__id__": 329
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -8772,7 +8764,7 @@
       "__id__": 340
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -12723,7 +12715,7 @@
     "_volume": 1,
     "_mute": false,
     "_loop": true,
-    "playOnLoad": true,
+    "playOnLoad": false,
     "preload": false,
     "_id": "beRPgrPvZF97pNyTANAmbw"
   },

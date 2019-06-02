@@ -53,6 +53,7 @@ cc.Class({
         this.unscheduleAllCallbacks();
 
         self = this;
+        cc.log(this.gameManager.gameDetail.awayID);
 
         cc.loader.loadRes("player/goalkeeper/save/" + this.gameManager.gameDetail.awayID, cc.SpriteFrame, function (err, spriteFrame) {
             try { self.sprite.spriteFrame = spriteFrame; } catch (err) { }
@@ -66,7 +67,6 @@ cc.Class({
         this.unscheduleAllCallbacks();
 
         self = this;
-
         cc.loader.loadRes("player/goalkeeper/sad/" + this.gameManager.gameDetail.awayID, cc.SpriteFrame, function (err, spriteFrame) {
             try { self.sprite.spriteFrame = spriteFrame; } catch (err) { }
         });

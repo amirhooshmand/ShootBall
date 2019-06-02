@@ -3061,7 +3061,7 @@
       "__id__": 84
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -3288,7 +3288,7 @@
       "__id__": 95
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -3508,7 +3508,7 @@
       "__id__": 105
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -3738,7 +3738,7 @@
       "__id__": 116
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -3968,7 +3968,7 @@
       "__id__": 127
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -4198,7 +4198,7 @@
       "__id__": 138
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -4428,7 +4428,7 @@
       "__id__": 149
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -4658,7 +4658,7 @@
       "__id__": 160
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -4888,7 +4888,7 @@
       "__id__": 171
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -5118,7 +5118,7 @@
       "__id__": 182
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -5348,7 +5348,7 @@
       "__id__": 193
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -5578,7 +5578,7 @@
       "__id__": 204
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -5811,7 +5811,7 @@
       "__id__": 215
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -6054,7 +6054,7 @@
       "__id__": 227
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -6297,7 +6297,7 @@
       "__id__": 239
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -6537,7 +6537,7 @@
       "__id__": 251
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -6770,7 +6770,7 @@
       "__id__": 262
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -7013,7 +7013,7 @@
       "__id__": 274
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -7256,7 +7256,7 @@
       "__id__": 286
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -7496,7 +7496,7 @@
       "__id__": 298
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -7726,7 +7726,7 @@
       "__id__": 309
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -9088,7 +9088,7 @@
   {
     "__type__": "Item",
     "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
+      "__uuid__": "a75e1d22-e1e1-442e-93ee-5f8eb7e57947"
     }
   },
   {
@@ -9313,7 +9313,7 @@
   {
     "__type__": "Item",
     "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
+      "__uuid__": "a75e1d22-e1e1-442e-93ee-5f8eb7e57947"
     }
   },
   {
@@ -9537,9 +9537,7 @@
   },
   {
     "__type__": "Item",
-    "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
-    }
+    "iconSF": null
   },
   {
     "__type__": "Item",
@@ -9762,9 +9760,7 @@
   },
   {
     "__type__": "Item",
-    "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
-    }
+    "iconSF": null
   },
   {
     "__type__": "Item",
@@ -9988,7 +9984,7 @@
   {
     "__type__": "Item",
     "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
+      "__uuid__": "a75e1d22-e1e1-442e-93ee-5f8eb7e57947"
     }
   },
   {
@@ -10213,7 +10209,7 @@
   {
     "__type__": "Item",
     "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
+      "__uuid__": "a75e1d22-e1e1-442e-93ee-5f8eb7e57947"
     }
   },
   {
@@ -10438,7 +10434,7 @@
   {
     "__type__": "Item",
     "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
+      "__uuid__": "a75e1d22-e1e1-442e-93ee-5f8eb7e57947"
     }
   },
   {
@@ -10663,7 +10659,7 @@
   {
     "__type__": "Item",
     "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
+      "__uuid__": "a75e1d22-e1e1-442e-93ee-5f8eb7e57947"
     }
   },
   {
@@ -10887,9 +10883,7 @@
   },
   {
     "__type__": "Item",
-    "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
-    }
+    "iconSF": null
   },
   {
     "__type__": "Item",
@@ -11112,9 +11106,7 @@
   },
   {
     "__type__": "Item",
-    "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
-    }
+    "iconSF": null
   },
   {
     "__type__": "Item",
@@ -11337,9 +11329,7 @@
   },
   {
     "__type__": "Item",
-    "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
-    }
+    "iconSF": null
   },
   {
     "__type__": "Item",
@@ -11562,9 +11552,7 @@
   },
   {
     "__type__": "Item",
-    "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
-    }
+    "iconSF": null
   },
   {
     "__type__": "Item",
@@ -11787,9 +11775,7 @@
   },
   {
     "__type__": "Item",
-    "iconSF": {
-      "__uuid__": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e"
-    }
+    "iconSF": null
   },
   {
     "__type__": "Item",
@@ -15688,7 +15674,7 @@
     "_volume": 1,
     "_mute": false,
     "_loop": true,
-    "playOnLoad": true,
+    "playOnLoad": false,
     "preload": false,
     "_id": "beRPgrPvZF97pNyTANAmbw"
   },

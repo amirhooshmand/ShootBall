@@ -4355,7 +4355,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "45QsnW63tC+5zUFWR2Qtc3"
   },
@@ -4389,7 +4389,7 @@
       "__id__": 128
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -4585,7 +4585,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "f6YUCSIfZDX6XsPKClShac"
   },
@@ -4619,7 +4619,7 @@
       "__id__": 139
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -4815,7 +4815,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "e5PhHOoHtOQb2t/3CnCNaw"
   },
@@ -4849,7 +4849,7 @@
       "__id__": 150
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -5045,7 +5045,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "67AVa1pA5B47s3+IW8u4F9"
   },
@@ -5079,7 +5079,7 @@
       "__id__": 161
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -5275,7 +5275,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "716urbHDNHLqXb1Z8LQ1Kg"
   },
@@ -5309,7 +5309,7 @@
       "__id__": 172
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -5505,7 +5505,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "_id": "c5KLlPOxRFCZlT60Ant8NM"
   },
@@ -5539,7 +5539,7 @@
       "__id__": 183
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 5,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -8981,7 +8981,7 @@
     "_volume": 1,
     "_mute": false,
     "_loop": true,
-    "playOnLoad": true,
+    "playOnLoad": false,
     "preload": false,
     "_id": "beRPgrPvZF97pNyTANAmbw"
   },
@@ -10942,8 +10942,6 @@
       "__id__": 2
     },
     "_enabled": true,
-    "userlable": null,
-    "responseTxt": "testing...",
     "_id": "b38n5vsjNGSYQpqrZ9iIkh"
   },
   {

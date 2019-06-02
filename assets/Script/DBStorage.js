@@ -1,3 +1,7 @@
+//import aes from 'crypto-js/aes'
+//import encHex from 'crypto-js/enc-hex'
+// padZeroPadding from 'crypto-js/pad-zeropadding'
+
 cc.Class({
     extends: cc.Component,
 
@@ -20,40 +24,63 @@ cc.Class({
             this.callBackNode.emit('load-db');
     },
     start() {
+
+
+
+
+        // message to encrypt
+        /*let msg = "Hello skjfhslhskfjhfd";
+
+        // the key and iv should be 32 hex digits each, any hex digits you want, but it needs to be 32 on length each
+        let key = encHex.parse("0123456789abcdef0123456789abcdef");
+        let iv = encHex.parse("abcdef9876543210abcdef9876543210");
+
+
+        //4uwV4BHJvBs89+Fb7vM/oQ==
+
+        // encrypt the message
+        var CryptoJS = require("crypto-js");
+        let encrypted = aes.encrypt(msg, key, { iv: iv, padding: padZeroPadding }).toString();
+        let decrypt = aes.decrypt("4uwV4BHJvBs89+Fb7vM/oQ==", key, { iv: iv });
+
+        cc.log(decrypt.toString(CryptoJS.enc.Utf8));
+
+        /*var key = "e2610a2a34b26fb9";
+        var iv = "447645551247fdf9f899c56df1defb7c";
+        
+        var CryptoJS = require("crypto-js");
+        var encryptedToken = CryptoJS.AES.encrypt("QT+ee7HWO\/wCYsjal8LuDw==", key, { iv: iv }).toString();;
+        cc.log(encryptedToken);
+        
+        var bytes = CryptoJS.AES.decrypt(encryptedToken, key, { iv: iv });
+        var token = bytes.toString(CryptoJS.enc.Utf8);
+        cc.log(token);
+        */
+
         this.canvas = cc.find("Canvas");
 
         //\"userID\":34,\"1_detail_week_15\":\"3 - 2\",\"2_detail_week_30\":\"3 - 2\",
         //this.setItem("userID", 34); this.setItem("1_detail_week_15", "3 - 2"); this.setItem("2_detail_week_30", "3 - 2"); this.setItem("userName", "amir"); this.setItem("team", 2); this.setItem("lastRewardTime", '2019-06-20T08:33:56.000Z'); this.setItem("coin", 100000); if (this.callBackNode != null) this.callBackNode.emit('load-db');
         //this.data = "{\"userName\":\"amir\",\"team\":2,\"lastRewardTime\":\"2019-06-20T08:33:56.000Z\",\"coin\":100000,\"1_week_0_score\":1,\"1_detail_week_1\":\"3 - 1\",\"1_week_1_score\":225,\"1_detail_week_2\":\"5 - 2\",\"1_week_2_score\":300}";
+        //cc.sys.localStorage.clear();
 
+        //cc.sys.localStorage.setItem("userID", 1);
 
-
+        var user = cc.sys.localStorage.getItem("userID");
+        if (user) {
+            try {
+                cc.find("Canvas/Login").destroy();
+            } catch (e) { }
+        }
+        else return;
 
         if (this.data == "{}") {
 
-            this.data = cc.sys.localStorage.getItem('userData');
-            if (this.data == null) {
-                this.data = "{}";
-                this.setItem("userID", 34);
-            }
-            if (this.callBackNode != null)
-                this.callBackNode.emit('load-db');
+            this.loadingNode = cc.instantiate(this.LoadingPrefab);
+            this.canvas.addChild(this.loadingNode);
 
-            //var userData = JSON.parse(cc.sys.localStorage.getItem('userData'));
-
-            //var userToken = androidApp.getUserToken(); //2508ppktfuxpnefmuiugqinpxyrkmvlm
-            //this.getUserData(userToken);
+            this.loadDBFromServer();
         }
-
-        var CryptoJS = require("crypto-js");
-
-        var encrypted = CryptoJS.AES.encrypt("amir hossein سییب", 'Secret Passphrase').toString();;
-
-        var bytes = CryptoJS.AES.decrypt(encrypted, 'Secret Passphrase');
-        var decrypted = bytes.toString(CryptoJS.enc.Utf8);
-
-        //cc.log(encrypted);
-        //cc.log(decrypted);
     },
     createCORSRequest: function (method, url) {
         var xhr = cc.loader.getXMLHttpRequest();
@@ -80,14 +107,14 @@ cc.Class({
     },
     loadDBFromServer: function () {
 
-        var url = "http://rubika1.rakhtkan.net/getUser.php";
+        var url = window.location.href + "getUser.php";
         var xhr = this.createCORSRequest("POST", url);
         if (!xhr) {
             cc.log('CORS not supported');
         }
 
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        var arg = "user_id=" + this.getItem("userID");
+        var arg = "user=" + cc.sys.localStorage.getItem("userID");
 
         try { xhr.send(arg); }
         catch (error) { cc.log(error); }
@@ -106,7 +133,9 @@ cc.Class({
         }
         if (event.currentTarget.readyState === 4 && (event.currentTarget.status >= 200 && event.currentTarget.status < 300)) {
 
-            if (this.responseText == "0 results") { db.setItem("coin", 5000); } else db.data = this.responseText;
+            cc.log(this.responseText);
+
+            if (this.responseText == "") { db.setItem("coin", 5000); } else db.data = this.responseText;
 
             db.setItem("lastLoginTime", db.getDateTime());
             db.save();
@@ -124,46 +153,6 @@ cc.Class({
         //this.setItem("coin", 4987);
 
         //cc.log(this.data);
-    },
-
-    getUserData: function (userToken) {
-        this.loadingNode = cc.instantiate(this.LoadingPrefab);
-        this.canvas.addChild(this.loadingNode);
-
-        var url = "http://rubika1.rakhtkan.net/getUserData.php";
-        var xhr = this.createCORSRequest("POST", url);
-        if (!xhr) {
-            cc.log('CORS not supported');
-        }
-
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        var arg = "user_token=" + userToken + "&app_token=NGDLPYOULRCSIQJBFSGITSTGCLQQYQDBEPDAZYAYBQFWOIOYZGRLOIHUNXJDHXWU";
-
-        try { xhr.send(arg); }
-        catch (error) { cc.log(error); }
-
-        xhr.onreadystatechange = this.xhrGetUserCallback;
-    },
-
-    xhrGetUserCallback: function (event) {
-        var db = cc.director.getScene().getChildByName('DBStorage').getComponent("DBStorage");
-        if (typeof event == 'undefined') {
-
-            return;
-        }
-        if (event.currentTarget.readyState === 4 && (event.currentTarget.status >= 200 && event.currentTarget.status < 300)) {
-            var json = JSON.parse(this.responseText);
-
-            //{"status":"OK","status_det":"OK","data":{"status":"Done","user_data":{"user_id":"827023719","name":"","family":"","username":"amir_hosh"}}}
-
-
-            db.setItem("userID", json.data.user_data.user_id);
-            db.setItem("userName", json.data.user_data.username);
-            if (json.data.user_data.name != "")
-                db.setItem("name", json.data.user_data.name);
-
-            db.loadDBFromServer();
-        }
     },
 
     resetAll: function () {
@@ -228,16 +217,21 @@ cc.Class({
     },
 
     save: function () {
-        cc.sys.localStorage.setItem("userData", this.data);
-
-        var url = "http://rubika1.rakhtkan.net/userUpdate.php";
+        var url = window.location.href + "updateUser.php";
         var xhr = this.createCORSRequest("POST", url);
         if (!xhr) {
             cc.log('CORS not supported');
         }
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+        var CryptoJS = require("crypto-js");
+        var encrypted = cc.sys.localStorage.getItem("token");
+        var bytes = CryptoJS.AES.decrypt(encrypted, 'sd1bfI8Puqj0&!jdvqL');
+        var token = bytes.toString(CryptoJS.enc.Utf8);
 
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        var arg = "user_id=" + this.getItem("userID") + "&data=" + this.data;
+        var arg = "user=" + cc.sys.localStorage.getItem("userID") + "&data=" + this.data + "&token=" + token;
+
         xhr.send(arg);
     },
 });

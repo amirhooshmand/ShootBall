@@ -1,25 +1,16 @@
 {
   "ver": "2.3.0",
-  "uuid": "24e7bcaa-a015-488b-8a0e-9b5df01a7692",
+  "uuid": "000ca59c-30dd-4402-b0d5-6a298d8307f1",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "premultiplyAlpha": false,
-  "platformSettings": {
-    "web": {
-      "formats": [
-        {
-          "name": "pvrtc_4bits",
-          "quality": "normal"
-        }
-      ]
-    }
-  },
+  "platformSettings": {},
   "subMetas": {
     "brick1": {
       "ver": "1.0.3",
-      "uuid": "45c2d8f0-f01e-4fff-a032-b86f5640ac5e",
-      "rawTextureUuid": "24e7bcaa-a015-488b-8a0e-9b5df01a7692",
+      "uuid": "41fd9b8d-1658-4a4c-a495-fdba767037e9",
+      "rawTextureUuid": "000ca59c-30dd-4402-b0d5-6a298d8307f1",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

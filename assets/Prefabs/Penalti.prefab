@@ -915,6 +915,7 @@
     },
     "_enabled": true,
     "fireBall": false,
+    "inHand": false,
     "_id": ""
   },
   {

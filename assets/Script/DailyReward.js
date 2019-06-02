@@ -3,11 +3,18 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-
+        LoadingPrefab: {
+            default: null,
+            type: cc.Prefab,
+        },
     },
 
 
     start() {
+        var canvas = cc.find("Canvas");
+        this.loadingNode = cc.instantiate(this.LoadingPrefab);
+        canvas.addChild(this.loadingNode);
+
         this.DBStorage = cc.find("DBStorage").getComponent("DBStorage");
         this.forwardPlayer = this.node.getChildByName("ForwardPlayer");
 
@@ -15,6 +22,7 @@ cc.Class({
         cc.loader.loadRes("player/forward/normal/" + this.DBStorage.getItem("team", 2), cc.SpriteFrame, function (err, spriteFrame) {
             var sprite = self.forwardPlayer.getChildByName("player").getComponent(cc.Sprite);
             sprite.spriteFrame = spriteFrame;
+            self.loadingNode.destroy();
         });
         this.items = [1, 2, 3, 4, 5, 6, 0];
 

@@ -56,7 +56,6 @@ cc.Class({
     },*/
 
     onEndContact: function (contact, selfCollider, otherCollider) {
-        //cc.log(otherCollider.name);
 
         if (otherCollider.name.startsWith('Ball') && otherCollider.tag == 0) {
             if (otherCollider.getComponent("Ball").fireBall) return;
@@ -70,7 +69,7 @@ cc.Class({
             else {
                 this.schedule(function () {
                     this.node.destroy();
-                }, .1, 0);
+                }, .08, 0);
 
             }
         }

@@ -60,14 +60,23 @@ cc.Class({
     start() {
         this.DBStorage = cc.find("DBStorage").getComponent("DBStorage");
 
-
         var getCurrentTime = this.DBStorage.getDateTime();
-        var remainDays = 7 - Math.abs(getCurrentTime.getDay() - 5);
 
-        var newDate = this.addDays(getCurrentTime, remainDays);
+        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+        var newDate = this.addDays(getCurrentTime, 0);
+        for (var i = 0; i <= 7; i++) {
+            if (days[newDate.getDay()] == "Friday") {
+                break;
+            } else {
+                newDate = this.addDays(newDate, 1);
+            }
+        }
+
         newDate.setHours(24, 0, 0, 0);
 
         var remaining = this.getTimeRemaining(newDate);
+
 
 
         this.second = (remaining.days * 24) + (remaining.hours * 60 * 60) + (remaining.minutes * 60) + (remaining.seconds);
@@ -83,7 +92,7 @@ cc.Class({
         // Time interval in units of seconds
         var interval = 1;
         // Time of repetition
-        var repeat = this.second;
+        var repeat = this.second - 1;
         // Start delay
         var delay = 0;
         this.schedule(function () {
@@ -93,8 +102,8 @@ cc.Class({
             remaining = this.getTimeRemaining(newDate);
 
             if (remaining.days <= 0) {
-                this.dayLbl.node.active = false;
-                this.rozLbl.node.active = false;
+                //this.dayLbl.node.active = false;
+                //this.rozLbl.node.active = false;
             }
 
         }, interval, repeat, delay);
@@ -238,14 +247,14 @@ cc.Class({
 
         //xhr.abort();
 
-        var url = "http://rubika1.rakhtkan.net/getLeaderBoard.php";
+        var url = window.location.href + "getLeaderBoard.php";
         var xhr = this.createCORSRequest("POST", url);
         if (!xhr) {
             cc.log('CORS not supported');
         }
-
+        var user = cc.sys.localStorage.getItem("userID");
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        var arg = "user=" + this.DBStorage.getItem("userID") + "&type=" + type;
+        var arg = "user=" + user + "&type=" + type;
 
         try { xhr.send(arg); }
         catch (error) { cc.log(error); }
