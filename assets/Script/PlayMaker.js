@@ -60,7 +60,7 @@ cc.Class({
 
         this.ballInHand = false;
 
-        var action1 = cc.sequence(cc.scaleTo(this.passDuration / 2, 1.7, 1.7), cc.scaleTo(this.passDuration / 2, 0.85, 0.85));
+        var action1 = cc.sequence(cc.scaleTo(this.passDuration / 2, 1.7, 1.7), cc.scaleTo(this.passDuration / 2, this.ball.scaleX, this.ball.scaleY));
         this.ball.runAction(action1);
 
         var dest = this.findPointOnCircle(this.player[this.count].position.x,

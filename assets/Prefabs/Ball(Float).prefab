@@ -176,7 +176,7 @@
     "_enabled": true,
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 1,
-    "_custom": false,
+    "_custom": true,
     "_file": {
       "__uuid__": "b2687ac4-099e-403c-a192-ff477686f4f5"
     },
@@ -186,7 +186,7 @@
     "_stopped": true,
     "playOnLoad": true,
     "autoRemoveOnFinish": false,
-    "totalParticles": 200,
+    "totalParticles": 150,
     "duration": -1,
     "emissionRate": 999.999985098839,
     "life": 0.20000000298023224,

@@ -32,7 +32,9 @@ cc.Class({
                 other.node.destroy();
             }, 1, 0);
 
-            this.goalKeeper.sad();
+            try {
+                this.goalKeeper.sad();
+            } catch (err) { }
         }
     },
 

@@ -49,13 +49,15 @@ cc.Class({
         clickEventHandler.target = this.node; //This node is the node to which your event handler code component belongs
         clickEventHandler.component = "AboutUs";//This is the code file name
         clickEventHandler.handler = "exitFromGame";
-        clickEventHandler.customEventData = customEventData;
+        clickEventHandler.customEventData = 0;
 
         d.negativeBtn.clickEvents.push(clickEventHandler);
     },
 
-    exitFromGame(){
+    exitFromGame(event, customEventData) {
         cc.sys.localStorage.clear();
-        window.close();
+        var url = "https://shootballista.ir";
+        window.open(url, "_self");
     }
 });
+  

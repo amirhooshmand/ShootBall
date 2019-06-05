@@ -279,9 +279,14 @@ cc.Class({
     },
     draw: function () {
 
+        var footer = cc.find("Canvas/footer");
+        footer.destroy();
 
-        var addBallNode = cc.find("Canvas/Environment/AddBall");
-        addBallNode.removeAllChildren();
+        var environment = cc.find("Canvas/Environment");
+        environment.destroy();
+
+        //var addBallNode = cc.find("Canvas/Environment/AddBall");
+        //addBallNode.removeAllChildren();
 
         var canvas = cc.find("Canvas");
         const p = cc.instantiate(this.PenaltiPrefab);
