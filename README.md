@@ -1,4 +1,4 @@
 # ShootBall	
-Game for Rubika
+![ShootBall](assets/Texture/logo-final.png)
 
 Powered by CocosCreator.
